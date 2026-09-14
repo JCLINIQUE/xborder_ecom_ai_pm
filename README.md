@@ -2,31 +2,70 @@
 
 跨境电商运营转向跨境电商 AI 产品经理的教学计划与配套材料。
 
-网页入口：`index.html`
+课程共 **30 天、约 60 小时**，包含 20 次交流和 10 天独立练习。围绕学员的真实运营场景，逐步完成调研、需求提炼、PRD、原型、Demo、评测与迭代，并整理成可讲解的项目材料。
 
-## 这里有什么
+## 从哪里开始
 
-- `index.html`：主教案页面，后续按真实教学进展持续更新。
-- [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)：Day 01 的方法与可填写模板。
-- [亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>)：结合 2026-09-14 的 Excel、访谈录屏和笔记整理的实际报告，后续补充统一更新此文件。
-- [Day 02 产品需求提炼](<attachments/2. product sense/Day02产品需求提炼.md>)：竞品分析案例的判断过程、方案比较和完整需求清单示例。
-- [Day 02 课堂练习与参考答案](<attachments/2. product sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product sense/产品需求清单模板.md>)：现场练习与课后作业。
-- [PRD 写作模板](<attachments/3. product_requirement_document/PRD写作模板.md>)：Day 03 按第一周课程说明填写，后续继续完善。
-- [给非技术人员的 GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：GitHub 科普和日常维护手册。
+1. **看课程安排**：[index.html](index.html) 包含岗位对照、学习重点和 Day 01–Day 30 的教学安排。下载到本地后，用浏览器打开这个文件即可查看，无需启动服务。
+2. **找当天材料**：按下方的材料目录阅读方法、案例和模板；在 GitHub 上点击 Markdown 文件即可阅读。
+3. **第一次使用 Git**：先看 [给非技术人员的 GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)，其中包含 Windows / Mac 打开命令窗口、首次克隆、分支操作、上传和常见报错说明。
+
+## 课程怎么推进
+
+| 阶段 | 主要内容 |
+| --- | --- |
+| 第一周 · Day 01–07 | 调研 → 产品需求提炼 → 业务版 PRD → 产品原型图 → Demo，再自查和修复 |
+| 第二周 · Day 08–14 | 用户试用、AI 基础、交互与技术架构，补充同一份 PRD，并制作学习 PWA |
+| 第三周 · Day 15–21 | 离线评测、评分校准、对照迭代、发布准备与小范围试用 |
+| 第四周 · Day 22–28 | 业务价值与实验分析、技术答辩、项目交付与终验 |
+| 结课 · Day 29–30 | 材料定稿、独立讲解与完整模拟 |
+
+主项目贯穿同一份 PRD、原型和 Demo。第一周先写清用户问题、范围、流程、输入输出、异常与功能验收；AI 方案、模型选择和质量评测随后续课程补充。
+
+学员还将亲手制作一个学习 PWA，用手机复习 AI 术语、业务案例和练习题。主项目 Demo、学习 PWA 和最终项目材料会在课程中逐步完成；当前仓库提供教学安排及下列配套教材。
+
+## 材料目录
+
+| 目录 | 内容与入口 |
+| --- | --- |
+| `attachments/0. github-basics/` | [GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：命令窗口、clone / pull、分支、提交与推送、常见问题 |
+| `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
+| `attachments/2. product sense/` | [Day 02 产品需求提炼](<attachments/2. product sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product sense/产品需求清单模板.md>) |
+| `attachments/3. prd/` | [PRD 写作模板](<attachments/3. prd/PRD写作模板.md>)：先按第一周课程说明完成业务版，后续逐步完善 |
+
+## 首次下载到电脑
+
+先按 GitHub 手册打开命令窗口：Windows 使用 Git Bash，Mac 使用终端。进入想存放项目的文件夹后，逐行执行：
+
+```bash
+git clone 仓库网址
+cd 文件夹名
+git status
+```
+
+把“仓库网址”换成 GitHub 仓库页面 **Code → HTTPS** 下的克隆地址，把“文件夹名”换成克隆生成的目录名称。`git clone` 会自动创建文件夹，不需要提前再建一个同名文件夹。
+
+如果已经克隆过，直接进入已有仓库；后续更新使用 `git pull`，具体分支选择和操作顺序见手册。只有下载 ZIP 解压出的文件时，可以阅读材料，但需要通过 `clone` 获取 Git 仓库才能按手册提交和推送。
 
 ## 怎么更新
 
-后续教案和配套材料统一在本目录维护；附件按 `attachments/` 下的课程编号目录归档，用户调研位于 `1. user-research/`，产品需求提炼位于 `2. product sense/`。
+教案统一维护根目录的 `index.html`，附件按 `attachments/` 下的课程编号目录归档。
 
-1. 改教案时，直接更新根目录的 `index.html`。
-2. 页面顶部的“最后更新”日期同步改成当天日期。
-3. 改已有附件时，尽量保留原文件名和路径，这样页面链接不会失效。
-4. 新增附件时，先放到对应主题目录，再在 `index.html` 加入口。
+1. 修改前先按 GitHub 手册检查仓库状态、更新相应分支；新任务可使用 `update-docs` 这样的分支名。
+2. 改教案时，更新 `index.html`，并同步页面顶部的“最后更新”日期。
+3. 修改已有附件时，尽量保留文件名和路径。确需重命名或移动目录时，同步修正首页、README 和其他文档里的引用。
+4. 新增附件时，放入对应编号目录，并在首页对应课程和 README 中补上入口。
+5. 用浏览器检查首页，确认课程安排、附件链接和模板说明一致，再提交并推送自己的分支。
+6. 通过 Pull Request 评审并合并到 `main`。把分支推送到 GitHub 不等于已经合并到 `main`。
 
 ## 发布到 GitHub Pages
 
-仓库上传到 GitHub 后，可以在仓库的 Settings -> Pages 中选择从 `main` 分支发布。发布后，访问地址通常是：
+如需把课程首页发布成网页，可由仓库维护者在 GitHub 上配置：
 
-`https://你的GitHub用户名.github.io/xborder_ecom_ai_pm/`
+1. 打开仓库的 **Settings → Pages**。
+2. 在 **Build and deployment → Source** 中选择 **Deploy from a branch**。
+3. 选择 **main** 分支和 **/(root)** 文件夹，点击 **Save**。
 
-之后只要继续更新同一个 `index.html` 并提交到 `main` 分支，网页地址会保持不变。
+配置方法见 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。部署完成后，以 Pages 页面显示的实际访问地址为准。
+
+按上述配置，后续改动合并并推送到远端 `main` 后，会触发网页更新；仅推送个人分支不会更新正式网页。
