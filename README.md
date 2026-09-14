@@ -30,8 +30,8 @@
 | --- | --- |
 | `attachments/0. github-basics/` | [GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：命令窗口、clone / pull、分支、提交与推送、常见问题 |
 | `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
-| `attachments/2. product sense/` | [Day 02 产品需求提炼](<attachments/2. product sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product sense/产品需求清单模板.md>) |
-| `attachments/3. prd/` | [PRD 写作模板](<attachments/3. prd/PRD写作模板.md>)：先按第一周课程说明完成业务版，后续逐步完善 |
+| `attachments/2. product-sense/` | [Day 02 产品需求提炼](<attachments/2. product-sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product-sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product-sense/产品需求清单模板.md>) |
+| `attachments/3. prd/` | [Day 03 编写指南](<attachments/3. prd/Day03业务版PRD编写指南.md>)、[竞品对比助手业务版 PRD](<attachments/3. prd/业务版PRD-竞品对比助手.md>)、[完整 PRD 模板](<attachments/3. prd/PRD写作模板.md>)：先完成业务规则与验收，后续逐步完善 |
 
 ## 首次下载到电脑
 
