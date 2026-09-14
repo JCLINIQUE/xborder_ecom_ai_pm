@@ -150,15 +150,6 @@
     <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。</p>
     <p class="course-setup"><strong>项目与准备：</strong>主案例经调研确定范围，另做一个学习 PWA。老师提前准备示范案例、学习 PWA、评测样例及实验教学数据；学员在独立日集中记录问题，下次交流处理。</p>
     <nav class="course-jumps" aria-label="30天教学安排导航"><a href="#week-1">第一周</a><a href="#week-2">第二周</a><a href="#week-3">第三周</a><a href="#week-4">第四周</a><a href="#closing">结课</a><a href="#ai-learning-map">Day 09 知识地图</a></nav>
-    <div class="resource-panel" id="user-research-materials">
-      <h3>Day 01 用户调研附件</h3>
-      <p>这组材料用于课堂示范和学员作业：先读方法，再按模板写报告，最后对照真实阶段性样例。</p>
-      <ul>
-        <li><a href="attachments/user-research/怎么做用户调研.md">怎么做用户调研</a></li>
-        <li><a href="attachments/user-research/用户调研报告模板.md">用户调研报告模板</a></li>
-        <li><a href="attachments/user-research/竞品分析用户调研报告示例.md">竞品分析用户调研报告示例</a></li>
-      </ul>
-    </div>
     <div class="resource-panel" id="github-basics">
       <h3>GitHub 小白使用手册</h3>
       <p>给没有编程背景的维护者和使用者，说明 GitHub 是什么、如何看文件、如何更新课程页面和附件。</p>
@@ -168,9 +159,10 @@
     </div>
     <div id="plan-30">
     <details class="study-plan" id="week-1" open>
-      <summary>第一周 · 从用户研究到首版产品<span class="plan-hours">Day 01–07 · 5 次交流 · 2 天独立练习</span></summary>
+      <summary>第一周 · 调研、需求提炼、PRD、原型图与 Demo<span class="plan-hours">Day 01–07 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
-        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 01 用竞品分析示范调研；Day 02–07 以“关键词跟踪助手”为例，沿用同一份调研，把需求做成 Demo，再让目标运营试用。实际选题可替换，后续需求、开发与测试须跟随同一项目。</p>
+        <p class="learning-map-intro"><strong>本周项目线：</strong>调研 → 产品需求提炼 → 产品 PRD → 产品原型图 → 产品 Demo，五次交流各推进一步。</p>
+        <p class="learning-map-intro"><strong>PRD 使用范围：</strong>第一周按<a href="attachments/product_requirement_document/PRD写作模板.md">PRD 模板中的第一周课程说明</a>完成业务版，写清问题、范围、流程、输入输出、异常与功能验收；AI 方案、模型选型与质量评测在后续学到时补写。</p>
         <table class="day-table" aria-label="第1至7天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
           <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
@@ -179,47 +171,56 @@
               <th scope="row"><span class="day-number">Day 01</span></th>
               <td><span class="day-label">教学安排</span><strong class="lesson-topic">老师示范：竞品分析调研</strong>对齐岗位与路线。老师访谈学员的竞品分析工作，共写报告；对照调研提纲与报告模板，找出未问清的流程和判断依据。</td>
               <td><span class="day-label">目标</span>看懂如何把业务访谈写成调研报告。</td>
-              <td><span class="day-label">产出</span>竞品调研示例、提纲与报告模板。</td>
+              <td><span class="day-label">产出</span>竞品调研示例、提纲与报告模板。
+                <div id="user-research-materials">
+                  <strong>用户调研附件</strong>
+                  <ul>
+                    <li><a href="attachments/user-research/怎么做用户调研.md">怎么做用户调研</a></li>
+                    <li><a href="attachments/user-research/用户调研报告模板.md">用户调研报告模板</a></li>
+                    <li><a href="attachments/user-research/用户调研报告-亚马逊精品运营-20260914.md">亚马逊精品运营调研报告示例</a></li>
+                  </ul>
+                </div>
+              </td>
             </tr>
             <tr id="day-02" data-study-day="30-2" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 02</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">学员实践：调研关键词跟踪</strong>参考 Day 01 的案例与模板，访谈一位做关键词跟踪的运营（如同事），观察他怎样选词、查数和判断是否调整；独立写报告，老师评审。</td>
-              <td><span class="day-label">目标</span>弄清目标用户的现有做法与困难。</td>
-              <td><span class="day-label">产出</span>关键词跟踪调研报告、现状流程与样例资料。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品需求提炼</strong>先评审主项目调研，缺少证据时补问用户；从现有流程中提炼痛点、用户目标与产品需求，按价值、频率和实现难度确定优先级与首版范围。</td>
+              <td><span class="day-label">目标</span>把用户描述的问题转成有依据的产品需求，解释为什么先做这一项。</td>
+              <td><span class="day-label">产出</span>主项目调研报告、需求清单（含证据与优先级）、首版范围。</td>
             </tr>
             <tr id="day-03" data-study-day="30-3" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 03</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">确定这款工具的首版需求</strong>师生从 Day 02 报告选出这款工具要解决的问题；例如帮运营找出待复核的排名变化。写清首版范围、输入输出与验收标准。</td>
-              <td><span class="day-label">目标</span>每项需求都能对应调研发现。</td>
-              <td><span class="day-label">产出</span>关键词跟踪助手的需求说明（PRD）。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品 PRD</strong>依据 Day 02 的需求清单，按模板的第一周范围写业务版 PRD：目标用户、范围、输入输出、操作流程、功能规则、异常与人工复核。老师示范用“给定输入 → 预期结果”写功能验收，学员完成并评审。</td>
+              <td><span class="day-label">目标</span>把选定需求写到可以画原型、制作 Demo 和检查结果的程度。</td>
+              <td><span class="day-label">产出</span>业务版 PRD、正常与异常验收样例、待确认事项。</td>
             </tr>
             <tr id="day-04" data-study-day="30-4" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 04</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">按需求做出关键词跟踪 Demo</strong>依据 Day 03 的 PRD 画原型，老师指导学员搭建 Demo；如“导入排名表→展示变化→人工复核”，跑通核心任务。</td>
-              <td><span class="day-label">目标</span>得到可供目标运营试用的版本。</td>
-              <td><span class="day-label">产出</span>该工具的原型、最小 Demo。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品原型图</strong>把 Day 03 的 PRD 转成页面与交互：画出导入资料、查看变化、人工复核等关键页面，标注按钮行为、页面跳转和空白、加载、错误状态；老师带学员逐步走查并同步修订 PRD。</td>
+              <td><span class="day-label">目标</span>说明每项需求在界面上如何呈现、用户如何完成任务。</td>
+              <td><span class="day-label">产出</span>关键页面原型图、页面流转与交互说明、修订后的 PRD。</td>
             </tr>
             <tr id="day-05" data-study-day="30-5" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 05</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">为这个 Demo 设计测试</strong>老师用 Day 04 的 Demo 示范测试设计。围绕“找出需要复核的排名变化”，确定任务、预期结果与观察项，现场试跑。</td>
-              <td><span class="day-label">目标</span>明确测什么、怎么判定任务完成。</td>
-              <td><span class="day-label">产出</span>Demo 测试任务、预期结果与记录表。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品 Demo</strong>依据 PRD 和 Day 04 的原型图，老师指导学员搭建最小 Demo，跑通“导入排名表 → 展示变化 → 人工复核”；老师示范按 Day 03 的验收样例检查功能，标明尚未实现或使用模拟数据的部分。</td>
+              <td><span class="day-label">目标</span>把原型变成可以实际操作、检查输入输出的产品 Demo。</td>
+              <td><span class="day-label">产出</span>可运行的最小 Demo、功能检查记录与待完善项。</td>
             </tr>
             <tr id="day-06" data-study-day="30-6" data-mode="independent">
               <th scope="row"><span class="day-number">Day 06</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">请目标运营试用这个 Demo</strong>邀请 Day 02 受访者或同类运营，用 Day 04 的 Demo 完成 Day 05 的任务；记录变化识别是否正确、操作卡点和耗时。</td>
-              <td><span class="day-label">目标</span>验证用户能否用它完成关键词复核。</td>
-              <td><span class="day-label">产出</span>Demo 试用记录、问题清单；模拟须注明。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完善 Demo 并按 PRD 自查</strong>补齐 Day 05 的待完善项，沿用课堂示范的验收样例检查正常与异常输入；记录实际结果、与 PRD 或原型的差异及待修复问题。</td>
+              <td><span class="day-label">目标</span>独立检查 Demo 是否符合已经写清的需求与交互规则。</td>
+              <td><span class="day-label">产出</span>完善后的 Demo、逐项自查记录与问题清单。</td>
             </tr>
             <tr id="day-07" data-study-day="30-7" data-mode="independent">
               <th scope="row"><span class="day-number">Day 07</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">根据试用结果修改 Demo</strong>按 Day 06 记录修复关键问题，用同一任务复测；整理修改依据和个人贡献，形成简历初稿。</td>
-              <td><span class="day-label">目标</span>确认问题是否修好，讲清迭代依据。</td>
-              <td><span class="day-label">产出</span>修改后的 Demo、复测记录、简历初稿。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">修复问题并整理五项产出</strong>按 Day 06 记录修复关键问题，用相同样例复查；同步 PRD、原型图与 Demo，整理调研依据和需求取舍，录制一次完整任务演示，并为 Day 08 之后的用户试用预约目标运营。</td>
+              <td><span class="day-label">目标</span>让调研、需求清单、PRD、原型图和 Demo 相互对应，讲清每一步的依据。</td>
+              <td><span class="day-label">产出</span>五项项目材料、Demo 演示、修复记录与待确认事项。</td>
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>同一个项目有完整的调研报告、需求说明、Demo 和试用记录；能解释需求从哪来、测试发现了什么、为何这样改。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>完成同一项目的调研报告、产品需求清单、业务版 PRD、产品原型图和可运行 Demo；能从一条调研证据讲到需求取舍、功能规则、页面交互和实际演示，并说明功能检查结果与未完成项。</p>
       </div>
     </details>
     <details class="study-plan" id="week-2">
@@ -231,13 +232,13 @@
           <tbody>
             <tr id="day-08" data-study-day="30-8" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 08</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">迭代复盘与简历评审</strong>复盘研究和反馈如何影响产品；老师追问简历中的个人贡献、结果与证据，学员现场改写，课后补齐材料。</td>
-              <td><span class="day-label">目标</span>用具体事实解释设计变化和个人能力。</td>
-              <td><span class="day-label">产出</span>版本对照、修订简历与待补证项。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">Demo 评审与用户测试设计</strong>评审第一周的五项产出与功能检查结果；老师用 Demo 示范如何设计用户任务、预期结果和观察记录，学员现场试跑。课后请预约的目标运营试用，记录操作卡点与耗时；角色模拟须注明。</td>
+              <td><span class="day-label">目标</span>学会观察用户能否用 Demo 完成任务，区分功能自查与用户测试。</td>
+              <td><span class="day-label">产出</span>用户测试任务、记录表、课后试用记录与改进问题。</td>
             </tr>
             <tr id="day-09" data-study-day="30-9" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 09</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">老师展示学习 PWA 与 AI 知识地图</strong>老师展示学习 PWA，讲清 AI PM 的六块知识范围；选一个概念，示范查资料→业务例子→自测。课后学员开始做自己的版本。 <a href="#ai-learning-map">查看知识地图</a></td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">试用反馈与 AI 知识地图</strong>先简要复盘 Day 08 试用记录，明确一项待改需求。老师展示学习 PWA，讲清 AI PM 的六块知识范围；选一个概念，示范查资料→业务例子→自测。课后学员开始做自己的版本。 <a href="#ai-learning-map">查看知识地图</a></td>
               <td><span class="day-label">目标</span>知道 AI 要学什么、怎样查证，以及怎样检验理解。</td>
               <td><span class="day-label">产出</span>个人学习地图、概念样例、PWA 需求草图。</td>
             </tr>

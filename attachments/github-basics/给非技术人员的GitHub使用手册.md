@@ -53,7 +53,48 @@ attachments/
 
 建议保留一个可编辑版本，例如 `.md` 或 `.docx`。需要发给别人时，再导出 PDF。
 
-## 4. Branch 是什么
+## 4. Windows 和 Mac 怎么打开命令窗口
+
+命令窗口就是输入 `git clone`、`git pull` 等命令的地方。本手册中，Windows 使用 **Git Bash**，Mac 使用系统自带的 **终端（Terminal）**。后面的命令都在对应窗口里输入，每行输入后按回车执行。
+
+### Windows：打开 Git Bash
+
+1. 如果还没安装 Git，先到 [Git for Windows 官网](https://gitforwindows.org/) 下载并安装，通常保留默认选项即可。安装后会带有 Git Bash；已经安装过的可以跳过这一步。
+2. 点击任务栏的“开始”按钮，搜索 `Git Bash`，点击打开。
+3. 也可以先在文件资源管理器中打开想存放项目的文件夹，在空白处右键，选择 **Open Git Bash here / Git Bash Here**。Windows 11 可能需要先点“显示更多选项”。这样打开的窗口会直接位于这个文件夹中。右键入口由 [Git for Windows 的文件夹菜单集成](https://gitforwindows.org/#features) 提供。
+
+如果右键菜单没有 Git Bash 选项，先用“开始”菜单搜索打开，再按下一节的说明进入目标文件夹。
+
+### Mac：打开终端（Terminal）
+
+1. 同时按下 **Command（⌘）+ 空格**，打开 Spotlight 搜索。
+2. 输入 `终端` 或 `Terminal`。
+3. 选中“终端”应用，按回车打开。这是通过 [Spotlight 搜索并打开应用](https://support.apple.com/guide/mac-help/search-with-spotlight-mchlp1008/mac) 的方式。
+
+也可以打开 **访达（Finder）→ 应用程序 → 实用工具 → 终端**。终端是 Mac 自带的应用，无需单独下载。参见 [Apple 的终端打开说明](https://support.apple.com/zh-cn/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac)。
+
+### 打开后：检查 Git 是否可用
+
+在 Windows 的 Git Bash 或 Mac 的终端中输入：
+
+```bash
+git --version
+```
+
+如果显示 `git version` 和版本号，就可以继续下一节。
+
+- **Windows**：如果提示找不到 `git` 命令，确认已安装 Git for Windows，并关闭窗口后重新打开 Git Bash。
+- **Mac**：如果系统提示安装命令行工具，按提示完成安装；如果尚未安装且没有弹出提示，可以执行下面的命令，按弹窗完成安装。Git 随这些工具一起提供，参见 [Git 官方的 Mac 安装说明](https://git-scm.com/install/mac)。
+
+```bash
+xcode-select --install
+```
+
+上面这条安装命令只用于 Mac。安装完成后，再运行一次 `git --version` 确认。
+
+打开命令窗口后，还需要确认自己位于正确的文件夹：首次克隆时进入想存放项目的位置；已有仓库时进入仓库文件夹。具体操作见下一节。
+
+## 5. Branch 是什么
 
 Branch 可以理解成“从正式版本复制出来的一份草稿”。正式版本通常放在 `main` 分支上；如果要做较大的调整，可以先在新分支里改，确认没问题后再合并回 `main`。
 
@@ -74,7 +115,7 @@ Branch 可以理解成“从正式版本复制出来的一份草稿”。正式�
 
 **情况 A：这台电脑还没有克隆过这个项目。**
 
-打开 Terminal，先进入你想存放项目的文件夹，再执行：
+按上一节打开命令窗口（Windows 用 Git Bash，Mac 用终端），先进入你想存放项目的文件夹，再执行：
 
 ```bash
 git clone 仓库网址
@@ -99,7 +140,7 @@ cd 文件夹名
 cd 文件夹名
 ```
 
-“文件夹名”要换成实际名称。如果当前不在目标文件夹的上一层，可以把它换成完整路径。Terminal 提示符通常只显示最后一级文件夹名，两层同名目录看起来可能一样，要用下面的命令确认。
+“文件夹名”要换成实际名称。如果当前不在目标文件夹的上一层，可以把它换成完整路径。命令窗口中的提示符不一定显示完整路径，两层同名目录看起来可能一样，要用下面的命令确认。
 
 ### 在分支上修改的完整流程
 
@@ -112,7 +153,7 @@ pwd
 git rev-parse --show-toplevel
 ```
 
-`pwd` 显示当前目录，第二行显示 Git 仓库根目录。如果出现 `fatal: not a git repository`，说明还没进入有效的仓库；先按第 5 节的说明检查目录，再继续。
+`pwd` 显示当前目录，第二行显示 Git 仓库根目录。如果出现 `fatal: not a git repository`，说明还没进入有效的仓库；先按第 6 节的说明检查目录，再继续。
 
 第二步，检查当前分支和本地改动：
 
@@ -245,7 +286,7 @@ git push
 
 如果冲突发生在 Pull Request 页面上，优先在 GitHub 页面看冲突文件；如果不确定该保留哪一版，不要硬合并，找维护者一起确认。
 
-## 5. 更新注意事项与常见问题
+## 6. 更新注意事项与常见问题
 
 每次更新首页，建议检查三件事：
 
@@ -281,7 +322,7 @@ git rev-parse --show-toplevel
 git status
 ```
 
-如果只有手动创建的文件夹或 GitHub 下载的 ZIP 解压文件，没有 Git 版本记录，应按第 4 节重新克隆到一个未占用的位置。不要为了消除这条报错在外层执行 `git init`；那会另建一个仓库，并不会让你进入原来的项目仓库。
+如果只有手动创建的文件夹或 GitHub 下载的 ZIP 解压文件，没有 Git 版本记录，应按第 5 节重新克隆到一个未占用的位置。不要为了消除这条报错在外层执行 `git init`；那会另建一个仓库，并不会让你进入原来的项目仓库。
 
 **为什么提示 `a branch named 'update-docs' already exists`？**
 
@@ -307,7 +348,7 @@ GitHub 已经不支持用账号密码做 Git 推送。现在一般用 SSH key �
 
 正在频繁修改的内容，优先用 Markdown 或 docx。定稿后再导出 PDF。
 
-## 6. 给维护者的最小命令清单
+## 7. 给维护者的最小命令清单
 
 以下按场景选用；每行成功后再继续。示例使用 `update-docs` 分支，换名时要保持前后一致。
 
