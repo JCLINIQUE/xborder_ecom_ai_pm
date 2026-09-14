@@ -15,7 +15,8 @@ GitHub 可以做三件事：
 | 保存一次版本 | Commit / 提交 | 记录一次改动，附带一句说明 |
 | 上传到网上 | Push / 推送 | 把本地改动同步到 GitHub |
 | 从网上更新到本地 | Pull / 拉取 | 把 GitHub 上的新内容同步到电脑 |
-| 网站预览 | GitHub Pages | 把 `index.html` 发布成一个网页链接 |
+| 临时修改版本 | Branch / 分支 | 在不影响正式版本的情况下试改内容 |
+| 网站预览 | GitHub Pages | 把 `index.html` 发布成网页链接 |
 
 你不需要先学会写代码。对这个项目来说，重点是会看文件、改文件、提交和发布。
 
@@ -51,84 +52,153 @@ attachments/
 
 建议保留一个可编辑版本，例如 `.md` 或 `.docx`。需要发给别人时，再导出 PDF。
 
-## 4. 日常更新流程
+## 4. Branch 是什么
 
-每次更新可以按这四步走：
+Branch 可以理解成“从正式版本复制出来的一份草稿”。正式版本通常放在 `main` 分支上；如果要做较大的调整，可以先在新分支里改，确认没问题后再合并回 `main`。
 
-1. 在电脑上修改文件。
-2. 用浏览器或 GitHub 页面检查内容是否正确。
-3. `commit` 保存这次改动。
-4. `push` 上传到 GitHub。
+常见用法：
 
-如果只改课程首页：
+| 场景 | 建议做法 |
+| --- | --- |
+| 改错字、更新日期、小改附件 | 直接在 `main` 上改 |
+| 大幅调整课程结构 | 新建一个分支，确认后再合并 |
+| 想尝试两个不同版本 | 分别建两个分支，比较后保留一个 |
+| 多个人同时维护 | 每个人在自己的分支改，最后统一合并 |
 
-```bash
-git add index.html
-git commit -m "Update teaching plan"
-git push
-```
+### 在分支上修改的完整流程
 
-如果同时改了附件：
+第一步，确认自己在项目文件夹里：
 
 ```bash
-git add index.html attachments
-git commit -m "Update teaching plan and attachments"
-git push
+cd 本地项目文件夹路径
 ```
 
-提交说明不用写很长，但要让以后的人看得懂。例如：
-
-- `Update teaching plan`
-- `Add GitHub beginner guide`
-- `Update user research template`
-- `Add user research sample`
-
-## 5. 怎么知道自己改了什么
-
-提交前先看状态：
-
-```bash
-git status
-```
-
-常见提示：
-
-| 看到什么 | 意思 | 下一步 |
-| --- | --- | --- |
-| `modified: index.html` | 首页被改过 | 确认后 `git add index.html` |
-| `untracked files` | 新文件还没被 Git 管理 | 用 `git add 文件名` 加进去 |
-| `nothing to commit` | 没有新的改动 | 不需要 commit |
-
-## 6. 如果只想在 GitHub 网页上改
-
-适合小改，比如改错字、更新日期、补一个链接。
-
-1. 打开 GitHub 仓库。
-2. 点要修改的文件。
-3. 点右上角铅笔图标。
-4. 修改内容。
-5. 页面底部填写提交说明。
-6. 点 `Commit changes`。
-
-网页上改完后，如果你电脑本地也要保持最新，回到终端执行：
+第二步，先把本地内容更新到最新：
 
 ```bash
 git pull
 ```
 
-## 7. GitHub Pages 是什么
+第三步，确认自己要在哪个分支上修改。
 
-GitHub Pages 可以把仓库里的 `index.html` 变成一个可访问的网址。
+如果分支已经存在，切换过去：
 
-发布后，使用者只需要打开网页，不需要懂 GitHub，也不需要下载文件。
+```bash
+git switch 你的分支名
+```
 
-本项目适合这样用：
+如果这是一个新任务，还没有对应分支，就新建并切换过去：
 
-- GitHub 仓库：给维护者看，管理文件和历史版本。
-- GitHub Pages 网页：给学习者看，打开就是课程首页。
-- `attachments/` 附件：从课程首页点进去读或下载。
+```bash
+git switch -c 你的分支名
+```
 
-## 8. 更新 `index.html` 时注意什么
+`-c` 表示创建新分支。分支名要换成实际名称。对新手来说，可以先用自己的名字做分支名；如果团队要求按任务命名，也可以用任务名。
+
+例如，第一次开始维护材料，可以新建自己的分支：
+
+```bash
+git switch -c 你的名字
+```
+
+下次继续改这个分支时，不再加 `-c`：
+
+```bash
+git switch 你的名字
+```
+
+第四步，确认已经在正确分支上：
+
+```bash
+git branch --show-current
+```
+
+第五步，修改文件。比如更新 `index.html`，或者新增 `attachments/` 里的材料。
+
+第六步，查看改了哪些文件：
+
+```bash
+git status
+```
+
+第七步，把这次要提交的文件加入版本记录。常用写法是：
+
+```bash
+git add index.html attachments
+```
+
+如果确定当前所有改动都要提交，也可以用：
+
+```bash
+git add -A
+```
+
+第八步，提交这次改动。引号里简短描述这次改了什么：
+
+```bash
+git commit -m "简短描述这次改了什么"
+```
+
+例如：
+
+- `git commit -m "Update user research template"`
+- `git commit -m "Add GitHub beginner guide"`
+- `git commit -m "Revise week one plan"`
+
+第九步，把这个分支上传到 GitHub。这里也要使用同一个分支名：
+
+```bash
+git push -u origin 你的分支名
+```
+
+例如：
+
+```bash
+git push -u origin 你的名字
+```
+
+上传后，GitHub 页面通常会提示创建 Pull Request。Pull Request 可以理解成“申请把这份草稿合并到正式版本”。确认内容没问题后，再把它合并到 `main`。
+
+如果只是自己维护的小项目，也可以先不强制使用分支；但只要是大改动、多人协作、或者不确定是否采用的内容，用分支会更清楚。
+
+### 遇到 conflict 怎么办
+
+Conflict 是“同一个地方被两边都改了，Git 不知道该保留哪一版”。常见情况是：你本地改了文件，GitHub 上同一个文件也被别人改了；或者你把分支合并回 `main` 时，两边改到了同一段内容。
+
+如果 `git pull` 或 `git push` 提示 conflict，先不要反复 push。先看状态：
+
+```bash
+git status
+```
+
+如果看到类似 `both modified`、`unmerged paths`，说明有文件需要手动处理。打开这些文件，会看到类似这样的标记：
+
+```text
+<<<<<<< HEAD
+本地这一版内容
+=======
+另一边的内容
+>>>>>>> 分支名
+```
+
+处理方法是：读两边内容，决定保留哪一版，或者合并成新的一版。处理完后，把 `<<<<<<<`、`=======`、`>>>>>>>` 这些标记全部删掉。
+
+然后执行：
+
+```bash
+git add 冲突文件名
+git commit -m "Resolve merge conflict"
+```
+
+如果冲突发生在 `pull` 之后，处理完再继续：
+
+```bash
+git push
+```
+
+如果冲突发生在 Pull Request 页面上，优先在 GitHub 页面看冲突文件；如果不确定该保留哪一版，不要硬合并，找维护者一起确认。
+
+## 5. 更新注意事项与常见问题
 
 每次更新首页，建议检查三件事：
 
@@ -137,8 +207,6 @@ GitHub Pages 可以把仓库里的 `index.html` 变成一个可访问的网址�
 3. 文件名和路径是否保持稳定。
 
 如果你已经把某个附件链接发给别人，尽量不要改文件名。要改内容，就直接更新原文件。
-
-## 9. 常见问题
 
 **我是不是每次都要重新建仓库？**
 
@@ -160,12 +228,12 @@ GitHub 已经不支持用账号密码做 Git 推送。现在一般用 SSH key �
 
 正在频繁修改的内容，优先用 Markdown 或 docx。定稿后再导出 PDF。
 
-## 10. 给维护者的最小命令清单
+## 6. 给维护者的最小命令清单
 
 进入项目：
 
 ```bash
-cd /Users/kkx/Desktop/benchmark/xborder_ecom_ai_pm
+cd 本地项目文件夹路径
 ```
 
 查看状态：
