@@ -1,3 +1,30 @@
 .DS_Store
 *.tmp
 *.bak
+
+# Local media captures
+*.mov
+*.mp4
+*.m4v
+*.webm
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.hevc
+
+# Local audio captures
+*.m4a
+*.mp3
+*.wav
+*.aac
+
+# Local compressed exports
+*.zip
+*.7z
+*.rar
+
+# App and editor metadata
+Thumbs.db
+*.swp
+*.swo
