@@ -10,6 +10,7 @@
 - `attachments/user-research/怎么做用户调研.md`：用户调研方法说明。
 - `attachments/user-research/用户调研报告模板.md`：可复制填写的用研报告模板。
 - `attachments/user-research/竞品分析用户调研报告示例.md`：基于一次竞品分析访谈整理的阶段性示例。
+- `attachments/github-basics/给非技术人员的GitHub使用手册.md`：给非技术人员看的 GitHub 科普和日常维护手册。
 
 ## 怎么更新
 
