@@ -32,6 +32,7 @@
 | `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
 | `attachments/2. product-sense/` | [Day 02 产品需求提炼](<attachments/2. product-sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product-sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product-sense/产品需求清单模板.md>) |
 | `attachments/3. prd/` | [Day 03 编写指南](<attachments/3. prd/Day03业务版PRD编写指南.md>)、[竞品对比助手业务版 PRD](<attachments/3. prd/业务版PRD-竞品对比助手.md>)、[完整 PRD 模板](<attachments/3. prd/PRD写作模板.md>)：先完成业务规则与验收，后续逐步完善 |
+| `attachments/4. prototype/` | [Day 04 原型设计指南](<attachments/4. prototype/Day04原型设计指南.md>)、[页面交互与三张线框](<attachments/4. prototype/页面与交互说明-竞品对比助手.md>)、[XMind 导入大纲](<attachments/4. prototype/竞品对比助手-XMind导入大纲.md>)：用 Figma 或 XMind 设计并按 PRD 走查 |
 
 ## 首次下载到电脑
 

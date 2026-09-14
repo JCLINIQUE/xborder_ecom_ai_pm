@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc"><title id="title">对比与复核</title><desc id="desc">Day 04 静态低保真绘制参考。全部商品与资料均为教学模拟。框内按钮不具有实际交互。</desc><rect width="1200" height="1000" fill="#F6F8FB"/>
+<text x="32" y="46" fill="#243449" font-size="28" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">竞品对比助手</text>
+<text x="250" y="46" fill="#243449" font-size="23" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">/ 对比与复核</text>
+<rect x="930" y="23" width="238" height="31" rx="5" fill="#EDF3FC" stroke="#EDF3FC"/>
+<text x="941" y="45" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">教学模拟 · 静态线框</text>
+<rect x="32" y="77" width="362" height="57" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="52" y="112" fill="#637286" font-size="20" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">01 资料录入</text>
+<rect x="419" y="77" width="362" height="57" rx="6" fill="#245AA8" stroke="#245AA8"/>
+<text x="439" y="112" fill="#FFF" font-size="20" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">02 对比与复核</text>
+<rect x="806" y="77" width="362" height="57" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="826" y="112" fill="#637286" font-size="20" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">03 整理与导出</text>
+<text x="32" y="161" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">任务：SSD 价格位置与图片表达｜日本站 · JPY · 2026-09-10</text>
+<rect x="32" y="184" width="1136" height="293" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="52" y="219" fill="#243449" font-size="22" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">价格位置</text>
+<text x="220" y="219" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">自家 S1：9,800 日元｜1 TB · 2.5 英寸 · SATA · 含税标价</text>
+<path d="M52 235H1148" stroke="#CFD6E0"/>
+<text x="52" y="261" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">竞品与标价</text>
+<text x="259" y="261" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">比较状态</text>
+<text x="522" y="261" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">结果或原因</text>
+<text x="944" y="261" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">仅对价格操作</text>
+<text x="52" y="300" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">A1 · 8,980</text>
+<text x="259" y="300" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">可比较</text>
+<text x="522" y="300" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">低 820 日元（价差 −820）</text>
+<text x="522" y="323" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源 S1-P / A1-P</text>
+<text x="944" y="300" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">修改资料｜排除价格</text>
+<path d="M52 337H1148" stroke="#CFD6E0"/>
+<text x="52" y="366" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">B1 · 12,800</text>
+<text x="259" y="366" fill="#637286" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">本轮不直接比较</text>
+<text x="522" y="366" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">容量 2 TB ≠ 自家 1 TB</text>
+<text x="522" y="389" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">不计算价差</text>
+<text x="944" y="366" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源｜修改资料</text>
+<path d="M52 403H1148" stroke="#CFD6E0"/>
+<text x="52" y="432" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1 · 8,480</text>
+<text x="259" y="432" fill="#637286" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补信息</text>
+<text x="522" y="432" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">缺形态、接口与价格条件</text>
+<text x="522" y="455" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">不计算价差</text>
+<text x="944" y="432" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源｜补资料</text>
+<rect x="32" y="494" width="1136" height="294" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="52" y="529" fill="#243449" font-size="22" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图片表达</text>
+<text x="220" y="529" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">自家 S1：图 5 列出已核实的兼容信息｜查看 S1-I</text>
+<path d="M52 545H1148" stroke="#CFD6E0"/>
+<text x="52" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">竞品</text>
+<text x="174" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">比较状态</text>
+<text x="369" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">人工观察与边界</text>
+<text x="944" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">仅对图片操作</text>
+<text x="52" y="610" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">A1</text>
+<text x="174" y="610" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">表达参考</text>
+<text x="369" y="610" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图 2 展示兼容信息；自家在图 5。</text>
+<text x="369" y="633" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源 A1-I / S1-I</text>
+<text x="944" y="610" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源｜修改｜排除图片</text>
+<path d="M52 647H1148" stroke="#CFD6E0"/>
+<text x="52" y="676" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">B1</text>
+<text x="174" y="676" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">表达参考</text>
+<text x="369" y="676" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图 2 用图示表达适用设备；容量 2 TB。</text>
+<text x="369" y="699" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">与自家容量不同；参数与兼容范围不能照搬。</text>
+<text x="944" y="676" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源｜修改｜排除图片</text>
+<path d="M52 713H1148" stroke="#CFD6E0"/>
+<text x="52" y="742" fill="#243449" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1</text>
+<text x="174" y="742" fill="#637286" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补资料</text>
+<text x="369" y="742" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">无图片位置、人工摘要及来源。</text>
+<text x="369" y="765" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">不生成图片差异；保留其他商品的对照。</text>
+<text x="944" y="742" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">补图片资料</text>
+<rect x="32" y="805" width="1136" height="87" rx="6" fill="#EDF3FC" stroke="#EDF3FC"/>
+<text x="52" y="837" fill="#243449" font-size="19" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">可选：生成可编辑的结论草稿</text>
+<text x="52" y="869" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">模拟演示须标注；生成后仍未复核。失败时保留资料，可手动继续。</text>
+<rect x="920" y="824" width="227" height="42" rx="5" fill="#FFF" stroke="#245AA8"/>
+<text x="936" y="851" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">生成草稿（可选）</text>
+<rect x="32" y="911" width="178" height="42" rx="5" fill="#FFF" stroke="#245AA8"/>
+<text x="48" y="938" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">← 返回资料录入</text>
+<text x="235" y="938" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">排除需写用途与理由；进入下一页不要求已确认。</text>
+<rect x="982" y="911" width="186" height="42" rx="5" fill="#245AA8" stroke="#245AA8"/>
+<text x="998" y="938" fill="#FFF" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">整理导出 →</text>
+<text x="32" y="979" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">Day 04 · 基于业务版 PRD 的教学绘制参考；尚待真实任务验证。</text>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc"><title id="title">资料录入</title><desc id="desc">Day 04 静态低保真绘制参考。全部商品与资料均为教学模拟。框内按钮不具有实际交互。</desc><rect width="1200" height="1000" fill="#F6F8FB"/>
+<text x="32" y="46" fill="#243449" font-size="28" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">竞品对比助手</text>
+<text x="250" y="46" fill="#243449" font-size="23" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">/ 资料录入</text>
+<rect x="930" y="23" width="238" height="31" rx="5" fill="#EDF3FC" stroke="#EDF3FC"/>
+<text x="941" y="45" fill="#245AA8" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">教学模拟 · 静态线框</text>
+<rect x="32" y="77" width="362" height="57" rx="6" fill="#245AA8" stroke="#245AA8"/>
+<text x="52" y="112" fill="#FFF" font-size="20" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">01 资料录入</text>
+<rect x="419" y="77" width="362" height="57" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="439" y="112" fill="#637286" font-size="20" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">02 对比与复核</text>
+<rect x="806" y="77" width="362" height="57" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="826" y="112" fill="#637286" font-size="20" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">03 整理与导出</text>
+<text x="32" y="161" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">任务：SSD 价格位置与图片表达｜日本站 · JPY · 2026-09-10</text>
+<rect x="32" y="184" width="247" height="711" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="50" y="219" fill="#243449" font-size="21" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">商品清单</text>
+<rect x="50" y="237" width="210" height="42" rx="5" fill="#FFF" stroke="#245AA8"/>
+<text x="66" y="264" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">载入教学样本</text>
+<rect x="50" y="290" width="210" height="42" rx="5" fill="#FFF" stroke="#245AA8"/>
+<text x="66" y="317" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">新建任务（空白）</text>
+<rect x="50" y="352" width="210" height="71" rx="5" fill="#FFF" stroke="#CFD6E0"/>
+<text x="63" y="379" fill="#243449" font-size="19" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">S1 · 自家</text>
+<text x="63" y="404" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">基准｜资料齐全</text>
+<rect x="50" y="435" width="210" height="71" rx="5" fill="#FFF" stroke="#CFD6E0"/>
+<text x="63" y="462" fill="#243449" font-size="19" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">A1 · 竞品</text>
+<text x="63" y="487" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">1 TB｜资料齐全</text>
+<rect x="50" y="518" width="210" height="71" rx="5" fill="#FFF" stroke="#CFD6E0"/>
+<text x="63" y="545" fill="#243449" font-size="19" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">B1 · 竞品</text>
+<text x="63" y="570" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">2 TB｜资料齐全</text>
+<rect x="50" y="601" width="210" height="71" rx="5" fill="#EDF3FC" stroke="#245AA8"/>
+<text x="63" y="628" fill="#243449" font-size="19" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1 · 竞品</text>
+<text x="63" y="653" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">已保存｜存在缺项</text>
+<text x="50" y="732" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">每个任务：</text>
+<text x="50" y="757" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">1 个自家＋至少 1 个竞品。</text>
+<text x="50" y="782" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">编号必须唯一，不能为空。</text>
+<rect x="299" y="184" width="869" height="711" rx="6" fill="#FFF" stroke="#CFD6E0"/>
+<text x="320" y="219" fill="#243449" font-size="21" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1 · 资料编辑</text>
+<rect x="950" y="195" width="194" height="31" rx="5" fill="#FFF5DB" stroke="#FFF5DB"/>
+<text x="961" y="217" fill="#8A6000" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">已保存 · 缺项待补</text>
+<text x="320" y="249" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">商品编号（必填）</text>
+<rect x="320" y="259" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="331" y="285" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1</text>
+<text x="590" y="249" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">角色</text>
+<rect x="590" y="259" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="601" y="285" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">竞品</text>
+<text x="860" y="249" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">ASIN（选填）</text>
+<rect x="860" y="259" width="284" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="871" y="285" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">未填写</text>
+<text x="320" y="320" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">站点</text>
+<rect x="320" y="330" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="331" y="356" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">日本站</text>
+<text x="590" y="320" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">币种</text>
+<rect x="590" y="330" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="601" y="356" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">JPY</text>
+<text x="860" y="320" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">采集日期</text>
+<rect x="860" y="330" width="284" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="871" y="356" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">2026-09-10</text>
+<text x="320" y="391" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">容量</text>
+<rect x="320" y="401" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="331" y="427" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">1 TB</text>
+<text x="590" y="391" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">形态</text>
+<rect x="590" y="401" width="250" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="601" y="427" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补 ▾</text>
+<text x="860" y="391" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">接口</text>
+<rect x="860" y="401" width="284" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="871" y="427" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补 ▾</text>
+<text x="320" y="462" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">价格金额（正数）</text>
+<rect x="320" y="472" width="250" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="331" y="498" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">8,480</text>
+<text x="590" y="462" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">价格口径</text>
+<rect x="590" y="472" width="250" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="601" y="498" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">未知 ▾</text>
+<text x="860" y="478" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">空值 → 待补，可保存</text>
+<text x="860" y="503" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">0 / 负数 / 非数字 → 报错</text>
+<text x="320" y="536" fill="#A43737" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">错误提示示例：请输入大于 0 的数字；纠正前不可保存，其他输入保留。</text>
+<text x="320" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">价格来源 · 材料名称或链接</text>
+<rect x="320" y="581" width="395" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="331" y="607" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">教学价格记录</text>
+<text x="735" y="571" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">具体位置</text>
+<rect x="735" y="581" width="409" height="38" rx="4" fill="#FFF" stroke="#CFD6E0"/>
+<text x="746" y="607" fill="#243449" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">C1 行 · 价格列</text>
+<text x="320" y="637" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">来源编号 C1-P｜链接仅供回查，系统不会自动读取或提取网页。</text>
+<text x="320" y="674" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图片位置</text>
+<rect x="320" y="684" width="250" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="331" y="710" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补</text>
+<text x="590" y="674" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图片观察摘要（人工填写）</text>
+<rect x="590" y="684" width="554" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="601" y="710" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补 · 不根据商品名推断</text>
+<text x="320" y="745" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">图片来源 · 材料名称或链接</text>
+<rect x="320" y="755" width="395" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="331" y="781" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补</text>
+<text x="735" y="745" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">具体位置</text>
+<rect x="735" y="755" width="409" height="38" rx="4" fill="#FFFCF3" stroke="#CFD6E0"/>
+<text x="746" y="781" fill="#8A6000" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">待补</text>
+<text x="320" y="812" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">缺项只影响对应比较；C1 待补不阻断 S1 与 A1 的有效对照。</text>
+<rect x="320" y="832" width="195" height="42" rx="5" fill="#FFF" stroke="#245AA8"/>
+<text x="336" y="859" fill="#245AA8" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">保存资料（含缺项）</text>
+<text x="535" y="859" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">当前没有格式错误，可以保存。</text>
+<text x="32" y="932" fill="#637286" font-size="17" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">先检查已设置自家商品和竞品；缺项会在下一页明确列出。</text>
+<rect x="982" y="906" width="186" height="42" rx="5" fill="#245AA8" stroke="#245AA8"/>
+<text x="998" y="933" fill="#FFF" font-size="17" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">生成对比 →</text>
+<text x="32" y="979" fill="#637286" font-size="16" font-weight="400" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">Day 04 · 基于业务版 PRD 的教学绘制参考；尚待真实任务验证。</text>
+</svg>
