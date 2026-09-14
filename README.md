@@ -7,15 +7,16 @@
 ## 这里有什么
 
 - `index.html`：主教案页面，后续按真实教学进展持续更新。
-- `attachments/user-research/怎么做用户调研.md`：用户调研方法说明。
-- `attachments/user-research/用户调研报告模板.md`：可复制填写的用研报告模板。
-- [亚马逊精品运营用户调研报告](attachments/user-research/用户调研报告-亚马逊精品运营-20260914.md)：结合 2026-09-14 的 Excel、访谈录屏和笔记整理的实际报告，后续补充统一更新此文件。
-- `attachments/user-research/竞品分析用户调研报告示例.md`：保留早期访谈提纲与阶段性总结，文内提供最新报告入口。
-- `attachments/github-basics/给非技术人员的GitHub使用手册.md`：给非技术人员看的 GitHub 科普和日常维护手册。
+- [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)：Day 01 的方法与可填写模板。
+- [亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>)：结合 2026-09-14 的 Excel、访谈录屏和笔记整理的实际报告，后续补充统一更新此文件。
+- [Day 02 产品需求提炼](<attachments/2. product sense/Day02产品需求提炼.md>)：竞品分析案例的判断过程、方案比较和完整需求清单示例。
+- [Day 02 课堂练习与参考答案](<attachments/2. product sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product sense/产品需求清单模板.md>)：现场练习与课后作业。
+- [PRD 写作模板](<attachments/3. product_requirement_document/PRD写作模板.md>)：Day 03 按第一周课程说明填写，后续继续完善。
+- [给非技术人员的 GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：GitHub 科普和日常维护手册。
 
 ## 怎么更新
 
-后续教案和配套材料统一在本目录维护；用户调研材料放在 `attachments/user-research/`。
+后续教案和配套材料统一在本目录维护；附件按 `attachments/` 下的课程编号目录归档，用户调研位于 `1. user-research/`，产品需求提炼位于 `2. product sense/`。
 
 1. 改教案时，直接更新根目录的 `index.html`。
 2. 页面顶部的“最后更新”日期同步改成当天日期。
