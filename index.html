@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="从跨境电商运营转向跨境电商 AI 产品：能力对照、岗位要求、算法和训练基础，以及 30 天、20 次交流的教学安排。">
+<title>跨境电商运营-&gt;跨境电商AI产品</title>
+<style>
+:root{color-scheme:light;--ink:#182c42;--muted:#5b6978;--blue:#194da2;--line:#dbe2e9;--light:#f3f6fa;--amber:#8a5a16}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:#fff;font:1rem/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:1080px;margin:auto;padding:42px 40px 60px}a{color:var(--blue);text-underline-offset:4px}header{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:2px solid var(--ink)}h1,h2,h3,p{margin:0}h1{font-size:1.85rem;line-height:1.4;letter-spacing:-.5px}header p{font-size:.875rem;color:var(--muted)}section{margin-top:30px}h2{font-size:1.25rem;line-height:1.5;margin-bottom:18px;display:flex;align-items:baseline;gap:12px}h2 .no{font:500 .875rem/1.5 ui-monospace,SFMono-Regular,monospace;color:var(--blue)}h3{font-size:1.125rem;line-height:1.5}.roles{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.role{padding:20px 24px}.role+.role{border-left:1px solid var(--line)}.role-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.judgment{font-size:.875rem;font-weight:600;color:var(--blue)}.later{color:var(--amber)}.role p+p{margin-top:10px}.role p{font-size:1rem}.threshold{color:var(--muted);font-size:.875rem!important;padding-top:12px;border-top:1px solid var(--line)}.takeaway{margin-top:14px;background:var(--light);padding:13px 18px;font-size:1rem}.comparison{width:100%;border-collapse:collapse;table-layout:fixed}.comparison col:first-child{width:17%}.comparison col:nth-child(2){width:34%}.comparison col:last-child{width:49%}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:14px 16px}thead th{font-size:.875rem;background:var(--light);font-weight:600;border-top:1px solid var(--line)}tbody th{font-size:1rem;font-weight:600;padding-left:16px}td{font-size:1rem}td:last-child{color:#304d70}.caveat{color:var(--muted);font-size:.875rem;margin-top:10px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:32px}.plan h3{padding:0 0 10px;border-bottom:1px solid var(--ink);font-size:1rem}.todo{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);cursor:pointer}.todo input{flex:0 0 auto;width:18px;height:18px;accent-color:var(--blue);margin:5px 0 0;cursor:pointer}.todo strong{display:block;font-size:1rem;font-weight:600}.todo small{display:block;font-size:.9375rem;line-height:1.75;color:var(--muted);margin-top:3px}.todo input:checked+span{opacity:.65}.todo input:checked+span strong{text-decoration:line-through;text-decoration-thickness:1px}.todo:focus-within{outline:2px solid var(--blue);outline-offset:4px}.teaching{margin-top:18px;padding:16px 20px;border-left:3px solid var(--blue);background:var(--light)}.teaching p+p{margin-top:5px}.teaching .secondary{font-size:.875rem;color:var(--muted)}footer{margin-top:28px;padding-top:15px;border-top:1px solid var(--line);font-size:.8125rem;line-height:1.7;color:var(--muted)}.mobile-label{display:none}
+@media(max-width:760px){main{padding:26px 20px 40px}header{display:block;padding-bottom:20px}header p{margin-top:8px}h1{font-size:1.6rem}.roles,.plans{grid-template-columns:1fr}.role{padding:20px}.role+.role{border-left:0;border-top:1px solid var(--line)}.plans{gap:24px}.comparison,.comparison tbody,.comparison tr,.comparison td,.comparison tbody th{display:block;width:100%}.comparison colgroup,.comparison thead{display:none}.comparison tr{border-top:1px solid var(--line);padding:15px 0}.comparison tr:last-child{border-bottom:1px solid var(--line)}.comparison tbody th{padding:0 0 7px;border:0}.comparison td{padding:5px 0;border:0}.mobile-label{display:inline;color:var(--muted);font-size:.875rem;margin-right:8px}section{margin-top:26px}.role-heading{flex-wrap:wrap}.todo{padding:13px 0}h2{gap:10px}.teaching{padding:14px 16px}}
+.capabilities{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px}.capability{padding-top:15px;border-top:1px solid var(--ink)}.capability h3{color:var(--blue);font-size:1rem;margin-bottom:6px}.capability .focus{font-size:1.125rem;font-weight:600;margin-bottom:9px}.capability p{font-size:1rem}.capability .learn{font-size:.875rem;color:var(--muted);margin-top:10px}.capability .learn b{font-weight:500;color:var(--ink)}
+@media(max-width:760px){.capabilities{grid-template-columns:1fr;gap:22px}.capability .focus{font-size:1.0625rem}}
+.scope{font-size:.875rem;color:var(--muted);margin:-7px 0 16px}.level-table{width:100%;border-collapse:collapse;table-layout:fixed}.level-table col:first-child{width:15%}.level-table col:not(:first-child){width:28.333%}.level-table th,.level-table td{padding:14px 13px;font-size:.9375rem}.level-table thead th{color:var(--ink)}.level-table thead small{display:block;font-size:.8125rem;color:var(--muted);font-weight:400;margin-top:3px}.level-table td:last-child{color:var(--ink)}.level-label{display:none}.directions{margin:22px 0 0}.directions h3{font-size:1rem;margin-bottom:10px}.direction-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.direction-grid p{font-size:.875rem;color:var(--muted)}.direction-grid strong{display:block;color:var(--ink);font-size:.9375rem;margin-bottom:3px}.technical-primer{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:22px}.technical-primer>summary{padding:15px 0;cursor:pointer;font-weight:600;font-size:1rem}.technical-primer>summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.primer-body{padding:0 0 18px}.primer-intro{font-size:.9375rem;margin-bottom:16px;color:#45566a}.knowledge-row{display:grid;grid-template-columns:145px 1fr;gap:18px;padding:13px 0;border-top:1px solid var(--line)}.knowledge-row h4{font-size:.9375rem;margin:0}.knowledge-row p{font-size:.9375rem}.knowledge-row .terms{font-size:.8125rem;color:var(--muted);margin-top:6px}.knowledge-row a{font-size:.8125rem}.technical-target{font-size:.875rem;padding:12px 16px;background:var(--light);margin-top:12px}.training-depth{font-size:.875rem;border-left:3px solid var(--blue);padding:10px 14px;background:var(--light);margin:-6px 0 22px;color:#45566a}
+@media(max-width:760px){.level-table,.level-table tbody,.level-table tr,.level-table td,.level-table tbody th{display:block;width:100%}.level-table colgroup,.level-table thead{display:none}.level-table tbody tr{border-top:1px solid var(--line);padding:14px 0}.level-table tbody tr:last-child{border-bottom:1px solid var(--line)}.level-table tbody th{border:0;padding:0 0 7px}.level-table td{border:0;padding:5px 0}.level-label{display:block;font-size:.8125rem;color:var(--blue);margin-bottom:1px}.direction-grid{grid-template-columns:1fr;gap:12px}.direction-grid strong{display:inline;margin-right:8px}.knowledge-row{grid-template-columns:1fr;gap:5px}.technical-primer>summary{font-size:.9375rem}}
+@media print{.level-table{display:table}.level-table tbody{display:table-row-group}.level-table tr{display:table-row}.level-table td,.level-table tbody th{display:table-cell;width:auto}.level-table thead{display:table-header-group}.level-table colgroup{display:table-column-group}.level-table th,.level-table td{font-size:9pt;padding:8px}.level-label{display:none}.direction-grid{grid-template-columns:repeat(3,1fr)}.knowledge-row{break-inside:avoid}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{main{padding:0;max-width:none}body{font-size:10pt}h1{font-size:19pt}h2{font-size:13pt}section{margin-top:18px}.roles,.plans{grid-template-columns:1fr 1fr}.role,.todo,tr{break-inside:avoid}.role p,td,tbody th,.todo strong,.takeaway{font-size:10pt}.todo small,.threshold,.caveat{font-size:9pt}.role{padding:14px 16px}th,td{padding:10px 12px}.plans{gap:24px}footer{font-size:8pt}}
+.appendix-section{margin-top:42px;padding-top:24px;border-top:2px solid var(--ink)}.appendix-intro{margin-bottom:15px;color:#45566a}.study-time{display:flex;gap:8px 24px;flex-wrap:wrap;padding:12px 16px;background:var(--light);font-size:.9375rem;margin-bottom:12px}.study-time strong{color:var(--ink)}.course-setup{font-size:.875rem;color:var(--muted);margin:8px 0}.course-setup strong{color:var(--ink);font-weight:600}.course-jumps{display:flex;gap:8px 20px;flex-wrap:wrap;margin:18px 0;font-size:.875rem}.resource-panel{margin:18px 0;padding:16px 20px;border:1px solid var(--line);background:#f8fafc}.resource-panel h3{font-size:1rem;margin-bottom:8px}.resource-panel p{font-size:.9375rem;color:#45566a}.resource-panel ul{margin:10px 0 0;padding-left:20px}.resource-panel li{margin:4px 0}.study-plan{border:1px solid var(--line);margin:14px 0}.study-plan>summary{padding:17px 20px;cursor:pointer;font-size:1.0625rem;font-weight:600;line-height:1.6}.study-plan>summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px}.study-plan>summary .plan-hours{display:block;font-weight:400;font-size:.875rem;color:var(--muted);margin:4px 0 0 19px}.study-plan[open]>summary{background:var(--light);border-bottom:1px solid var(--line)}.study-body{padding:16px}.day-table{width:100%;border-collapse:collapse;table-layout:fixed}.day-table col:first-child{width:13%}.day-table col:nth-child(2){width:42%}.day-table col:nth-child(3){width:23%}.day-table col:nth-child(4){width:22%}.day-table th,.day-table td{padding:14px 12px;font-size:1rem;line-height:1.75;overflow-wrap:anywhere}.day-table thead th{font-size:.875rem;background:var(--light)}.day-table tbody th{font-size:.9375rem;font-weight:600;color:var(--blue);white-space:normal}.day-table tbody tr[data-mode="independent"]{background:#f8fafc}.day-number{display:block;white-space:nowrap}.session-kind{display:block;font-size:.875rem;font-weight:400;color:var(--muted);margin-top:5px}.lesson-topic{display:block;font-weight:600;margin-bottom:5px}.day-label{display:none}.study-gate{padding:12px 15px;background:var(--light);margin-top:16px;font-size:.9375rem;border-left:3px solid var(--blue)}.ai-learning-map{margin:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.ai-learning-map>summary{padding:15px 0;font-weight:600;cursor:pointer}.ai-learning-map>summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.learning-map-intro{font-size:.9375rem;color:#45566a;margin-bottom:15px}.learning-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px 28px;padding-bottom:18px}.learning-map-item{border-top:1px solid var(--line);padding-top:12px}.learning-map-item h4{font-size:1rem;margin:0 0 5px}.learning-map-item p{font-size:.9375rem;color:#45566a}.appendix-notes{font-size:.875rem;color:var(--muted);margin-top:18px}.appendix-notes p+p{margin-top:10px}.appendix-notes strong{color:var(--ink)}.study-sources{font-size:.875rem;color:var(--muted);margin-top:15px}.study-jump{font-size:.875rem;margin-left:14px}
+@media(max-width:760px){.study-plan>summary{padding:15px 16px;font-size:1rem}.study-body{padding:14px}.study-time{gap:6px 16px}.day-table,.day-table tbody,.day-table tr,.day-table td,.day-table tbody th{display:block;width:100%}.day-table thead,.day-table colgroup{display:none}.day-table tr{padding:15px 0;border-top:1px solid var(--line)}.day-table tbody th{padding:0 0 8px;border:0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.session-kind{display:inline;margin:0}.day-table td{padding:5px 0;border:0}.day-label{display:block;color:var(--muted);font-size:.875rem;margin-bottom:3px}.lesson-topic{margin-bottom:4px}.learning-map-grid{grid-template-columns:1fr;gap:14px}.study-jump{margin-left:10px}.appendix-section{margin-top:32px}.course-jumps{gap:7px 16px}.day-table tbody tr[data-mode="independent"]{padding-left:10px;padding-right:10px}}
+@media print{.day-table tr{break-inside:avoid}.study-plan{border:0}.study-plan>summary{padding:10px 0}.study-body{padding:0}.day-table{display:table}.day-table tbody{display:table-row-group}.day-table tr{display:table-row}.day-table td,.day-table tbody th{display:table-cell;width:auto}.day-table thead{display:table-header-group}.day-table colgroup{display:table-column-group}.day-table th,.day-table td{font-size:10pt;padding:7px 9px}.session-kind{font-size:9pt;display:block}.day-label,.study-jump,.course-jumps{display:none}.learning-map-grid{grid-template-columns:1fr 1fr}.learning-map-item{break-inside:avoid}}
+
+</style>
+</head>
+<body>
+<main>
+  <header><h1>跨境电商运营-&gt;跨境电商AI产品</h1><p>最后更新：2026-09-14 · 岗位对照与学习重点<a class="study-jump" href="#appendix">学习附录</a></p></header>
+
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title"><span class="no">01</span>AI 产品经理需要什么能力</h2>
+    <p class="scope">用负责范围、决策难度和实际结果区分水平。六个维度可以处在不同阶段，不按会多少工具或学了多少天评级。</p>
+    <table class="level-table" aria-label="AI产品经理六个能力维度的三级对照">
+      <colgroup><col><col><col><col></colgroup>
+      <thead><tr><th scope="col">能力</th><th scope="col">入门<small>在指导下完成明确任务</small></th><th scope="col">独立负责<small>对一个产品的结果负责</small></th><th scope="col">资深负责人<small>处理复杂取舍与长期演进</small></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">业务洞察</th><td><span class="level-label">入门</span>说清用户、痛点与现有流程，找到具体问题。</td><td><span class="level-label">独立负责</span>验证需求，按业务价值、数据条件和可行性排序。</td><td><span class="level-label">资深负责人</span>识别跨业务共性，决定哪些机会值得长期投入。</td></tr>
+        <tr><th scope="row">产品设计</th><td><span class="level-label">入门</span>写清需求、主流程、原型与基本验收。</td><td><span class="level-label">独立负责</span>设计完整体验，处理不确定输出、异常与人工接管。</td><td><span class="level-label">资深负责人</span>处理多场景约束，判断何时共用能力、何时保留差异。</td></tr>
+        <tr><th scope="row">技术理解</th><td><span class="level-label">入门</span>听懂算法、训练、推理及应用机制，解释基本边界。</td><td><span class="level-label">独立负责</span>与研发比较规则、传统算法、大模型及微调方案。</td><td><span class="level-label">资深负责人</span>与技术团队制定演进路线，权衡数据、算力与维护成本。</td></tr>
+        <tr><th scope="row">评测与数据</th><td><span class="level-label">入门</span>整理样本、读懂指标，识别典型错误和数据泄漏。</td><td><span class="level-label">独立负责</span>定义标注、评测与对照实验，验证质量及业务收益。</td><td><span class="level-label">资深负责人</span>审查实验可信度，建立数据反馈、持续评估与监控机制。</td></tr>
+        <tr><th scope="row">商业判断</th><td><span class="level-label">入门</span>算清任务成本，区分模型指标和业务指标。</td><td><span class="level-label">独立负责</span>验证采用率与净收益，决定继续、调整或停止。</td><td><span class="level-label">资深负责人</span>决定自建、采购或合作，管理规模化收益与长期投入。</td></tr>
+        <tr><th scope="row">协同交付</th><td><span class="level-label">入门</span>完成明确任务，说明依赖，回应评审与反馈。</td><td><span class="level-label">独立负责</span>协调算法、研发与测试，推进上线、试用和迭代。</td><td><span class="level-label">资深负责人</span>解决多团队目标冲突，建立持续交付与运营机制。</td></tr>
+      </tbody>
+    </table>
+    <div class="directions">
+      <h3>水平之外，还要看岗位方向</h3>
+      <div class="direction-grid">
+        <p><strong>应用产品</strong>侧重业务流程、系统集成与用户采用。本页讨论的跨境电商岗位主要在这一侧。</p>
+        <p><strong>算法 / 策略产品</strong>侧重搜索、推荐、排序、预测；更深入地定义数据、目标和实验。</p>
+        <p><strong>模型 / 平台产品</strong>侧重模型能力、训练评测与推理服务；更深入地理解技术依赖与成本。</p>
+      </div>
+      <p class="caveat">三个方向会交叉。资深应用产品经理也需要技术判断；是否亲自训练模型，取决于具体分工。</p>
+    </div>
+    <details class="technical-primer" id="model-basics">
+      <summary>算法与模型训练：必须听懂，再练习选型与评审</summary>
+      <div class="primer-body">
+        <p class="primer-intro">至少能解释“数据怎样变成模型、模型怎样被验证”。进阶后，能与算法团队共同定义目标、数据和实验。</p>
+        <div class="knowledge-row">
+          <h4>算法解决什么</h4>
+          <div><p>把业务任务对应到方法：风险识别是分类，销量估计涉及回归或时间序列预测，推荐涉及候选召回与排序，文案属于生成。</p><p class="terms">应知：线性 / 逻辑回归、树模型、神经网络；Embedding、Attention、Transformer。先能说出用途与基本直觉。<a href="https://developers.google.com/machine-learning/glossary" target="_blank" rel="noopener noreferrer">概念参考</a></p></div>
+        </div>
+        <div class="knowledge-row">
+          <h4>训练改变什么</h4>
+          <div><p>训练从数据中学习参数，推理用模型处理新输入。理解预训练、用示范数据做监督微调（SFT），以及用偏好反馈做对齐各自的目的。</p><p class="terms">应知：特征、标签、损失、梯度下降、学习率；听过 RLHF、DPO，能区分示范数据与偏好数据。<a href="https://huggingface.co/learn/smol-course/unit1/1" target="_blank" rel="noopener noreferrer">SFT</a> · <a href="https://huggingface.co/learn/smol-course/unit2/1" target="_blank" rel="noopener noreferrer">偏好对齐</a></p></div>
+        </div>
+        <div class="knowledge-row">
+          <h4>结果凭什么可信</h4>
+          <div><p>训练集学参数，验证集做选择，测试集做最终检查。能解释过拟合、数据泄漏，以及误报和漏报为何有不同业务代价。</p><p class="terms">应知：泛化、Precision / Recall、阈值、离线评测与线上实验。重点是识别“分数很好，但不能上线”的原因。<a href="https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets" target="_blank" rel="noopener noreferrer">数据划分</a> · <a href="https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall" target="_blank" rel="noopener noreferrer">分类指标</a></p></div>
+        </div>
+        <div class="knowledge-row">
+          <h4>什么时候值得训练</h4>
+          <div><p>先判断问题出在资料、任务定义、模型行为还是业务流程。RAG 在回答时补充检索依据；微调通过训练改变模型参数，两者可以配合使用。</p><p class="terms">练习：比较规则、传统算法、Prompt、RAG 与微调；写清现有基线、数据需求、成本和验收方式。<a href="https://developers.google.com/machine-learning/glossary#retrieval-augmented-generation" target="_blank" rel="noopener noreferrer">RAG</a> · <a href="https://huggingface.co/learn/smol-course/unit1/1" target="_blank" rel="noopener noreferrer">微调</a></p></div>
+        </div>
+        <p class="technical-target"><strong>她的近期目标：</strong>先听懂算法与训练基础，再用主项目讲清数据条件、技术取舍和验证方式。模型训练基本流程也纳入教学，深度按目标岗位调整。</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="roles" aria-labelledby="roles-title">
+    <h2 id="roles-title"><span class="no">02</span>相关岗位要什么</h2>
+    <div class="roles">
+      <article class="role">
+        <div class="role-heading"><h3>跨境电商 AI 应用产品</h3><span class="judgment">近期对标</span></div>
+        <p>懂跨境业务，能找到 AI 应用场景，写需求、做方案、推动上线、验证效果。</p>
+        <p><strong>能力重点：</strong>识别业务场景，设计需求与流程，实际使用 Agent 或工作流，并验证效果。</p>
+        <p class="threshold">准备重点：把已有运营经验转成具体产品案例，说明用户问题、方案取舍和实际结果。</p>
+      </article>
+      <article class="role">
+        <div class="role-heading"><h3>内部 AI 产品负责人</h3><span class="judgment later">进阶方向</span></div>
+        <p>能独立负责内部 AI 产品：需求、技术选型、研发交付、推广使用、收益复盘。</p>
+        <p><strong>能力重点：</strong>完整产品交付、技术与成本判断、跨团队协作，以及持续推广和迭代。</p>
+        <p class="threshold">准备重点：积累独立负责产品与 AI 落地的经历，用采用率、业务收益和迭代记录支撑。</p>
+      </article>
+    </div>
+    <p class="takeaway"><strong>近期先对标跨境电商 AI 应用产品。</strong>用具体案例证明能发现问题、设计方案并验证效果，再逐步积累独立负责产品的经验。</p>
+    <p class="caveat">以上按岗位方向归纳能力重点，具体学历、年限与工具要求以目标岗位 JD 为准。</p>
+  </section>
+
+  <section id="gaps" aria-labelledby="gaps-title">
+    <h2 id="gaps-title"><span class="no">03</span>你已经有的，岗位还要看的</h2>
+    <table class="comparison">
+      <colgroup><col><col><col></colgroup>
+      <thead><tr><th scope="col">能力</th><th scope="col">你已经有的</th><th scope="col">岗位还要看什么</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">业务理解</th><td><span class="mobile-label">已有</span>日本站运营、Listing 本土化、新品与广告经验。</td><td><span class="mobile-label">还要</span>把运营痛点拆成产品需求，判断哪一步值得用 AI。</td></tr>
+        <tr><th scope="row">产品设计</th><td><span class="mobile-label">已有</span>简历未展示软件产品的功能、流程或交互设计经历。</td><td><span class="mobile-label">还要</span>把需求转成功能、流程和交互原型，并明确异常情况与验收标准。</td></tr>
+        <tr><th scope="row">AI 技术</th><td><span class="mobile-label">已有</span>写了“熟练使用 AI 工具”，未展示方案或算法、训练知识。</td><td><span class="mobile-label">还要</span>LLM、RAG、Agent 的方案取舍与实操，并能解释模型训练的基本流程。</td></tr>
+        <tr><th scope="row">效果判断</th><td><span class="mobile-label">已有</span>销量、毛利、ACoS 等经营指标经验。</td><td><span class="mobile-label">还要</span>AI 输出对不对、快不快，扣除复核后省多少时间、成本是否划算。</td></tr>
+        <tr><th scope="row">协同交付</th><td><span class="mobile-label">已有</span>独立运营、设计师与品牌协作。</td><td><span class="mobile-label">还要</span>对齐研发与测试，安排版本优先级和排期，推进上线与迭代。</td></tr>
+        <tr><th scope="row">落地成果</th><td><span class="mobile-label">已有</span>有运营业绩，未写 AI 产品案例。</td><td><span class="mobile-label">还要</span>别人实际用过的工具，以及使用、提效和失败复盘记录。</td></tr>
+      </tbody>
+    </table>
+    <p class="caveat">“没写”不等于“不会”。已经做过的先补材料，没做过的再补课。</p>
+  </section>
+
+  <section id="checklist" aria-labelledby="checklist-title">
+    <h2 id="checklist-title"><span class="no">04</span>要补的，是四种产品判断</h2>
+    <div class="capabilities">
+      <article class="capability">
+        <h3>机会判断</h3>
+        <p class="focus">选出值得用 AI 解决的问题</p>
+        <p>通过访谈与操作观察理解业务，区分事实和假设，判断问题的价值与优先级。</p>
+        <p class="learn"><b>学习重点</b> · 用户研究、业务分析、需求定义与优先级</p>
+      </article>
+      <article class="capability">
+        <h3>系统设计</h3>
+        <p class="focus">选择技术路径，设计系统分工</p>
+        <p>判断规则、传统算法与大模型分别适合什么；何时需要检索、微调、工具调用或人工介入。</p>
+        <p class="learn"><b>学习重点</b> · 算法与训练基础、模型选型、RAG / Agent</p>
+      </article>
+      <article class="capability">
+        <h3>质量判断</h3>
+        <p class="focus">为不确定的输出建立标准</p>
+        <p>定义什么结果可以交付，哪些错误不能接受，如何取舍质量、速度与成本。</p>
+        <p class="learn"><b>学习重点</b> · 数据与标注、评测体系、对照实验、效果与成本</p>
+      </article>
+      <article class="capability">
+        <h3>业务落地</h3>
+        <p class="focus">让 AI 成为团队的工作方式</p>
+        <p>把方案变成可交付的产品，观察真实使用，结合反馈与实验结果持续迭代。</p>
+        <p class="learn"><b>学习重点</b> · 流程与原型、研发协作、发布实验与迭代</p>
+      </article>
+    </div>
+    <div class="teaching"><p><strong>从用户研究开始，</strong>把业务理解、流程设计、AI 实现、效果验证与迭代放进同一个项目。</p><p class="secondary">应用实操和算法训练认知都要补，深度按目标岗位调整。Agent 深度使用需要具体操作与案例支撑。</p></div>
+  </section>
+
+  <section id="appendix" class="appendix-section" aria-labelledby="appendix-title">
+    <h2 id="appendix-title"><span class="no">附录</span>30 天教学安排</h2>
+    <p class="appendix-intro">从学员的真实运营经历中选一个主案例，贯穿用户研究、业务分析、流程与产品设计、评测、发布验证和迭代，再用于求职表达。</p>
+    <div class="study-time"><span><strong>30 天</strong> · 约 60 小时</span><span><strong>20 次交流</strong> · 每次约 60 分钟</span><span><strong>10 天</strong> · 独立练习</span></div>
+    <p class="course-setup"><strong>日期：</strong>按 Day 01–Day 30 标注，具体日期按实际约定。每 7 天为一个教学周，前三周各 5 次交流，第四周 4 次，Day 30 结课交流 1 次。</p>
+    <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。</p>
+    <p class="course-setup"><strong>项目与准备：</strong>主案例经调研确定范围，另做一个学习 PWA。老师提前准备示范案例、学习 PWA、评测样例及实验教学数据；学员在独立日集中记录问题，下次交流处理。</p>
+    <nav class="course-jumps" aria-label="30天教学安排导航"><a href="#week-1">第一周</a><a href="#week-2">第二周</a><a href="#week-3">第三周</a><a href="#week-4">第四周</a><a href="#closing">结课</a><a href="#ai-learning-map">Day 09 知识地图</a></nav>
+    <div class="resource-panel" id="user-research-materials">
+      <h3>Day 01 用户调研附件</h3>
+      <p>这组材料用于课堂示范和学员作业：先读方法，再按模板写报告，最后对照真实阶段性样例。</p>
+      <ul>
+        <li><a href="attachments/user-research/怎么做用户调研.md">怎么做用户调研</a></li>
+        <li><a href="attachments/user-research/用户调研报告模板.md">用户调研报告模板</a></li>
+        <li><a href="attachments/user-research/竞品分析用户调研报告示例.md">竞品分析用户调研报告示例</a></li>
+      </ul>
+    </div>
+    <div id="plan-30">
+    <details class="study-plan" id="week-1" open>
+      <summary>第一周 · 从用户研究到首版产品<span class="plan-hours">Day 01–07 · 5 次交流 · 2 天独立练习</span></summary>
+      <div class="study-body">
+        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 01 用竞品分析示范调研；Day 02–07 以“关键词跟踪助手”为例，沿用同一份调研，把需求做成 Demo，再让目标运营试用。实际选题可替换，后续需求、开发与测试须跟随同一项目。</p>
+        <table class="day-table" aria-label="第1至7天的教学安排、目标与产出">
+          <colgroup><col><col><col><col></colgroup>
+          <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
+          <tbody>
+            <tr id="day-01" data-study-day="30-1" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 01</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">老师示范：竞品分析调研</strong>对齐岗位与路线。老师访谈学员的竞品分析工作，共写报告；对照调研提纲与报告模板，找出未问清的流程和判断依据。</td>
+              <td><span class="day-label">目标</span>看懂如何把业务访谈写成调研报告。</td>
+              <td><span class="day-label">产出</span>竞品调研示例、提纲与报告模板。</td>
+            </tr>
+            <tr id="day-02" data-study-day="30-2" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 02</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">学员实践：调研关键词跟踪</strong>参考 Day 01 的案例与模板，访谈一位做关键词跟踪的运营（如同事），观察他怎样选词、查数和判断是否调整；独立写报告，老师评审。</td>
+              <td><span class="day-label">目标</span>弄清目标用户的现有做法与困难。</td>
+              <td><span class="day-label">产出</span>关键词跟踪调研报告、现状流程与样例资料。</td>
+            </tr>
+            <tr id="day-03" data-study-day="30-3" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 03</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">确定这款工具的首版需求</strong>师生从 Day 02 报告选出这款工具要解决的问题；例如帮运营找出待复核的排名变化。写清首版范围、输入输出与验收标准。</td>
+              <td><span class="day-label">目标</span>每项需求都能对应调研发现。</td>
+              <td><span class="day-label">产出</span>关键词跟踪助手的需求说明（PRD）。</td>
+            </tr>
+            <tr id="day-04" data-study-day="30-4" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 04</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">按需求做出关键词跟踪 Demo</strong>依据 Day 03 的 PRD 画原型，老师指导学员搭建 Demo；如“导入排名表→展示变化→人工复核”，跑通核心任务。</td>
+              <td><span class="day-label">目标</span>得到可供目标运营试用的版本。</td>
+              <td><span class="day-label">产出</span>该工具的原型、最小 Demo。</td>
+            </tr>
+            <tr id="day-05" data-study-day="30-5" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 05</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">为这个 Demo 设计测试</strong>老师用 Day 04 的 Demo 示范测试设计。围绕“找出需要复核的排名变化”，确定任务、预期结果与观察项，现场试跑。</td>
+              <td><span class="day-label">目标</span>明确测什么、怎么判定任务完成。</td>
+              <td><span class="day-label">产出</span>Demo 测试任务、预期结果与记录表。</td>
+            </tr>
+            <tr id="day-06" data-study-day="30-6" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 06</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">请目标运营试用这个 Demo</strong>邀请 Day 02 受访者或同类运营，用 Day 04 的 Demo 完成 Day 05 的任务；记录变化识别是否正确、操作卡点和耗时。</td>
+              <td><span class="day-label">目标</span>验证用户能否用它完成关键词复核。</td>
+              <td><span class="day-label">产出</span>Demo 试用记录、问题清单；模拟须注明。</td>
+            </tr>
+            <tr id="day-07" data-study-day="30-7" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 07</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">根据试用结果修改 Demo</strong>按 Day 06 记录修复关键问题，用同一任务复测；整理修改依据和个人贡献，形成简历初稿。</td>
+              <td><span class="day-label">目标</span>确认问题是否修好，讲清迭代依据。</td>
+              <td><span class="day-label">产出</span>修改后的 Demo、复测记录、简历初稿。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="study-gate"><strong>阶段目标：</strong>同一个项目有完整的调研报告、需求说明、Demo 和试用记录；能解释需求从哪来、测试发现了什么、为何这样改。</p>
+      </div>
+    </details>
+    <details class="study-plan" id="week-2">
+      <summary>第二周 · AI 知识、学习 PWA 与离线评测<span class="plan-hours">Day 08–14 · 5 次交流 · 2 天独立练习</span></summary>
+      <div class="study-body">
+        <table class="day-table" aria-label="第8至14天的教学安排、目标与产出">
+          <colgroup><col><col><col><col></colgroup>
+          <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
+          <tbody>
+            <tr id="day-08" data-study-day="30-8" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 08</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">迭代复盘与简历评审</strong>复盘研究和反馈如何影响产品；老师追问简历中的个人贡献、结果与证据，学员现场改写，课后补齐材料。</td>
+              <td><span class="day-label">目标</span>用具体事实解释设计变化和个人能力。</td>
+              <td><span class="day-label">产出</span>版本对照、修订简历与待补证项。</td>
+            </tr>
+            <tr id="day-09" data-study-day="30-9" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 09</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">老师展示学习 PWA 与 AI 知识地图</strong>老师展示学习 PWA，讲清 AI PM 的六块知识范围；选一个概念，示范查资料→业务例子→自测。课后学员开始做自己的版本。 <a href="#ai-learning-map">查看知识地图</a></td>
+              <td><span class="day-label">目标</span>知道 AI 要学什么、怎样查证，以及怎样检验理解。</td>
+              <td><span class="day-label">产出</span>个人学习地图、概念样例、PWA 需求草图。</td>
+            </tr>
+            <tr id="day-10" data-study-day="30-10" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 10</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">学员展示自己的学习 PWA</strong>学员展示独立制作的 PWA，演示概念→业务例子→自测的核心流程；老师检查内容正确性和使用体验，学员现场改一处。</td>
+              <td><span class="day-label">目标</span>把自己的学习需求做成可用产品，并解释所学概念。</td>
+              <td><span class="day-label">产出</span>个人学习 PWA、首批学习内容与修改记录。</td>
+            </tr>
+            <tr id="day-11" data-study-day="30-11" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 11</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">离线评测讲解与示范</strong>老师用主项目演示样本、评分、人工基线和错误分类；学员当场练习标注，课后独立完成评测设计。</td>
+              <td><span class="day-label">目标</span>定义 AI 输出何时合格，理解质量、速度与成本的取舍。</td>
+              <td><span class="day-label">产出</span>评分标准、样例及预期结果、评测方案初稿。</td>
+            </tr>
+            <tr id="day-12" data-study-day="30-12" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 12</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测设计评审</strong>评审样本覆盖、测试集独立性、对照公平性和成本记录；学员修订方案，课后先跑一轮小评测。</td>
+              <td><span class="day-label">目标</span>让评测能够发现问题，并支持可信的版本比较。</td>
+              <td><span class="day-label">产出</span>评测方案定稿、首批结果与错误分类。</td>
+            </tr>
+            <tr id="day-13" data-study-day="30-13" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 13</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">执行离线评测</strong>按方案运行样例，记录输出质量、失败、耗时和成本；用开发样例比较改进方向，保留终验样例。</td>
+              <td><span class="day-label">目标</span>定位最影响任务完成的问题，并选择改进重点。</td>
+              <td><span class="day-label">产出</span>逐条评测记录、质量与成本对照、问题排序。</td>
+            </tr>
+            <tr id="day-14" data-study-day="30-14" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 14</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">修复与回归</strong>修复最高优先级的问题，复测相关样例并检查是否引入新错误；用学习 PWA 补上关联概念。</td>
+              <td><span class="day-label">目标</span>用证据判断修改是否有效，积累持续学习的方法。</td>
+              <td><span class="day-label">产出</span>改进版本、回归记录与新增学习卡。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="study-gate"><strong>阶段目标：</strong>能解释一次需求修改；有自己的学习 PWA，并用评测发现和修复一个问题。</p>
+      </div>
+    </details>
+    <details class="study-plan" id="week-3">
+      <summary>第三周 · 产品判断、技术协作与业务实验<span class="plan-hours">Day 15–21 · 5 次交流 · 2 天独立练习</span></summary>
+      <div class="study-body">
+        <table class="day-table" aria-label="第15至21天的教学安排、目标与产出">
+          <colgroup><col><col><col><col></colgroup>
+          <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
+          <tbody>
+            <tr id="day-15" data-study-day="30-15" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 15</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">行为案例与个人贡献</strong>老师教如何讲清情境、行动与证据；学员分别练一个真实运营案例和一个课堂 AI 项目，接受追问后重答。</td>
+              <td><span class="day-label">目标</span>说明自己的判断、协作和改进，区分两类经历。</td>
+              <td><span class="day-label">产出</span>两份案例提纲、追问与修订记录。</td>
+            </tr>
+            <tr id="day-16" data-study-day="30-16" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 16</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品迭代与实验设计</strong>据调研和评测选一项改进；老师教实验假设、主指标、风险指标、随机分组、样本需求和周期，学员设计验证方案。</td>
+              <td><span class="day-label">目标</span>解释为何先改这一项，以及用什么证据判断效果。</td>
+              <td><span class="day-label">产出</span>版本取舍、实验假设、指标与分组方案。</td>
+            </tr>
+            <tr id="day-17" data-study-day="30-17" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 17</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术选型、算法与训练基础</strong>老师结合主项目讲算法任务、训练与推理，比较规则、模型、RAG、微调及 Agent；学员解释一次工具调用和失败处理，课后补数据条件。</td>
+              <td><span class="day-label">目标</span>理解技术路径的用途与边界，能讨论数据、成本和验证。</td>
+              <td><span class="day-label">产出</span>技术取舍单、数据需求、Agent 调用轨迹与失败记录。</td>
+            </tr>
+            <tr id="day-18" data-study-day="30-18" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 18</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">发布方案与研发协作</strong>明确发布范围、埋点、分流、验收和回退；老师模拟研发对依赖与排期的质疑，学员协商范围并完成发布前检查。</td>
+              <td><span class="day-label">目标</span>把产品和实验方案转成可执行、可检查的交付安排。</td>
+              <td><span class="day-label">产出</span>发布计划、埋点核对单、验收与回退方案。</td>
+            </tr>
+            <tr id="day-19" data-study-day="30-19" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 19</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">A/B 实验结果解读</strong>使用老师明确标注的教学数据，练习检查分组、样本和结果不确定性；判断继续观察、修改还是停止，并解释理由。</td>
+              <td><span class="day-label">目标</span>读懂实验结果，知道证据何时不足以支持结论。</td>
+              <td><span class="day-label">产出</span>教学数据分析、决策与依据（模拟）。</td>
+            </tr>
+            <tr id="day-20" data-study-day="30-20" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 20</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">执行发布或用户试用</strong>具备权限和流量条件时按方案小范围上线并记录数据；否则做用户试用，同时检查埋点与实验执行方案。</td>
+              <td><span class="day-label">目标</span>检验产品和数据记录能否正常工作，取得使用反馈。</td>
+              <td><span class="day-label">产出</span>上线或试用记录、数据核对单与问题单。</td>
+            </tr>
+            <tr id="day-21" data-study-day="30-21" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 21</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">整理阶段数据与反馈</strong>核对数据、样本和异常，汇总用户反馈；实验周期未结束时保留观察，不提前宣布某个版本获胜。</td>
+              <td><span class="day-label">目标</span>形成可追溯的阶段判断，识别尚未验证的问题。</td>
+              <td><span class="day-label">产出</span>阶段观察、反馈汇总与待验证问题。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="study-gate"><strong>阶段目标：</strong>能说明版本与技术取舍；有发布和实验方案，区分教学数据、试用反馈与真实实验结果。</p>
+      </div>
+    </details>
+    <details class="study-plan" id="week-4">
+      <summary>第四周 · 结果复盘、迁移练习与面试补课<span class="plan-hours">Day 22–28 · 4 次交流 · 3 天独立练习</span></summary>
+      <div class="study-body">
+        <table class="day-table" aria-label="第22至28天的教学安排、目标与产出">
+          <colgroup><col><col><col><col></colgroup>
+          <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
+          <tbody>
+            <tr id="day-22" data-study-day="30-22" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 22</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">结果复盘与下一轮迭代</strong>老师评审主项目的真实数据或注明的模拟结果，讲解证据强度；学员决定继续观察、修改或停止，并更新下一轮安排。</td>
+              <td><span class="day-label">目标</span>让数据与用户反馈影响产品决策，解释结论的限度。</td>
+              <td><span class="day-label">产出</span>结果复盘、决策依据与下一版需求。</td>
+            </tr>
+            <tr id="day-23" data-study-day="30-23" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 23</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">陌生场景与方法迁移</strong>换一个运营场景，老师逐步增加约束；学员先澄清问题，再说明需要调研什么、如何拆流程、选择技术和验证效果。</td>
+              <td><span class="day-label">目标</span>面对新问题也能独立分析，明确已知与待验证假设。</td>
+              <td><span class="day-label">产出</span>新场景方案草图、假设与验证计划。</td>
+            </tr>
+            <tr id="day-24" data-study-day="30-24" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 24</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">整理项目与面试证据</strong>整理研究发现、PRD、Demo、评测、版本变化和本人贡献；准备行为案例，独立演示一次项目。</td>
+              <td><span class="day-label">目标</span>让项目叙述与原始证据对应，发现材料缺口。</td>
+              <td><span class="day-label">产出</span>项目材料第一版、简历更新与演示记录。</td>
+            </tr>
+            <tr id="day-25" data-study-day="30-25" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 25</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完整模拟一与讲评</strong>用约 40 分钟模拟简历、行为、产品和技术面试，再用 20 分钟讲评；选出最影响表现的两个缺口。</td>
+              <td><span class="day-label">目标</span>定位知识、判断、证据或表达中的主要短板。</td>
+              <td><span class="day-label">产出</span>模拟记录、两项关键缺口与补改任务。</td>
+            </tr>
+            <tr id="day-26" data-study-day="30-26" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 26</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">专项补课与现场重练</strong>老师按两项缺口补课；学员现场重写、重算或重新设计，再回答变化后的题目，课后落实到项目与材料。</td>
+              <td><span class="day-label">目标</span>修正理解和判断，并在新追问下验证是否学会。</td>
+              <td><span class="day-label">产出</span>修订方案、重答记录与剩余补改清单。</td>
+            </tr>
+            <tr id="day-27" data-study-day="30-27" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 27</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">落实补改</strong>完成专项补课留下的任务，更新产品、分析或表达；核对简历中的每项描述是否有实际材料支持。</td>
+              <td><span class="day-label">目标</span>把课堂反馈变成可以展示的改进。</td>
+              <td><span class="day-label">产出</span>补改后的项目、案例与简历。</td>
+            </tr>
+            <tr id="day-28" data-study-day="30-28" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 28</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目复现与终验</strong>重新运行主项目，用预留样例做终验；复现调用和失败处理，整理修改前后的证据。</td>
+              <td><span class="day-label">目标</span>确认作品可以复现，结论与当前版本一致。</td>
+              <td><span class="day-label">产出</span>终验结果、复现说明与版本记录。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="study-gate"><strong>阶段目标：</strong>能从数据和反馈提出下一步；完成首轮模拟后的专项补改，并复现项目与验收记录。</p>
+      </div>
+    </details>
+    <details class="study-plan" id="closing">
+      <summary>结课 · 独立表达与第二轮模拟<span class="plan-hours">Day 29–30 · 1 次交流 · 1 天独立练习</span></summary>
+      <div class="study-body">
+        <table class="day-table" aria-label="第29至30天的教学安排、目标与产出">
+          <colgroup><col><col><col><col></colgroup>
+          <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
+          <tbody>
+            <tr id="day-29" data-study-day="30-29" data-mode="independent">
+              <th scope="row"><span class="day-number">Day 29</span><span class="session-kind">独立练习</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">独立讲解与材料定稿</strong>独立录一次项目讲解和行为案例回答，检查含糊之处；整理最终材料及仍不确定的问题。</td>
+              <td><span class="day-label">目标</span>脱离提示讲清整个项目，明确自己的能力边界。</td>
+              <td><span class="day-label">产出</span>讲解记录、项目材料与简历终稿。</td>
+            </tr>
+            <tr id="day-30" data-study-day="30-30" data-mode="meeting">
+              <th scope="row"><span class="day-number">Day 30</span></th>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完整模拟二与结课</strong>老师更换问题和约束，检验业务、产品、技术与行为回答；讲评后共同核对目标 JD 和仍需积累的能力。</td>
+              <td><span class="day-label">目标</span>验证迁移能力，形成有证据的求职表达与后续重点。</td>
+              <td><span class="day-label">产出</span>结课模拟记录、能力证据表与后续学习清单。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="study-gate"><strong>阶段目标：</strong>能独立讲清研究、设计、技术、验证和迭代，交付项目材料与简历终稿。</p>
+      </div>
+    </details>
+    </div>
+    <details class="ai-learning-map" id="ai-learning-map">
+      <summary>Day 09 · AI PM 的学习地图</summary>
+      <p class="learning-map-intro">Day 09 由老师展示范围和学习方法，示范一个“概念→业务例子→自测”的流程；Day 10 学员展示自己的 PWA。六块知识在后续项目和每日学习中逐步补齐。</p>
+      <div class="learning-map-grid">
+        <article class="learning-map-item"><h4>模型与算法基础</h4><p>分类、预测、排序与生成分别解决什么；大模型的上下文、能力与局限。</p></article>
+        <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>如何描述任务、提供上下文、约束输出，并通过 API 使用模型。</p></article>
+        <article class="learning-map-item"><h4>RAG、工作流与 Agent</h4><p>知识从哪里来、工具如何调用、何时停止；哪些步骤需要人工接管。</p></article>
+        <article class="learning-map-item"><h4>数据与模型训练</h4><p>训练与推理、预训练与微调的区别；特征、标签、数据划分及验证方法。</p></article>
+        <article class="learning-map-item"><h4>评测与模型选择</h4><p>如何比较质量、稳定性、速度和成本，分析失败并判断方案是否合适。</p></article>
+        <article class="learning-map-item"><h4>产品运行</h4><p>失败、权限与人工接管怎样处理；如何记录实际使用并持续监控。</p></article>
+      </div>
+    </details>
+    <div class="appendix-notes">
+      <p><strong>三种验证：</strong>用户测试看人能否完成任务；离线评测看 AI 输出是否合格；线上 A/B 用随机分组检验改动对业务指标的影响。样本、周期或数据不足时，结论保留为待验证。</p>
+      <p><strong>实验实操：</strong>Day 19 固定使用标注的教学数据。Day 20 后的真实上线与 A/B 取决于权限、流量及样本条件；条件不足时做用户测试和实验设计练习，Day 22 分开呈现真实证据与模拟结果。</p>
+      <p><strong>课程目标：</strong>用一个主案例讲清研究、设计、技术、验证和迭代。算法与训练以概念、数据条件和方案判断为本期目标；Agent 深度使用和正式产品交付经验按结课证据继续补。</p>
+      <p><strong>材料口径：</strong>使用获授权的脱敏资料，简历标明课堂项目和个人贡献。缺少真实用户时明确记录角色模拟；课程天数不能替代岗位要求的产品年限。</p>
+    </div>
+    <p class="study-sources">方法参考：<a href="https://www.microsoft.com/en-us/research/articles/a-b-testing-across-products/" target="_blank" rel="noopener noreferrer">线上 A/B 实验</a> · <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">AI 评测</a> · <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">工作流与 Agent</a> · <a href="https://docs.openclaw.ai/tools" target="_blank" rel="noopener noreferrer">工具调用机制</a>。逐日安排依据课程讨论与教学记录制定。</p>
+  </section>
+
+  <footer>依据：你提供的简历、跨境电商 AI 产品岗位 JD 截图与首次教学录屏。三级能力框架为教学对照，不是企业统一职级标准；技术概念附官方资料，Day 01 按课堂记录修订，后续学习安排为教学计划。</footer>
+</main>
+</body>
+</html>
