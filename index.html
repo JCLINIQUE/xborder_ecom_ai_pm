@@ -150,7 +150,7 @@
     <div class="study-time"><span><strong>30 天</strong> · 约 60 小时</span><span><strong>20 次交流</strong> · 每次约 60 分钟</span><span><strong>10 天</strong> · 独立练习</span></div>
     <p class="course-setup"><strong>日期：</strong>按 Day 01–Day 30 标注，具体日期按实际约定。每 7 天为一个教学周，前三周各 5 次交流，第四周 4 次，Day 30 结课交流 1 次。</p>
     <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。</p>
-    <p class="course-setup"><strong>项目与准备：</strong>主案例经调研确定范围，贯穿同一份 PRD、原型与 Demo。老师提前准备示范案例、学习 PWA 框架、评测样例及实验教学数据；学员课后在 PWA 中持续记录概念、业务例子与自测，集中记录问题，下次交流处理。</p>
+    <p class="course-setup"><strong>项目与准备：</strong>主案例贯穿同一份 PRD、原型与 Demo；学员另行亲手制作学习 PWA，在手机上刷 AI 术语、定义、案例与练习题。老师提前准备示范 PWA、经核对的学习资料、评测样例和实验教学数据。主项目文档与 PWA 内容在既定课后时间内逐步完善。</p>
     <nav class="course-jumps" aria-label="30天教学安排导航"><a href="#week-1">第一周</a><a href="#week-2">第二周</a><a href="#week-3">第三周</a><a href="#week-4">第四周</a><a href="#closing">结课</a><a href="#ai-learning-map">Day 09 知识地图</a></nav>
     <div class="resource-panel" id="github-basics">
       <h3>GitHub 小白使用手册</h3>
@@ -164,7 +164,7 @@
       <summary>第一周 · 调研、需求提炼、PRD、原型图与 Demo<span class="plan-hours">Day 01–07 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
         <p class="learning-map-intro"><strong>本周项目线：</strong>调研 → 产品需求提炼 → 产品 PRD → 产品原型图 → 产品 Demo，五次交流各推进一步。</p>
-        <p class="learning-map-intro"><strong>PRD 使用范围：</strong>第一周按<a href="attachments/3.%20product_requirement_document/PRD写作模板.md">PRD 模板中的第一周课程说明</a>完成业务版，写清问题、范围、流程、输入输出、异常与功能验收；AI 方案、模型选型与质量评测在后续学到时补写。</p>
+        <p class="learning-map-intro"><strong>PRD 使用范围：</strong>第一周按<a href="attachments/3.%20prd/PRD写作模板.md">PRD 模板中的第一周课程说明</a>完成业务版，写清问题、范围、流程、输入输出、异常与功能验收；AI 方案、模型选型与质量评测在后续学到时补写。</p>
         <table class="day-table" aria-label="第1至7天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
           <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
@@ -245,9 +245,10 @@
       </div>
     </details>
     <details class="study-plan" id="week-2">
-      <summary>第二周 · 用户试用、AI 知识与产品方案审查<span class="plan-hours">Day 08–14 · 5 次交流 · 2 天独立练习</span></summary>
+      <summary>第二周 · 用户试用、AI 产品方案与学习 PWA<span class="plan-hours">Day 08–14 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
         <p class="learning-map-intro"><strong>本周项目线：</strong>用户试用 → AI 基础 → 交互范式 → 技术架构 → PRD 补充与审查，围绕第一周的同一个 Demo 推进。</p>
+        <p class="learning-map-intro"><strong>学习 PWA：</strong>Day 09 学员动手制作术语学习初版，Day 13 完成手机刷学；把课程中的概念、业务案例与自测逐步加入同一个 PWA。</p>
         <table class="day-table" aria-label="第8至14天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
           <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
@@ -278,33 +279,57 @@
             </tr>
             <tr id="day-09" data-study-day="30-9" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 09</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础与能力边界</strong>先简要回看 Day 08 试用反馈，再结合已有 Demo 讲模型能力与局限、训练与推理、上下文和 Prompt。沿用一个任务比较输入与输出，说明模型负责什么、为什么可能出错；用老师提供的学习 PWA 课后记录概念与业务例子。 <a href="#ai-learning-map">查看知识地图</a></td>
-              <td><span class="day-label">目标</span>解释主项目中 AI 的任务、输入和能力边界，识别需要查证的输出与初始实现假设。</td>
-              <td><span class="day-label">产出</span>AI 输入输出说明、Prompt 样例、能力边界与待查证事项。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础与学习 PWA 首版</strong>简要回看试用反馈，从模型、训练与推理、上下文和 Prompt 中选 3–5 个术语，结合主项目解释能力边界。老师示范“术语 → 定义 → 业务例子 → 自测”，学员用 vibe coding 亲手制作自己的 PWA 初版。 <a href="#ai-learning-map">查看知识地图</a>
+                <details class="lesson-detail">
+                  <summary>60 分钟讲练与首版范围</summary>
+                  <ol>
+                    <li><strong>5 分钟：</strong>回看 Day 08 的试用发现，确定主项目中需要理解的 AI 任务。</li>
+                    <li><strong>15 分钟：</strong>讲解首批术语，用同一任务的输入输出说明定义、用途和局限。</li>
+                    <li><strong>10 分钟：</strong>老师演示学习 PWA，说明如何把一个概念做成卡片和自测题，并示范手机访问与添加主屏幕。</li>
+                    <li><strong>25 分钟：</strong>学员现场编写自己的学习需求，通过 vibe coding 跑通“看卡片 → 作答 → 看解析”，老师指导排除阻断问题。</li>
+                    <li><strong>5 分钟：</strong>检查一条定义和一道题，确定课后补齐项。</li>
+                  </ol>
+                  <p><strong>内容要求：</strong>每张卡包含英文术语、中文定义、业务例子和资料来源；每道题有参考答案与解析，内容须经核对。首版先做 3–5 个术语。</p>
+                  <p><strong>课后 60 分钟：</strong>约 40 分钟完成 PWA 初版内容，20 分钟补写主项目的 AI 输入输出、能力边界与待查证事项；手机体验在 Day 13 集中完善。</p>
+                </details>
+              </td>
+              <td><span class="day-label">目标</span>理解首批 AI 术语与主项目能力边界，把自己的学习需求做成可以刷卡自测的产品。</td>
+              <td><span class="day-label">产出</span>学员自建 PWA 初版、3–5 个术语及自测题、主项目 AI 输入输出与边界说明。</td>
             </tr>
             <tr id="day-10" data-study-day="30-10" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 10</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 交互范式</strong>比较对话式、嵌入式辅助、生成与编辑式、任务委托式交互；回看已有原型，判断当前方式是否适合业务任务，检查生成中、证据查看、修改、确认、失败重试和人工接管的设计。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">PWA 短展示与 AI 交互范式</strong>开头 5 分钟展示自建 PWA，检查一个概念与一道题；其余 55 分钟比较对话式、嵌入式辅助、生成与编辑式、任务委托式交互，审查主项目的生成、修改、确认和失败恢复。课后先同步主项目 PRD 与原型，再把课堂结论整理成 PWA 学习卡。</td>
               <td><span class="day-label">目标</span>能说明交互方式的选择依据，让用户知道如何使用、检查和纠正 AI 结果。</td>
-              <td><span class="day-label">产出</span>交互选择依据、原型批注、需补充的状态与交互规则。</td>
+              <td><span class="day-label">产出</span>PWA 展示反馈、主项目交互选择依据、原型批注与修订规则、交互学习卡。</td>
             </tr>
             <tr id="day-11" data-study-day="30-11" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 11</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 应用技术架构</strong>老师带着梳理已有 Demo 的实际链路：用户输入 → 应用服务或工作流 → 模型、数据与工具 → 结果校验 → 用户查看或确认。对照真实请求画架构图，比较规则、模型调用、RAG 与 Agent 的适用条件，检查数据来源、权限、失败处理、耗时和成本。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 应用技术架构</strong>老师带着梳理已有 Demo 的实际链路：用户输入 → 应用服务或工作流 → 模型、数据与工具 → 结果校验 → 用户查看或确认。对照真实请求画架构图，比较规则、模型调用、RAG 与 Agent 的适用条件，检查数据来源、权限、失败处理、耗时与成本；课后补齐主项目架构说明，并把关键概念加入 PWA。</td>
               <td><span class="day-label">目标</span>沿架构图解释一次实际请求，说明现有技术选择及其适用边界。</td>
-              <td><span class="day-label">产出</span>现有架构图、数据与工具依赖、调用记录、技术取舍与待验证假设。</td>
+              <td><span class="day-label">产出</span>现有架构图、数据与工具依赖、调用记录、技术取舍与待验证假设、架构学习卡。</td>
             </tr>
             <tr id="day-12" data-study-day="30-12" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 12</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">PRD 补充与方案评审</strong>汇总 Day 09–11 逐日补写的内容，对照实际产品检查 AI 任务、交互、架构和人工边界是否一致。逐项审查 vibe coding 阶段的初始选择，记录保留或调整的依据，明确后续修改范围。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">PRD 补充与方案评审</strong>汇总 Day 09–11 逐日补写的内容，对照实际产品检查 AI 任务、交互、架构和人工边界是否一致。逐项审查 vibe coding 阶段的初始选择，记录保留或调整的依据；课后完成主项目文档与证据修订，明确 Day 14 的修改范围。</td>
               <td><span class="day-label">目标</span>把业务版 PRD 补充到能解释现有 AI 方案的程度，区分已确认规则与待验证假设。</td>
               <td><span class="day-label">产出</span>补充后的 PRD、原型与架构说明、一致性检查记录、方案决策与修改清单。</td>
             </tr>
             <tr id="day-13" data-study-day="30-13" data-mode="independent">
               <th scope="row"><span class="day-number">Day 13</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完善方案说明</strong>沿用同一份 PRD、原型图与 Demo，补齐 Day 12 的说明和证据；整理实际输入输出、数据来源及人工确认点，注明保留现有方案的理由与尚未确定的问题。</td>
-              <td><span class="day-label">目标</span>让每一项方案判断能对应需求、交互和实际实现。</td>
-              <td><span class="day-label">产出</span>完整的方案说明、证据链接与待确认事项。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">手机学习 PWA</strong>独立完善自己的 PWA：手机刷卡、答题、查看解析、保存进度与回看错题；用真实手机打开并添加主屏幕，检查关闭后重新进入能否继续学习，修正已发现的内容错误。
+                <details class="lesson-detail">
+                  <summary>手机验收与后续扩展</summary>
+                  <ul>
+                    <li>在自己的手机上打开并添加主屏幕，文字、按钮与卡片适合触屏使用。</li>
+                    <li>连续完成“看术语与定义 → 作答 → 查看答案和解析 → 回看错题”。</li>
+                    <li>关闭后重新打开，已学内容、答题进度与错题仍可查看。</li>
+                    <li>卡片与题目有经核对的来源，能解释自己制作的功能及一条内容修订。</li>
+                  </ul>
+                  <p><strong>后续扩展：</strong>保留同一套卡片、答题与解析功能；第三周把评测术语和案例加入已有题库。</p>
+                </details>
+              </td>
+              <td><span class="day-label">目标</span>交付能在手机上随时刷术语、学概念与做自测的个人学习工具。</td>
+              <td><span class="day-label">产出</span>手机可用的学习 PWA、访问入口、进度与错题记录、手机操作演示与内容修订记录。</td>
             </tr>
             <tr id="day-14" data-study-day="30-14" data-mode="independent">
               <th scope="row"><span class="day-number">Day 14</span><span class="session-kind">独立练习</span></th>
@@ -314,7 +339,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>能解释已有 Demo 的 AI 能力、交互方式和实际架构；在同一份 PRD 中补齐方案与边界，对初始实现给出保留或修订的依据，并有用户试用记录。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>主项目有用户试用记录，能解释其 AI 能力、交互和实际架构，在同一份 PRD 中补齐方案与取舍；同时交付学员亲手制作的学习 PWA，在手机上完成刷卡、自测、解析与进度恢复。</p>
       </div>
     </details>
     <details class="study-plan" id="week-3">
@@ -326,21 +351,32 @@
           <tbody>
             <tr id="day-15" data-study-day="30-15" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 15</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">离线评测讲解与示范</strong>老师用主项目的实际输出讲任务样本、人工基线、评分标准和错误分类，区分功能运行成功与结果质量合格；学员现场标注样例，并学习如何分开开发样例与预留终验样例。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">离线评测讲解与示范</strong>老师用主项目的实际输出讲任务样本、人工基线、评分标准和错误分类，区分功能运行成功与结果质量合格；学员现场标注样例，学习分开开发与终验样例。课后完成评测方案初稿，并将已讲的术语和一条教学评分练习加入同一个 PWA。</td>
               <td><span class="day-label">目标</span>知道 AI 输出何时合格，能设计可执行的质量检查。</td>
-              <td><span class="day-label">产出</span>评分标准、人工基线、标注样例与评测方案初稿。</td>
+              <td><span class="day-label">产出</span>评分标准、人工基线、标注样例与评测方案初稿；PWA 评测术语卡与评分练习。</td>
             </tr>
             <tr id="day-16" data-study-day="30-16" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 16</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测方案评审与评分校准</strong>检查样本覆盖、数据划分、对照公平性和耗时成本记录；师生独立评分后讨论分歧，修订评分规则。冻结本轮标准和终验样例，课后用开发样例执行一轮小评测。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测方案评审与评分校准</strong>检查样本覆盖、数据划分、对照公平性和耗时成本记录；师生独立评分后讨论分歧，修订评分规则并冻结终验样例。课后优先用开发样例执行主项目小评测，再把课堂练习的参考评分与解析补入 PWA。
+                <details class="lesson-detail">
+                  <summary>把评测方法做成手机练习</summary>
+                  <ul>
+                    <li><strong>术语卡：</strong>人工基线、评分标准、开发集与终验集，配上业务例子和常见误区。</li>
+                    <li><strong>评分练习：</strong>先给一份教学输出评分，再查看老师核对的参考评分与理由。</li>
+                    <li><strong>方案判断：</strong>从课堂案例中找出样本偏差、数据泄漏或对照不公平的问题。</li>
+                  </ul>
+                  <p><strong>学习与实测：</strong>PWA 自测分数用于检查学生理解；主项目 AI 输出质量按评测方案另行记录。复用已有答题与解析功能，逐步补入经核对的课堂内容。</p>
+                  <p><strong>样例范围：</strong>日常练习只使用教学或开发样例；预留终验样例及其答案、输出不录入或改写进 PWA 题库。</p>
+                </details>
+              </td>
               <td><span class="day-label">目标</span>让不同人能按相同规则判断输出，保证版本比较有可信依据。</td>
-              <td><span class="day-label">产出</span>评测方案定稿、评分校准记录、课后首批结果与版本记录。</td>
+              <td><span class="day-label">产出</span>评测方案定稿、评分校准记录、课后首批实测结果与版本记录；PWA 参考评分与解析。</td>
             </tr>
             <tr id="day-17" data-study-day="30-17" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 17</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测结果诊断</strong>分析 Day 16 的逐条结果与运行记录，判断问题来自需求、Prompt、资料、模型、工具还是业务流程；比较可能的修复路径和数据条件，选出一项优先改进，并写明预期变化与检查方法。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测结果诊断</strong>分析 Day 16 的逐条结果与运行记录，判断问题来自需求、Prompt、资料、模型、工具还是业务流程；比较修复路径和数据条件，选出一项优先改进，写明预期变化与检查方法。课后将一个已分析的开发样例整理成 PWA 错误案例题，用于手机复习。</td>
               <td><span class="day-label">目标</span>用错误证据定位问题，解释为何选择某项技术或产品调整。</td>
-              <td><span class="day-label">产出</span>错误分类、问题优先级、改进假设与技术取舍记录。</td>
+              <td><span class="day-label">产出</span>错误分类、问题优先级、改进假设与技术取舍记录；PWA 错误案例题与解析。</td>
             </tr>
             <tr id="day-18" data-study-day="30-18" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 18</span></th>
@@ -368,7 +404,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>形成评分标准、逐条评测与前后版本对照，能用证据说明一次改进的效果与代价；完成发布或试用准备并取得实际使用记录。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>主项目形成评分标准、逐条评测与前后版本对照，能说明改进的效果与代价，并取得试用记录；同一个学习 PWA 增补评测术语、评分与错误案例练习，供手机持续复习。</p>
       </div>
     </details>
     <details class="study-plan" id="week-4">
@@ -392,7 +428,7 @@
             </tr>
             <tr id="day-24" data-study-day="30-24" data-mode="independent">
               <th scope="row"><span class="day-number">Day 24</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">整理项目证据与简历初稿</strong>把调研、需求清单、PRD、原型、架构、Demo、评测和版本变化整理成可查阅的材料；按老师提供的示例写项目经历与真实运营案例，明确课堂项目、本人贡献和证据来源。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">整理项目证据与简历初稿</strong>把主项目的调研、PRD、原型、架构、Demo、评测和版本变化整理成可查阅的材料；另附自建学习 PWA 的手机演示、内容修订与学习记录。按老师示例写项目经历和运营案例，明确课堂项目、本人贡献与证据来源。</td>
               <td><span class="day-label">目标</span>让项目表达对应实际成果，为后续技术答辩和交付评审做好准备。</td>
               <td><span class="day-label">产出</span>项目材料初稿、简历初稿、案例提纲与证据索引。</td>
             </tr>
@@ -404,7 +440,7 @@
             </tr>
             <tr id="day-26" data-study-day="30-26" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 26</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目交付评审与表达</strong>学员演示主项目，老师对照 PRD、原型、架构与评测证据检查成果，追问技术选择和个人贡献；现场练习讲清一个项目决策，明确未通过项、修改动作与完成标准。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目交付评审与表达</strong>学员演示主项目，老师对照 PRD、原型、架构和评测证据检查成果，追问技术选择与个人贡献；再用手机演示学习 PWA 的术语与评测练习，抽查定义和解析。现场练习讲清一个项目决策，明确补改项与完成标准。</td>
               <td><span class="day-label">目标</span>独立讲清产品、技术与验证依据，把评审反馈落实成具体交付任务。</td>
               <td><span class="day-label">产出</span>项目评审结论、修订后的项目表达、明确的补改与验收清单。</td>
             </tr>
@@ -416,9 +452,9 @@
             </tr>
             <tr id="day-28" data-study-day="30-28" data-mode="independent">
               <th scope="row"><span class="day-number">Day 28</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目复现与终验</strong>按复现说明重新运行当前版本，用 Day 16 预留的终验样例检查质量；复现调用失败与人工处理路径，记录未通过项及交付限制。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目复现与终验</strong>按复现说明运行主项目，用 Day 16 预留的终验样例检查质量，复现调用失败与人工处理路径；另在手机复查学习 PWA 的刷卡、答题、解析和关闭后进度恢复，记录两项作品的未通过项与限制。</td>
               <td><span class="day-label">目标</span>确认作品可复现，最终质量结论与当前版本一致。</td>
-              <td><span class="day-label">产出</span>终验结果、复现说明、最终版本与已知限制。</td>
+              <td><span class="day-label">产出</span>主项目终验与复现记录、PWA 手机验收记录、两项作品的最终版本与已知限制。</td>
             </tr>
           </tbody>
         </table>
@@ -446,13 +482,13 @@
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>能独立讲清研究、设计、技术、验证和迭代，交付项目材料与简历终稿。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>能独立讲清研究、设计、技术、验证和迭代，交付主项目、可在手机持续使用的自建学习 PWA、项目材料与简历终稿。</p>
       </div>
     </details>
     </div>
     <details class="ai-learning-map" id="ai-learning-map">
       <summary>Day 09 · AI PM 的学习地图</summary>
-      <p class="learning-map-intro">Day 09 先结合已有 Demo 学模型与 Prompt 基础，Day 10 学交互范式，Day 11 学技术架构，Day 15 起学习评测。课后用老师提供的学习 PWA 框架记录“概念 → 业务例子 → 自测”，其余知识结合项目问题和后续答辩逐步补齐。</p>
+      <p class="learning-map-intro">Day 09 学首批 AI 术语并亲手制作学习 PWA，Day 10–11 学交互与架构，Day 13 完成手机刷学；Day 15–17 把评测术语、评分和错误案例加入同一题库。每条学习内容包含定义、业务例子、来源与自测解析，随课堂反馈修订，在手机上持续复习。</p>
       <div class="learning-map-grid">
         <article class="learning-map-item"><h4>模型与算法基础</h4><p>分类、预测、排序与生成分别解决什么；大模型的上下文、能力与局限。</p></article>
         <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>如何描述任务、提供上下文、约束输出，并通过 API 使用模型。</p></article>
@@ -465,9 +501,10 @@
       </div>
     </details>
     <div class="appendix-notes">
+      <p><strong>学习 PWA：</strong>学生亲手制作并持续使用，术语、定义、交互、架构与评测练习随课程增补。首版使用经核对的内容，后续复用已有刷卡、答题与解析功能；学习自测记录与主项目的 AI 质量评测结果分别保存。</p>
       <p><strong>三种验证：</strong>用户测试看人能否完成任务；离线评测看 AI 输出是否合格；线上 A/B 用随机分组检验改动对业务指标的影响。样本、周期或数据不足时，结论保留为待验证。</p>
       <p><strong>实验实操：</strong>Day 20–21 做小范围试用或具备条件的发布，记录实际使用；Day 22 学习实验设计，Day 23 使用明确标注的教学数据解读 A/B 结果。真实 A/B 须满足权限、流量和样本条件，试用观察与教学实验结论分别记录。</p>
-      <p><strong>课程目标：</strong>用一个主案例讲清研究、设计、技术、验证和迭代。算法与训练以概念、数据条件和方案判断为本期目标；Agent 深度使用和正式产品交付经验按结课证据继续补。</p>
+      <p><strong>课程目标：</strong>用一个主案例讲清研究、设计、技术、验证和迭代，同时亲手制作可在手机刷学 AI 知识与评测方法的 PWA。算法与训练以概念、数据条件和方案判断为本期目标；Agent 深度使用和正式产品交付经验按结课证据继续补。</p>
       <p><strong>材料口径：</strong>使用获授权的脱敏资料，简历标明课堂项目和个人贡献。缺少真实用户时明确记录角色模拟；课程天数不能替代岗位要求的产品年限。</p>
     </div>
     <p class="study-sources">方法参考：<a href="https://www.microsoft.com/en-us/research/articles/a-b-testing-across-products/" target="_blank" rel="noopener noreferrer">线上 A/B 实验</a> · <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">AI 评测</a> · <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">工作流与 Agent</a> · <a href="https://docs.openclaw.ai/tools" target="_blank" rel="noopener noreferrer">工具调用机制</a> · <a href="https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/" target="_blank" rel="noopener noreferrer">AI 交互设计</a> · <a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">用户反馈与控制</a>。逐日安排依据课程讨论与教学记录制定。</p>
