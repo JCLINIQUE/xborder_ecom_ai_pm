@@ -2,7 +2,7 @@
 
 跨境电商运营转向跨境电商 AI 产品经理的教学计划与配套材料。
 
-课程共 **30 天、约 60 小时**，包含 20 次交流和 10 天独立练习。围绕学员的真实运营场景，逐步完成调研、需求提炼、PRD、原型、Demo、评测与迭代，并整理成可讲解的项目材料。
+课程共 **30 天、约 60 小时**，包含 20 次交流和 10 天独立练习。围绕学员的真实运营场景，逐步完成调研、需求提炼、产品功能设计、PRD、原型、Demo、评测与迭代，并整理成可讲解的项目材料。
 
 ## 从哪里开始
 
@@ -14,13 +14,15 @@
 
 | 阶段 | 主要内容 |
 | --- | --- |
-| 第一周 · Day 01–07 | 调研 → 产品需求提炼 → 业务版 PRD → 产品原型图 → Demo，再自查和修复 |
+| 第一周 · Day 01–07 | Day 01–03：调研 → 候选需求提炼 → 产品功能设计；Day 04–07 保留旧安排，待衔接 |
 | 第二周 · Day 08–14 | 用户试用、AI 基础、交互与技术架构，补充同一份 PRD，并制作学习 PWA |
 | 第三周 · Day 15–21 | 离线评测、评分校准、对照迭代、发布准备与小范围试用 |
 | 第四周 · Day 22–28 | 业务价值与实验分析、技术答辩、项目交付与终验 |
 | 结课 · Day 29–30 | 材料定稿、独立讲解与完整模拟 |
 
-主项目贯穿同一份 PRD、原型和 Demo。第一周先写清用户问题、范围、流程、输入输出、异常与功能验收；AI 方案、模型选择和质量评测随后续课程补充。
+本次更新 Day 02–03：Day 02 结合真实桌麦报告提出 2–3 条候选需求，标明证据缺口并推荐一项；Day 03 将推荐需求拆成产品功能，交付需求—功能对应表、首版范围与输入输出样例，再进入 PRD。课堂主线为“一款自家商品＋少量已选竞品 → 资料与文字图片提取 → 竞品对照 → 带依据的卖点建议 → 运营修改确认”；图需整理属于后续扩展。
+
+**Day 04–30 及后续阶段目标目前保留旧安排，待按新功能设计衔接。** 旧安排中对“Day 03 的 PRD”的依赖不代表当前 Day 03 已完成 PRD；原 SSD PRD 和原型材料仅保留作写法参考。后续在需求与功能明确后编写 PRD，再衔接原型与 Demo，并随学习补充 AI 交互、架构和评测要求。
 
 学员还将亲手制作一个学习 PWA，用手机复习 AI 术语、业务案例和练习题。主项目 Demo、学习 PWA 和最终项目材料会在课程中逐步完成；当前仓库提供教学安排及下列配套教材。
 
@@ -31,8 +33,9 @@
 | `attachments/0. github-basics/` | [GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：命令窗口、clone / pull、分支、提交与推送、常见问题 |
 | `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
 | `attachments/2. product-sense/` | [Day 02 产品需求提炼](<attachments/2. product-sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product-sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product-sense/产品需求清单模板.md>) |
-| `attachments/3. prd/` | [Day 03 编写指南](<attachments/3. prd/Day03业务版PRD编写指南.md>)、[竞品对比助手业务版 PRD](<attachments/3. prd/业务版PRD-竞品对比助手.md>)、[完整 PRD 模板](<attachments/3. prd/PRD写作模板.md>)：先完成业务规则与验收，后续逐步完善 |
-| `attachments/4. prototype/` | [Day 04 原型设计指南](<attachments/4. prototype/Day04原型设计指南.md>)、[页面交互与三张线框](<attachments/4. prototype/页面与交互说明-竞品对比助手.md>)、[XMind 导入大纲](<attachments/4. prototype/竞品对比助手-XMind导入大纲.md>)：用 Figma 或 XMind 设计并按 PRD 走查 |
+| `attachments/3. prd/` | [Day 03 产品功能设计](<attachments/3. prd/Day03产品功能设计.md>)、[课堂练习与功能清单模板](<attachments/3. prd/Day03课堂练习与功能清单模板.md>)；后续参考 [完整 PRD 模板](<attachments/3. prd/PRD写作模板.md>)及[旧版 SSD PRD 写法示例](<attachments/3. prd/业务版PRD-竞品对比助手.md>) |
+| `attachments/4. prototype/` | [Day 04 原型设计指南](<attachments/4. prototype/Day04原型设计指南.md>)、[页面交互与三张线框](<attachments/4. prototype/页面与交互说明-竞品对比助手.md>)、[XMind 导入大纲](<attachments/4. prototype/竞品对比助手-XMind导入大纲.md>)：旧版 SSD 原型材料，待与新功能设计衔接 |
+| `attachments/5. demo/` | [桌麦市场调研.xlsx](<attachments/5. demo/桌麦市场调研.xlsx>)：真实竞品报告，供 Day 02–03 拆解工作与设计功能；商品与访谈演示中的 SSD 不同，该附件是资料样本 |
 
 ## 首次下载到电脑
 
