@@ -24,6 +24,11 @@
 *.7z
 *.rar
 
+# Local spreadsheet exports
+*.xlsx
+*.xls
+*.csv
+
 # App and editor metadata
 Thumbs.db
 *.swp
