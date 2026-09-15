@@ -29,6 +29,11 @@
 *.xls
 *.csv
 
+# Local document exports
+*.doc
+*.docx
+*.pages
+
 # App and editor metadata
 Thumbs.db
 *.swp
