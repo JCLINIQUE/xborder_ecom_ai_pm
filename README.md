@@ -20,7 +20,9 @@
 | 第四周 · Day 22–28 | 业务价值与实验分析、技术答辩、项目交付与终验 |
 | 结课 · Day 29–30 | 材料定稿、独立讲解与完整模拟 |
 
-本次更新 Day 02–03：Day 02 结合真实桌麦报告提出 2–3 条候选需求，标明证据缺口并推荐一项；Day 03 将推荐需求拆成产品功能，交付需求—功能对应表、首版范围与输入输出样例，再进入 PRD。课堂主线为“一款自家商品＋少量已选竞品 → 资料与文字图片提取 → 竞品对照 → 带依据的卖点建议 → 运营修改确认”；图需整理属于后续扩展。
+Day 01–03 聚焦**日常竞品跟踪如何辅助运营决策**。Day 01 先区分产品开发／选品的市场调研与运营的日常跟踪，再示范访谈和报告；Day 02 从核验、比较与判断中提出 2–3 条候选需求，标明证据缺口并推荐一项；Day 03 围绕价格／促销变化，设计“核验记录 → 识别变化 → 辅助排查 → 运营决定”，交付需求—功能对应表、首版范围与输入输出样例，再进入 PRD。
+
+现有材料提供了跟踪流程和判断思路，完整的连续记录与真实处理案例仍待补充。课堂模拟样例单独标注，不作为已验证的需求或收益；桌麦市场报告归入市场调研参考，不与跟踪证据混用。
 
 **Day 04–30 及后续阶段目标目前保留旧安排，待按新功能设计衔接。** 旧安排中对“Day 03 的 PRD”的依赖不代表当前 Day 03 已完成 PRD；原 SSD PRD 和原型材料仅保留作写法参考。后续在需求与功能明确后编写 PRD，再衔接原型与 Demo，并随学习补充 AI 交互、架构和评测要求。
 
@@ -31,11 +33,11 @@
 | 目录 | 内容与入口 |
 | --- | --- |
 | `attachments/0. github-basics/` | [GitHub 使用手册](<attachments/0. github-basics/给非技术人员的GitHub使用手册.md>)：命令窗口、clone / pull、分支、提交与推送、常见问题 |
-| `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊精品运营用户调研报告](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
+| `attachments/1. user-research/` | [怎么做用户调研](<attachments/1. user-research/怎么做用户调研.md>)、[用户调研报告模板](<attachments/1. user-research/用户调研报告模板.md>)、[亚马逊运营调研示例：日常竞品跟踪](<attachments/1. user-research/用户调研报告-亚马逊精品运营-20260914.md>) |
 | `attachments/2. product-sense/` | [Day 02 产品需求提炼](<attachments/2. product-sense/Day02产品需求提炼.md>)、[课堂练习与参考答案](<attachments/2. product-sense/Day02课堂练习与参考答案.md>)、[产品需求清单模板](<attachments/2. product-sense/产品需求清单模板.md>) |
 | `attachments/3. prd/` | [Day 03 产品功能设计](<attachments/3. prd/Day03产品功能设计.md>)、[课堂练习与功能清单模板](<attachments/3. prd/Day03课堂练习与功能清单模板.md>)；后续参考 [完整 PRD 模板](<attachments/3. prd/PRD写作模板.md>)及[旧版 SSD PRD 写法示例](<attachments/3. prd/业务版PRD-竞品对比助手.md>) |
 | `attachments/4. prototype/` | [Day 04 原型设计指南](<attachments/4. prototype/Day04原型设计指南.md>)、[页面交互与三张线框](<attachments/4. prototype/页面与交互说明-竞品对比助手.md>)、[XMind 导入大纲](<attachments/4. prototype/竞品对比助手-XMind导入大纲.md>)：旧版 SSD 原型材料，待与新功能设计衔接 |
-| `attachments/5. demo/` | [桌麦市场调研.xlsx](<attachments/5. demo/桌麦市场调研.xlsx>)：真实竞品报告，供 Day 02–03 拆解工作与设计功能；商品与访谈演示中的 SSD 不同，该附件是资料样本 |
+| `attachments/5. demo/` | [桌麦市场调研.xlsx](<attachments/5. demo/桌麦市场调研.xlsx>)：市场调研／竞品分析的真实样本，保留供其他场景参考；不作为 Day 01–03 日常竞品跟踪的证据或练习输入 |
 
 ## 首次下载到电脑
 
