@@ -1,0 +1,1613 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Day 04｜竞品追踪工作台 · 三条原型路径</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Day 04｜竞品追踪工作台 · 三条原型路径" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Day 04｜竞品追踪工作台 · 三条原型路径&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;style&gt;
+#tracking-proto{--cp-bg:light-dark(#fff,#1b1d20);--cp-soft:light-dark(#f4f5f6,#25282d);--cp-ink:light-dark(#202328,#ededee);--cp-muted:light-dark(#626970,#b3b8bf);--cp-line:light-dark(#d9dde1,#444a52);--cp-strong:light-dark(#242a32,#e3e7ed);--cp-on:light-dark(#fff,#202328);--cp-warn:light-dark(#795017,#e5ba78);--cp-good:light-dark(#23633e,#9bcca7);background:var(--cp-bg);color:var(--cp-ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,&quot;PingFang SC&quot;,&quot;Microsoft YaHei&quot;,sans-serif;overflow-wrap:anywhere;border:1px solid var(--cp-line);border-radius:8px}
+#tracking-proto *{box-sizing:border-box}#tracking-proto [hidden]{display:none!important}
+#tracking-proto button,#tracking-proto input,#tracking-proto textarea{font:inherit;color:inherit}#tracking-proto button{padding:7px 11px;border:1px solid var(--cp-line);border-radius:5px;background:var(--cp-bg);cursor:pointer}#tracking-proto button:hover{background:var(--cp-soft)}#tracking-proto button:disabled{opacity:.5;cursor:default}#tracking-proto button.cp-primary{color:var(--cp-on);background:var(--cp-strong);border-color:var(--cp-strong)}#tracking-proto button[aria-pressed=&quot;true&quot;]{background:var(--cp-soft);border-color:var(--cp-ink)}
+#tracking-proto input,#tracking-proto textarea{padding:8px;border:1px solid var(--cp-line);border-radius:4px;background:var(--cp-bg);max-width:100%;min-width:0}#tracking-proto textarea{width:100%;resize:vertical}#tracking-proto input[type=&quot;checkbox&quot;]{width:16px;height:16px;flex-shrink:0;margin-top:4px;accent-color:var(--cp-strong)}
+#tracking-proto h2,#tracking-proto h3,#tracking-proto h4,#tracking-proto p{margin:0}#tracking-proto h2{font-size:18px;font-weight:500}#tracking-proto h3{font-size:16px;font-weight:500}#tracking-proto h4,#tracking-proto strong{font-weight:500}#tracking-proto .cp-muted{color:var(--cp-muted);font-size:12px}#tracking-proto .cp-warn{color:var(--cp-warn)}#tracking-proto .cp-good{color:var(--cp-good)}
+#tracking-proto .cp-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}#tracking-proto .cp-header{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-teaching{padding:12px 20px;background:var(--cp-soft);border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-teaching details{margin-top:8px}#tracking-proto summary{cursor:pointer}
+#tracking-proto .cp-nav{display:flex;gap:10px;padding:12px 20px;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-notice{padding:10px 20px;color:var(--cp-muted);border-bottom:1px solid var(--cp-line);font-size:13px}
+#tracking-proto .cp-prep{max-width:820px;padding:22px}#tracking-proto .cp-field{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px;margin:14px 0;align-items:center}#tracking-proto .cp-check{display:flex;align-items:flex-start;gap:8px;margin:12px 0}#tracking-proto .cp-prep-list{background:var(--cp-soft);padding:14px;margin:16px 0}#tracking-proto .cp-file{padding:10px 0;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-file:last-child{border-bottom:0}
+#tracking-proto .cp-layout{display:grid;grid-template-columns:178px minmax(0,1fr);align-items:start}#tracking-proto .cp-layout.cp-source-open{grid-template-columns:170px minmax(0,1fr) 230px}#tracking-proto .cp-materials{padding:18px 14px;border-right:1px solid var(--cp-line);align-self:stretch}#tracking-proto .cp-item{padding:14px 0;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-item p{margin:5px 0}#tracking-proto .cp-main{padding:20px;min-width:0}#tracking-proto .cp-main&gt;section+section{margin-top:22px;padding-top:18px;border-top:1px solid var(--cp-line)}
+#tracking-proto .cp-scroll{overflow-x:auto;margin-top:12px}#tracking-proto table{border-collapse:collapse;width:100%;font-size:13px}#tracking-proto th,#tracking-proto td{vertical-align:top;text-align:left;border-bottom:1px solid var(--cp-line);padding:10px 7px}#tracking-proto th{color:var(--cp-muted);font-weight:500}#tracking-proto .cp-number{white-space:nowrap;font-variant-numeric:tabular-nums}#tracking-proto .cp-data-table{min-width:510px}
+#tracking-proto .cp-actions{margin-top:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}#tracking-proto .cp-block{margin-top:12px;padding:14px;border:1px solid var(--cp-line);border-radius:6px;background:var(--cp-bg)}#tracking-proto .cp-block p+p{margin-top:8px}#tracking-proto .cp-bottom{margin-top:18px;padding-top:14px;border-top:1px solid var(--cp-line);display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+#tracking-proto .cp-analysis-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-analysis-row:last-child{border-bottom:0}#tracking-proto .cp-analysis-row h4{color:var(--cp-muted);font-size:13px}#tracking-proto .cp-source{padding:18px 14px;background:var(--cp-soft);border-left:1px solid var(--cp-line);align-self:stretch;min-width:0}#tracking-proto .cp-source blockquote{margin:16px 0;padding-left:10px;border-left:2px solid var(--cp-line)}#tracking-proto .cp-source.cp-inline{grid-column:2;border-top:1px solid var(--cp-line);border-left:0}#tracking-proto .cp-history{margin-top:12px}#tracking-proto .cp-edit-fields label{display:block;margin:12px 0}#tracking-proto .cp-edit-fields label span{display:block;margin-bottom:4px}
+@media(max-width:850px){#tracking-proto .cp-layout,#tracking-proto .cp-layout.cp-source-open{grid-template-columns:minmax(0,1fr)}#tracking-proto .cp-materials{display:flex;gap:12px;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--cp-line)}#tracking-proto .cp-materials&gt;h3{width:100%}#tracking-proto .cp-item{flex:1 1 180px}#tracking-proto .cp-source,#tracking-proto .cp-source.cp-inline{grid-column:1;border-left:0;border-top:1px solid var(--cp-line)}}
+@media(max-width:540px){#tracking-proto .cp-header,#tracking-proto .cp-teaching,#tracking-proto .cp-main,#tracking-proto .cp-prep{padding:14px}#tracking-proto .cp-field,#tracking-proto .cp-analysis-row{grid-template-columns:minmax(0,1fr);gap:5px}#tracking-proto .cp-nav{padding:10px 14px;flex-wrap:wrap}}
+@media(pointer:coarse){#tracking-proto button{min-height:44px}#tracking-proto input,#tracking-proto textarea{font-size:16px}}
+&lt;/style&gt;
+&lt;div id=&quot;tracking-proto&quot; aria-label=&quot;Day 04 竞品追踪工作台教学原型&quot;&gt;
+  &lt;header class=&quot;cp-header&quot;&gt;&lt;div&gt;&lt;h2&gt;竞品追踪工作台&lt;/h2&gt;&lt;p class=&quot;cp-muted&quot;&gt;日本站 · 已选商品的日常价格与促销跟踪&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;cp-muted&quot;&gt;Day 04 · 可点击教学原型&lt;/span&gt;&lt;/header&gt;
+  &lt;div class=&quot;cp-teaching&quot; aria-label=&quot;课堂路径切换&quot;&gt;
+    &lt;div class=&quot;cp-row&quot;&gt;&lt;strong&gt;演示路径&lt;/strong&gt;&lt;button type=&quot;button&quot; data-scenario=&quot;normal&quot; aria-pressed=&quot;true&quot;&gt;① 正常完成&lt;/button&gt;&lt;button type=&quot;button&quot; data-scenario=&quot;partial&quot; aria-pressed=&quot;false&quot;&gt;② 部分失败&lt;/button&gt;&lt;button type=&quot;button&quot; data-scenario=&quot;modified&quot; aria-pressed=&quot;false&quot;&gt;③ 修改之后&lt;/button&gt;&lt;/div&gt;
+    &lt;p class=&quot;cp-muted&quot;&gt;示例数据 · 提取和 AI 输出均为预设模拟 · 不读取真实文件、不联网 · 导出仅预览 · 切换路径或刷新会重置&lt;/p&gt;
+    &lt;details&gt;&lt;summary class=&quot;cp-muted&quot;&gt;课堂故障演示&lt;/summary&gt;&lt;label class=&quot;cp-check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;cp-fail-next&quot;&gt;&lt;span&gt;下一次模型调用失败（模拟）&lt;/span&gt;&lt;/label&gt;&lt;/details&gt;
+  &lt;/div&gt;
+  &lt;nav class=&quot;cp-nav&quot; aria-label=&quot;任务页面&quot;&gt;&lt;button type=&quot;button&quot; data-page=&quot;prep&quot; aria-pressed=&quot;true&quot;&gt;1 资料准备&lt;/button&gt;&lt;button type=&quot;button&quot; data-page=&quot;work&quot; aria-pressed=&quot;false&quot; disabled&gt;2 分析工作台&lt;/button&gt;&lt;/nav&gt;
+  &lt;div class=&quot;cp-notice&quot; id=&quot;cp-notice&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;先确认本次跟踪对象与资料，再提取示例数据。&lt;/div&gt;
+  &lt;section id=&quot;cp-prep&quot; class=&quot;cp-prep&quot; aria-label=&quot;资料准备&quot;&gt;
+    &lt;h3&gt;先确认本次分析的对象与用途&lt;/h3&gt;
+    &lt;label class=&quot;cp-field&quot;&gt;&lt;span&gt;自家商品&lt;/span&gt;&lt;input value=&quot;自家 S · 日本站 · 指定变体与卖家&quot; readonly aria-label=&quot;自家商品（模拟）&quot;&gt;&lt;/label&gt;
+    &lt;label class=&quot;cp-field&quot;&gt;&lt;span&gt;跟踪竞品&lt;/span&gt;&lt;input value=&quot;竞品 A · 日本站 · 指定变体与卖家&quot; readonly aria-label=&quot;跟踪竞品（模拟）&quot;&gt;&lt;/label&gt;
+    &lt;label class=&quot;cp-field&quot;&gt;&lt;span&gt;观察范围&lt;/span&gt;&lt;input value=&quot;2026-09-10 — 09-11 · 每日 10:00 JST&quot; readonly aria-label=&quot;观察范围（模拟）&quot;&gt;&lt;/label&gt;
+    &lt;div class=&quot;cp-prep-list&quot;&gt;&lt;strong&gt;本次材料 · 3 份示例&lt;/strong&gt;&lt;div class=&quot;cp-file&quot;&gt;Excel · 跟踪记录.xlsx &lt;p class=&quot;cp-muted&quot;&gt;竞品旧记录 A-1；自家两期记录 S-1/2&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cp-file&quot;&gt;截图 · 竞品旧页面.png &lt;p class=&quot;cp-muted&quot;&gt;A-1-I · 9 月 10 日的优惠展示证据&lt;/p&gt;&lt;p id=&quot;cp-prep-file-state&quot; class=&quot;cp-warn&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cp-file&quot;&gt;Word · 本次促销记录.docx &lt;p class=&quot;cp-muted&quot;&gt;A-2 · 9 月 11 日的标价、优惠展示与条件&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;label class=&quot;cp-check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;cp-identities&quot;&gt;&lt;span&gt;已确认商品、变体、卖家与观察时间；横向比较的规格可比。&lt;/span&gt;&lt;/label&gt;
+    &lt;p class=&quot;cp-muted&quot;&gt;资料来自用户上传；来源链接仅留作记录，不自动抓取。缺项可以保留。&lt;/p&gt;
+    &lt;div class=&quot;cp-bottom&quot;&gt;&lt;span class=&quot;cp-warn&quot; id=&quot;cp-prep-error&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-extract&quot;&gt;提取示例资料&lt;/button&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div id=&quot;cp-work&quot; hidden&gt;
+    &lt;div class=&quot;cp-layout&quot; id=&quot;cp-layout&quot;&gt;
+      &lt;aside class=&quot;cp-materials&quot; aria-label=&quot;任务资料&quot;&gt;
+        &lt;h3&gt;任务资料&lt;/h3&gt;
+        &lt;div class=&quot;cp-item&quot;&gt;&lt;strong&gt;跟踪记录.xlsx&lt;/strong&gt;&lt;p class=&quot;cp-muted&quot;&gt;A-1 · S-1/2&lt;/p&gt;&lt;p class=&quot;cp-good&quot;&gt;提取完成&lt;/p&gt;&lt;button type=&quot;button&quot; data-source=&quot;excel&quot;&gt;查看来源&lt;/button&gt;&lt;/div&gt;
+        &lt;div class=&quot;cp-item&quot;&gt;&lt;strong&gt;竞品旧页面.png&lt;/strong&gt;&lt;p class=&quot;cp-muted&quot;&gt;A-1-I · 优惠展示&lt;/p&gt;&lt;p id=&quot;cp-old-state&quot;&gt;&lt;/p&gt;&lt;div class=&quot;cp-row&quot;&gt;&lt;button type=&quot;button&quot; data-source=&quot;old&quot;&gt;查看来源&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-retry-file&quot; hidden&gt;单独重试旧截图&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-remove-old&quot;&gt;撤去旧截图&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;cp-item&quot;&gt;&lt;strong&gt;本次促销记录.docx&lt;/strong&gt;&lt;p class=&quot;cp-muted&quot;&gt;A-2 · 当前记录&lt;/p&gt;&lt;p class=&quot;cp-good&quot;&gt;提取完成&lt;/p&gt;&lt;button type=&quot;button&quot; data-source=&quot;current&quot;&gt;查看来源&lt;/button&gt;&lt;/div&gt;
+      &lt;/aside&gt;
+      &lt;main class=&quot;cp-main&quot;&gt;
+        &lt;section aria-labelledby=&quot;cp-table-title&quot;&gt;
+          &lt;div class=&quot;cp-row&quot;&gt;&lt;h3 id=&quot;cp-table-title&quot;&gt;跟踪记录&lt;/h3&gt;&lt;span class=&quot;cp-muted&quot; id=&quot;cp-record-state&quot;&gt;候选数据 · 待核对&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;cp-scroll&quot;&gt;&lt;table class=&quot;cp-data-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;对象 / 观察时点&lt;/th&gt;&lt;th&gt;标价（日元）&lt;/th&gt;&lt;th&gt;优惠展示&lt;/th&gt;&lt;th&gt;依据&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;竞品 A · 09-10 10:00&lt;/td&gt;&lt;td class=&quot;cp-number&quot;&gt;11,800&lt;/td&gt;&lt;td id=&quot;cp-old-coupon&quot;&gt;页面未展示券&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; data-source=&quot;old&quot;&gt;A-1 / A-1-I&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;竞品 A · 09-11 10:00&lt;/td&gt;&lt;td class=&quot;cp-number&quot;&gt;11,800&lt;/td&gt;&lt;td&gt;&lt;span id=&quot;cp-current-coupon&quot;&gt;2,000 日元券&lt;/span&gt;&lt;p class=&quot;cp-muted&quot;&gt;资格、期限未知&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; data-source=&quot;current&quot;&gt;A-2&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;自家 S · 09-10 10:00&lt;/td&gt;&lt;td class=&quot;cp-number&quot;&gt;10,800&lt;/td&gt;&lt;td&gt;资料未提供&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; data-source=&quot;excel&quot;&gt;S-1&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;自家 S · 09-11 10:00&lt;/td&gt;&lt;td class=&quot;cp-number&quot;&gt;10,800&lt;/td&gt;&lt;td&gt;资料未提供&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; data-source=&quot;excel&quot;&gt;S-2&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+          &lt;p class=&quot;cp-muted&quot; style=&quot;margin-top:8px&quot;&gt;时间均为 JST；标价未扣券。观察时间来自资料，不是上传时间。金额与来源均为教学模拟。&lt;/p&gt;
+          &lt;div class=&quot;cp-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-verify&quot;&gt;核对本批记录&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-edit-data&quot;&gt;修改本次券金额&lt;/button&gt;&lt;span class=&quot;cp-muted&quot; id=&quot;cp-verify-help&quot;&gt;请先查看来源；缺项不会自动变为 0。&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;cp-block&quot; id=&quot;cp-data-editor&quot; hidden&gt;
+            &lt;label class=&quot;cp-field&quot;&gt;&lt;span&gt;修订券面额（日元）&lt;/span&gt;&lt;input type=&quot;number&quot; id=&quot;cp-coupon-input&quot; value=&quot;1000&quot; min=&quot;1&quot; max=&quot;11799&quot; aria-label=&quot;修订券面额（日元）&quot;&gt;&lt;/label&gt;
+            &lt;p class=&quot;cp-muted&quot;&gt;模拟一份补充截图 A-2-R 更正券面额；保留原 Word 的 2,000，保存后需重新核对。&lt;/p&gt;
+            &lt;div class=&quot;cp-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-save-data&quot;&gt;保存修订&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-cancel-data&quot;&gt;取消修改&lt;/button&gt;&lt;span id=&quot;cp-edit-error&quot; class=&quot;cp-warn&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div id=&quot;cp-compare&quot; class=&quot;cp-block&quot;&gt;&lt;strong&gt;程序对比&lt;/strong&gt;&lt;p id=&quot;cp-compare-main&quot;&gt;&lt;/p&gt;&lt;p class=&quot;cp-muted&quot; id=&quot;cp-compare-conditional&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section aria-labelledby=&quot;cp-ai-title&quot;&gt;
+          &lt;div class=&quot;cp-row&quot;&gt;&lt;h3 id=&quot;cp-ai-title&quot;&gt;变化解读与核查建议&lt;/h3&gt;&lt;span id=&quot;cp-ai-state&quot; class=&quot;cp-muted&quot;&gt;尚未分析&lt;/span&gt;&lt;/div&gt;
+          &lt;p class=&quot;cp-muted&quot;&gt;程序提供已核对数值与计算；模型整理四部分解读，运营决定是否行动。&lt;/p&gt;
+          &lt;div class=&quot;cp-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-analyze&quot; disabled&gt;辅助分析&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-edit-ai&quot; hidden&gt;修改解读&lt;/button&gt;&lt;span class=&quot;cp-warn&quot; id=&quot;cp-ai-error&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div id=&quot;cp-ai-content&quot; hidden&gt;
+            &lt;div class=&quot;cp-analysis-row&quot;&gt;&lt;h4&gt;发现了什么&lt;/h4&gt;&lt;p id=&quot;cp-ai-0&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;cp-analysis-row&quot;&gt;&lt;h4&gt;为什么值得关注&lt;/h4&gt;&lt;p id=&quot;cp-ai-1&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;cp-analysis-row&quot;&gt;&lt;h4&gt;还需核实什么&lt;/h4&gt;&lt;p id=&quot;cp-ai-2&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;cp-analysis-row&quot;&gt;&lt;h4&gt;可以考虑什么方向&lt;/h4&gt;&lt;p id=&quot;cp-ai-3&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;cp-actions&quot;&gt;&lt;span class=&quot;cp-muted&quot;&gt;回查引用&lt;/span&gt;&lt;button type=&quot;button&quot; data-source=&quot;excel&quot;&gt;A-1 / S-1/2&lt;/button&gt;&lt;button type=&quot;button&quot; data-source=&quot;old&quot;&gt;A-1-I&lt;/button&gt;&lt;button type=&quot;button&quot; data-source=&quot;current&quot;&gt;A-2&lt;/button&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;cp-edit-fields cp-block&quot; id=&quot;cp-ai-editor&quot; hidden&gt;&lt;label&gt;&lt;span&gt;发现了什么&lt;/span&gt;&lt;textarea id=&quot;cp-ai-edit-0&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;label&gt;&lt;span&gt;为什么值得关注&lt;/span&gt;&lt;textarea id=&quot;cp-ai-edit-1&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;label&gt;&lt;span&gt;还需核实什么&lt;/span&gt;&lt;textarea id=&quot;cp-ai-edit-2&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;label&gt;&lt;span&gt;可以考虑什么方向&lt;/span&gt;&lt;textarea id=&quot;cp-ai-edit-3&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;div class=&quot;cp-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-save-ai&quot;&gt;保存解读修改&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;cp-cancel-ai&quot;&gt;取消&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;cp-block&quot; id=&quot;cp-candidate&quot; hidden&gt;&lt;h4&gt;新候选 · 尚未替换你的旧解读&lt;/h4&gt;&lt;div id=&quot;cp-candidate-text&quot;&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-adopt&quot;&gt;采用新草稿&lt;/button&gt;&lt;/div&gt;
+          &lt;details class=&quot;cp-history&quot; id=&quot;cp-history&quot; hidden&gt;&lt;summary&gt;查看保留的旧解读与人工修改&lt;/summary&gt;&lt;div id=&quot;cp-history-text&quot; class=&quot;cp-block&quot;&gt;&lt;/div&gt;&lt;/details&gt;
+          &lt;div id=&quot;cp-review&quot; hidden&gt;&lt;label class=&quot;cp-check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;cp-review-check&quot;&gt;&lt;span&gt;已回查来源并复核本次解读；条件与未知项保留。&lt;/span&gt;&lt;/label&gt;&lt;button type=&quot;button&quot; class=&quot;cp-primary&quot; id=&quot;cp-confirm-ai&quot; disabled&gt;确认解读&lt;/button&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section id=&quot;cp-export-preview&quot; class=&quot;cp-block&quot; hidden aria-label=&quot;导出预览&quot;&gt;&lt;div class=&quot;cp-row&quot;&gt;&lt;h3&gt;导出预览 · 不生成真实文件&lt;/h3&gt;&lt;button type=&quot;button&quot; id=&quot;cp-close-export&quot;&gt;返回工作台&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;cp-muted&quot;&gt;当前范围：自家 S、竞品 A · 9 月 10–11 日 · JST · 数据与来源说明&lt;/p&gt;&lt;div id=&quot;cp-export-table&quot; class=&quot;cp-scroll&quot;&gt;&lt;/div&gt;&lt;label class=&quot;cp-check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;cp-export-ai&quot;&gt;&lt;span&gt;附带当前已复核的 AI 解读&lt;/span&gt;&lt;/label&gt;&lt;p class=&quot;cp-warn&quot; id=&quot;cp-export-reason&quot;&gt;&lt;/p&gt;&lt;div id=&quot;cp-export-analysis&quot; hidden&gt;&lt;/div&gt;&lt;/section&gt;
+        &lt;footer class=&quot;cp-bottom&quot;&gt;&lt;span class=&quot;cp-muted&quot; id=&quot;cp-final-state&quot;&gt;资料、修订和解读仅保留在本次演示中。&lt;/span&gt;&lt;button type=&quot;button&quot; id=&quot;cp-export&quot;&gt;导出预览&lt;/button&gt;&lt;/footer&gt;
+      &lt;/main&gt;
+      &lt;aside id=&quot;cp-source&quot; class=&quot;cp-source&quot; aria-label=&quot;来源详情&quot; hidden&gt;&lt;div class=&quot;cp-row&quot;&gt;&lt;h3 id=&quot;cp-source-title&quot;&gt;来源详情&lt;/h3&gt;&lt;button type=&quot;button&quot; id=&quot;cp-close-source&quot;&gt;关闭来源&lt;/button&gt;&lt;/div&gt;&lt;blockquote id=&quot;cp-source-quote&quot;&gt;&lt;/blockquote&gt;&lt;p id=&quot;cp-source-note&quot; class=&quot;cp-muted&quot;&gt;&lt;/p&gt;&lt;/aside&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function(){
+  const root=document.getElementById(&#x27;tracking-proto&#x27;);
+  const q=s=&gt;root.querySelector(s);
+  const labels=[&#x27;发现了什么&#x27;,&#x27;为什么值得关注&#x27;,&#x27;还需核实什么&#x27;,&#x27;可以考虑什么方向&#x27;];
+  const design={sourcePlacement:&#x27;side&#x27;};
+  let state, timers=[];
+  const money=n=&gt;Number(n).toLocaleString(&#x27;en-US&#x27;);
+  function later(fn){const id=setTimeout(fn,650);timers.push(id);}
+  function tell(text){q(&#x27;#cp-notice&#x27;).textContent=text;}
+  function fieldsFor(s){
+    const conditional=11800-s.coupon, diff=conditional-10800;
+    const position=diff===0?&#x27;与自家标价相同&#x27;:`比自家标价${diff&lt;0?&#x27;低&#x27;:&#x27;高&#x27;} ${money(Math.abs(diff))} 日元`;
+    return [
+      `竞品两期标价均为 11,800 日元〔A-1、A-2〕，本次展示 ${money(s.coupon)} 日元券，资格与期限未知〔${s.coupon===2000?&#x27;A-2&#x27;:&#x27;A-2-R&#x27;}〕。`+(s.oldAvailable?&#x27;旧页面未展示券，两次优惠展示不同〔A-1-I、A-2〕。&#x27;:&#x27;旧券字段未采集，尚无法确认是否新增优惠〔A-1；A-1-I 缺失〕。&#x27;),
+      `若券适用，程序计算为 ${money(conditional)} 日元，${position}〔${s.coupon===2000?&#x27;A-2&#x27;:&#x27;A-2-R&#x27;}、S-1/2〕。可能影响可享优惠买家的价格比较；不据此认定清库存或抢走自家销量。`,
+      (s.oldAvailable?&#x27;先核券资格与期限〔A-2 缺项〕&#x27;:&#x27;先补旧页面证据，区分新增优惠与旧记录漏采〔A-1-I 缺失〕，再核券资格与期限〔A-2 缺项〕&#x27;)+&#x27;；补自家同期销量、转化、广告和利润约束〔S-1/2 未提供〕。&#x27;,
+      &#x27;可先核实优惠条件，信息不足时继续观察；优惠适用且自家经营与利润约束支持时，再评估促销方案。当前不足以直接给出跟价结论。&#x27;
+    ];
+  }
+  function fillParagraphs(element,fields){
+    element.replaceChildren();fields.forEach((text,i)=&gt;{const p=document.createElement(&#x27;p&#x27;),b=document.createElement(&#x27;strong&#x27;);b.textContent=labels[i]+&#x27;：&#x27;;p.append(b,document.createTextNode(text));element.append(p);});
+  }
+  function eligible(){return state.verified&amp;&amp;state.aiStatus===&#x27;reviewed&#x27;&amp;&amp;state.aiVersion===state.version&amp;&amp;!state.aiBusy;}
+  function renderSource(){
+    const open=Boolean(state.source);q(&#x27;#cp-source&#x27;).hidden=!open;
+    q(&#x27;#cp-source&#x27;).classList.toggle(&#x27;cp-inline&#x27;,design.sourcePlacement===&#x27;inline&#x27;);
+    q(&#x27;#cp-layout&#x27;).classList.toggle(&#x27;cp-source-open&#x27;,open&amp;&amp;design.sourcePlacement===&#x27;side&#x27;);
+    if(!open)return;
+    const sources={
+      excel:[&#x27;跟踪记录.xlsx · 工作表「日跟踪」&#x27;,&#x27;A-1：第 2 行，2026-09-10 10:00 JST，竞品 A 标价 11,800；优惠未采集。S-1/2：第 3–4 行，自家 S 两期标价均 10,800，经营指标未提供。&#x27;,&#x27;教学模拟。B 列为观察时间，D 列为标价，E 列为优惠状态；不是实时平台数据。&#x27;],
+      old:[&#x27;竞品旧页面.png · A-1-I&#x27;,state.oldAvailable?&#x27;截图区域「价格与促销」：2026-09-10 10:00 JST，11,800 日元；页面未展示券。&#x27;:&#x27;A-1 的 Excel 记录仍保留；旧截图当前不可用。优惠字段未采集，不能填 0 或认定没有券。&#x27;,state.oldAvailable?&#x27;教学模拟。已关联同站点、同 ASIN／变体、同卖家与时点。&#x27;:state.fileFailure?&#x27;识读失败：图片模糊。可以单独重试，不影响 Excel 与 Word。&#x27;:&#x27;该证据已撤去。旧解读仅作历史保留。&#x27;],
+      current:[&#x27;本次促销记录.docx · A-2&#x27;,&#x27;表格 1 第 2 行：2026-09-11 10:00 JST，标价 11,800 日元，展示 2,000 日元券；资格与期限未知。&#x27;+(state.coupon!==2000?` 补充截图 A-2-R（教学模拟）将券面额更正为 ${money(state.coupon)}；原 Word 值保留。`:&#x27;&#x27;),&#x27;教学模拟。当前使用的修订值需人工重新核对；并未访问商品链接。&#x27;]
+    };
+    const item=sources[state.source];q(&#x27;#cp-source-title&#x27;).textContent=item[0];q(&#x27;#cp-source-quote&#x27;).textContent=item[1];q(&#x27;#cp-source-note&#x27;).textContent=item[2];
+  }
+  function renderExport(){
+    if(!state.exportOpen)return;
+    const wrap=q(&#x27;#cp-export-table&#x27;);wrap.replaceChildren();
+    const table=document.createElement(&#x27;table&#x27;),head=document.createElement(&#x27;thead&#x27;),body=document.createElement(&#x27;tbody&#x27;);
+    const headings=[&#x27;记录&#x27;,&#x27;标价（日元）&#x27;,&#x27;优惠展示&#x27;,&#x27;核对状态 / 来源&#x27;];
+    const tr=document.createElement(&#x27;tr&#x27;);headings.forEach(t=&gt;{const th=document.createElement(&#x27;th&#x27;);th.textContent=t;tr.append(th);});head.append(tr);
+    const priceStatus=state.priceVerified?&#x27;标价已核对&#x27;:&#x27;标价待核对&#x27;;
+    const oldStatus=state.oldAvailable?(state.verified?&#x27;优惠展示已核对&#x27;:&#x27;优惠展示待核对&#x27;):&#x27;优惠未采集&#x27;;
+    const currentStatus=state.verified?&#x27;券面额已核对，条件未知&#x27;:&#x27;券面额待核对，条件未知&#x27;;
+    const rows=[[&#x27;A · 09-10 10:00&#x27;, &#x27;11,800&#x27;,state.oldAvailable?&#x27;页面未展示券&#x27;:&#x27;未采集；旧截图不可用&#x27;,priceStatus+&#x27;；&#x27;+oldStatus+&#x27; · A-1&#x27;+(state.oldAvailable?&#x27; / A-1-I&#x27;:&#x27;&#x27;)],[&#x27;A · 09-11 10:00&#x27;,&#x27;11,800&#x27;,money(state.coupon)+&#x27; 日元券；条件未知&#x27;,priceStatus+&#x27;；&#x27;+currentStatus+&#x27; · &#x27;+(state.coupon===2000?&#x27;A-2&#x27;:&#x27;A-2 / A-2-R&#x27;)],[&#x27;S · 09-10 / 09-11&#x27;,&#x27;10,800&#x27;,&#x27;未提供&#x27;,priceStatus+&#x27;；优惠未提供 · S-1/2&#x27;]];
+    rows.forEach(row=&gt;{const r=document.createElement(&#x27;tr&#x27;);row.forEach(t=&gt;{const td=document.createElement(&#x27;td&#x27;);td.textContent=t;r.append(td);});body.append(r);});table.append(head,body);wrap.append(table);
+    q(&#x27;#cp-export-ai&#x27;).disabled=!eligible();if(!eligible())q(&#x27;#cp-export-ai&#x27;).checked=false;
+    q(&#x27;#cp-export-reason&#x27;).textContent=eligible()?&#x27;可选附带：当前范围的已复核解读，保留条件、引用及生成时间。&#x27;:&#x27;当前只预览数据。解读须依据未变且已复核，才能附带；这不阻止数据导出。&#x27;;
+    const withAI=q(&#x27;#cp-export-ai&#x27;).checked&amp;&amp;eligible();q(&#x27;#cp-export-analysis&#x27;).hidden=!withAI;
+    if(withAI){fillParagraphs(q(&#x27;#cp-export-analysis&#x27;),state.fields);const p=document.createElement(&#x27;p&#x27;);p.className=&#x27;cp-muted&#x27;;p.textContent=`模拟解读 · 数据版本 v${state.aiVersion} · 生成于 ${state.generatedAt} · 条件仍需核实`;q(&#x27;#cp-export-analysis&#x27;).append(p);}
+  }
+  function render(){
+    q(&#x27;#cp-prep&#x27;).hidden=state.page!==&#x27;prep&#x27;;q(&#x27;#cp-work&#x27;).hidden=state.page!==&#x27;work&#x27;;
+    root.querySelectorAll(&#x27;[data-page]&#x27;).forEach(b=&gt;{b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.page===state.page));b.disabled=b.dataset.page===&#x27;work&#x27;&amp;&amp;!state.extracted;});
+    root.querySelectorAll(&#x27;[data-scenario]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.scenario===state.scenario)));
+    q(&#x27;#cp-prep-file-state&#x27;).textContent=state.scenario===&#x27;partial&#x27;?&#x27;本路径模拟：旧截图识读失败，其他材料继续。&#x27;:&#x27;&#x27;;
+    q(&#x27;#cp-extract&#x27;).disabled=state.extracting;q(&#x27;#cp-extract&#x27;).textContent=state.extracting?&#x27;正在提取示例…&#x27;:state.extracted?&#x27;回到当前工作台&#x27;:&#x27;提取示例资料&#x27;;
+    q(&#x27;#cp-old-state&#x27;).textContent=state.fileRetrying?&#x27;正在单独重试…&#x27;:state.oldAvailable?&#x27;提取完成&#x27;:state.fileFailure?&#x27;识读失败 · 图片模糊&#x27;:&#x27;已撤去 · 未参与当前比较&#x27;;
+    q(&#x27;#cp-old-state&#x27;).className=state.oldAvailable?&#x27;cp-good&#x27;:&#x27;cp-warn&#x27;;q(&#x27;#cp-retry-file&#x27;).hidden=state.oldAvailable;q(&#x27;#cp-retry-file&#x27;).disabled=state.fileRetrying;q(&#x27;#cp-retry-file&#x27;).textContent=state.fileFailure?&#x27;单独重试旧截图&#x27;:&#x27;重新补入旧截图&#x27;;q(&#x27;#cp-remove-old&#x27;).hidden=!state.oldAvailable;
+    q(&#x27;#cp-old-coupon&#x27;).textContent=state.oldAvailable?&#x27;页面未展示券&#x27;:&#x27;未采集 · 旧截图不可用&#x27;;q(&#x27;#cp-current-coupon&#x27;).textContent=money(state.coupon)+&#x27; 日元券&#x27;;
+    q(&#x27;#cp-record-state&#x27;).textContent=`数据 v${state.version} · `+(state.verified?&#x27;已核对；缺项保留&#x27;:&#x27;候选 / 修订数据 · 待核对&#x27;);q(&#x27;#cp-verify&#x27;).disabled=state.verified||state.fileRetrying;q(&#x27;#cp-verify&#x27;).textContent=state.verified?&#x27;本批记录已核对&#x27;:&#x27;核对本批记录&#x27;;
+    q(&#x27;#cp-verify-help&#x27;).textContent=state.verified?&#x27;已按来源核对；未知优惠条件仍然未知。&#x27;:&#x27;先回查原资料，再确认；此时不计算确定变化。&#x27;;
+    q(&#x27;#cp-compare-main&#x27;).textContent=state.priceVerified?&#x27;竞品与自家标价的前后差均为 0。当前竞品标价比自家高 1,000 日元。&#x27;+(state.verified?(state.oldAvailable?&#x27;两次优惠展示不同。&#x27;:&#x27;旧优惠记录不足，无法确认新增券。&#x27;):&#x27;优惠字段待重新核对；标价比较仍可用。&#x27;):&#x27;当前有待核对记录：确定差异暂停计算，已有数值和来源保留。&#x27;;
+    const current=11800-state.coupon,difference=current-10800;
+    q(&#x27;#cp-compare-conditional&#x27;).textContent=state.verified?`若券适用：11,800 − ${money(state.coupon)} = ${money(current)} 日元，`+(difference===0?&#x27;与自家标价相同。&#x27;:`比自家标价${difference&lt;0?&#x27;低&#x27;:&#x27;高&#x27;} ${money(Math.abs(difference))} 日元。`)+ &#x27;资格、期限未知；不当作普遍成交价。&#x27;:&#x27;核对后重新计算；资料不足不会被填为 0。&#x27;;
+    const names={idle:&#x27;尚未分析&#x27;,draft:&#x27;当前草稿 · 待复核&#x27;,reviewed:&#x27;当前解读 · 已复核&#x27;,failed:&#x27;本次分析失败&#x27;,stale:&#x27;依据已变化 · 原解读仅供回看&#x27;,candidate:&#x27;新候选待采用 · 旧解读保留&#x27;};
+    q(&#x27;#cp-ai-state&#x27;).textContent=state.aiBusy?&#x27;正在分析（模拟）…&#x27;:names[state.aiStatus];
+    q(&#x27;#cp-analyze&#x27;).disabled=!state.verified||state.aiBusy||state.fileRetrying;
+    q(&#x27;#cp-analyze&#x27;).textContent=state.aiBusy?&#x27;正在分析…&#x27;:state.aiStatus===&#x27;failed&#x27;?&#x27;重试辅助分析&#x27;:state.fields.length?&#x27;重新生成候选解读&#x27;:&#x27;辅助分析&#x27;;
+    q(&#x27;#cp-ai-error&#x27;).textContent=state.aiError;q(&#x27;#cp-ai-content&#x27;).hidden=!state.fields.length;
+    state.fields.forEach((v,i)=&gt;q(&#x27;#cp-ai-&#x27;+i).textContent=v);
+    q(&#x27;#cp-edit-ai&#x27;).hidden=![&#x27;draft&#x27;,&#x27;reviewed&#x27;].includes(state.aiStatus)||state.aiBusy;
+    q(&#x27;#cp-candidate&#x27;).hidden=!state.candidate;if(state.candidate)fillParagraphs(q(&#x27;#cp-candidate-text&#x27;),state.candidate.fields);
+    q(&#x27;#cp-history&#x27;).hidden=!state.history.length;if(state.history.length){q(&#x27;#cp-history-text&#x27;).replaceChildren();state.history.forEach(item=&gt;{const block=document.createElement(&#x27;div&#x27;),heading=document.createElement(&#x27;p&#x27;);heading.textContent=&#x27;保留记录 · 数据 v&#x27;+item.version;block.append(heading);const content=document.createElement(&#x27;div&#x27;);fillParagraphs(content,item.fields);block.append(content);q(&#x27;#cp-history-text&#x27;).append(block);});}
+    q(&#x27;#cp-review&#x27;).hidden=![&#x27;draft&#x27;,&#x27;reviewed&#x27;].includes(state.aiStatus)||state.aiBusy;
+    q(&#x27;#cp-review-check&#x27;).disabled=state.aiStatus===&#x27;reviewed&#x27;;q(&#x27;#cp-confirm-ai&#x27;).disabled=!q(&#x27;#cp-review-check&#x27;).checked||state.aiStatus!==&#x27;draft&#x27;||!state.verified;q(&#x27;#cp-confirm-ai&#x27;).textContent=state.aiStatus===&#x27;reviewed&#x27;?&#x27;解读已确认&#x27;:&#x27;确认解读&#x27;;
+    q(&#x27;#cp-final-state&#x27;).textContent=eligible()?&#x27;当前解读已复核，可选附带在导出预览中。&#x27;:&#x27;数据可以单独导出；解读不代替运营决定。&#x27;;
+    q(&#x27;#cp-export-preview&#x27;).hidden=!state.exportOpen;renderSource();renderExport();
+  }
+  function reset(scenario){
+    timers.forEach(clearTimeout);timers=[];
+    state={scenario,page:scenario===&#x27;modified&#x27;?&#x27;work&#x27;:&#x27;prep&#x27;,extracted:scenario===&#x27;modified&#x27;,extracting:false,verified:scenario===&#x27;modified&#x27;,priceVerified:scenario===&#x27;modified&#x27;,oldAvailable:true,fileFailure:false,fileRetrying:false,coupon:2000,version:1,source:&#x27;&#x27;,aiStatus:&#x27;idle&#x27;,aiVersion:0,aiBusy:false,aiError:&#x27;&#x27;,fields:[],candidate:null,history:[],generatedAt:&#x27;&#x27;,exportOpen:false};
+    if(scenario===&#x27;modified&#x27;){state.fields=fieldsFor(state);state.fields[3]=&#x27;人工补充：先联系同事核实券资格，资料齐备后再评估促销；暂不跟价。&#x27;;state.aiStatus=&#x27;reviewed&#x27;;state.aiVersion=1;state.generatedAt=&#x27;已载入的模拟状态&#x27;;}
+    q(&#x27;#cp-identities&#x27;).checked=scenario===&#x27;modified&#x27;;q(&#x27;#cp-review-check&#x27;).checked=scenario===&#x27;modified&#x27;;q(&#x27;#cp-export-ai&#x27;).checked=false;q(&#x27;#cp-fail-next&#x27;).checked=false;
+    q(&#x27;#cp-prep-error&#x27;).textContent=&#x27;&#x27;;q(&#x27;#cp-edit-error&#x27;).textContent=&#x27;&#x27;;q(&#x27;#cp-data-editor&#x27;).hidden=true;q(&#x27;#cp-ai-editor&#x27;).hidden=true;
+    tell(scenario===&#x27;modified&#x27;?&#x27;已载入一份已复核解读，含人工修改。请修改券金额或撤去旧截图，观察受影响的结果。&#x27;:scenario===&#x27;partial&#x27;?&#x27;本路径的旧截图将识读失败。先确认资料，再观察其他文件如何继续。&#x27;:&#x27;先确认本次跟踪对象与资料，再提取示例数据。&#x27;);render();
+  }
+  function invalidate(message){
+    state.version++;state.verified=false;state.candidate=null;state.aiError=&#x27;&#x27;;if(state.fields.length)state.aiStatus=&#x27;stale&#x27;;
+    q(&#x27;#cp-review-check&#x27;).checked=false;q(&#x27;#cp-ai-editor&#x27;).hidden=true;state.exportOpen=false;
+    tell(message+&#x27; 已有资料和人工解读保留；先重新核对，再生成新候选。&#x27;);render();
+  }
+  root.querySelectorAll(&#x27;[data-scenario]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;reset(b.dataset.scenario)));
+  root.querySelectorAll(&#x27;[data-page]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{state.page=b.dataset.page;render();}));
+  root.querySelectorAll(&#x27;[data-source]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{state.source=b.dataset.source;render();if(window.matchMedia(&#x27;(max-width:850px)&#x27;).matches)q(&#x27;#cp-source&#x27;).scrollIntoView({block:&#x27;nearest&#x27;});}));
+  q(&#x27;#cp-close-source&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.source=&#x27;&#x27;;render();});
+  q(&#x27;#cp-extract&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{
+    if(state.extracted){state.page=&#x27;work&#x27;;render();return;}
+    if(!q(&#x27;#cp-identities&#x27;).checked){q(&#x27;#cp-prep-error&#x27;).textContent=&#x27;请先确认商品身份、观察时间和比较范围。&#x27;;return;}
+    q(&#x27;#cp-prep-error&#x27;).textContent=&#x27;&#x27;;state.extracting=true;tell(&#x27;正在提取三份示例资料；候选数据需人工核对。&#x27;);render();
+    later(()=&gt;{state.extracting=false;state.extracted=true;state.page=&#x27;work&#x27;;state.fileFailure=state.scenario===&#x27;partial&#x27;;state.oldAvailable=!state.fileFailure;tell(state.fileFailure?&#x27;2 份资料提取完成，旧截图识读失败。可先核对可用记录；旧优惠状态保持未知。&#x27;:&#x27;3 份资料提取完成。请回查来源，核对后再比较。&#x27;);render();});
+  });
+  q(&#x27;#cp-verify&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.verified=true;state.priceVerified=true;tell(&#x27;已核对本批可用记录。缺失项保留；程序已更新可比较字段。&#x27;);render();});
+  q(&#x27;#cp-retry-file&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.fileRetrying=true;tell(&#x27;仅重新处理旧截图，其他文件和人工修改保留。&#x27;);render();later(()=&gt;{state.fileRetrying=false;state.fileFailure=false;state.oldAvailable=true;invalidate(&#x27;旧截图样例已补入，相关优惠展示依据发生变化。&#x27;);});});
+  q(&#x27;#cp-remove-old&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.oldAvailable=false;state.fileFailure=false;invalidate(&#x27;已撤去 A-1-I，不能再确认两次优惠展示变化。&#x27;);});
+  q(&#x27;#cp-edit-data&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{q(&#x27;#cp-data-editor&#x27;).hidden=false;q(&#x27;#cp-coupon-input&#x27;).value=state.coupon===2000?&#x27;1000&#x27;:String(state.coupon);q(&#x27;#cp-edit-error&#x27;).textContent=&#x27;&#x27;;});
+  q(&#x27;#cp-cancel-data&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{q(&#x27;#cp-data-editor&#x27;).hidden=true;});
+  q(&#x27;#cp-save-data&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{const n=Number(q(&#x27;#cp-coupon-input&#x27;).value);if(!Number.isInteger(n)||n&lt;=0||n&gt;=11800){q(&#x27;#cp-edit-error&#x27;).textContent=&#x27;本例请输入 1–11,799 的整数券面额。&#x27;;return;}q(&#x27;#cp-data-editor&#x27;).hidden=true;if(n===state.coupon){tell(&#x27;券面额未变化，已有复核状态保留。&#x27;);return;}state.coupon=n;invalidate(&#x27;券面额已修订为 &#x27;+money(n)+&#x27; 日元，原提取值保留。&#x27;);});
+  q(&#x27;#cp-analyze&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{
+    if(!state.verified||state.aiBusy)return;
+    const version=state.version,fields=fieldsFor({...state}),fail=q(&#x27;#cp-fail-next&#x27;).checked;q(&#x27;#cp-fail-next&#x27;).checked=false;
+    state.aiBusy=true;state.aiError=&#x27;&#x27;;state.candidate=null;q(&#x27;#cp-ai-editor&#x27;).hidden=true;tell(&#x27;正在根据已核对记录生成四部分解读（模拟）；现有内容保持不变。&#x27;);render();
+    later(()=&gt;{
+      state.aiBusy=false;
+      if(version!==state.version){if(!state.fields.length){state.fields=fields;state.aiVersion=version;state.generatedAt=new Date().toLocaleTimeString(&#x27;zh-CN&#x27;,{hour12:false});}state.aiStatus=&#x27;stale&#x27;;tell(&#x27;分析期间资料发生变化；保留已有解读与人工修改，不将迟到结果作为当前结论，请按新数据重新分析。&#x27;);render();return;}
+      if(fail){state.aiStatus=&#x27;failed&#x27;;state.aiError=&#x27;模拟超时：本次分析未成功，可重试；原表和人工内容保留。&#x27;;tell(&#x27;辅助分析失败。你仍可查看、修改和单独导出数据。&#x27;);render();return;}
+      const generatedAt=new Date().toLocaleTimeString(&#x27;zh-CN&#x27;,{hour12:false});
+      if(state.fields.length){state.candidate={fields,version,generatedAt};state.aiStatus=&#x27;candidate&#x27;;tell(&#x27;新候选已生成，尚未覆盖旧解读及人工修改；检查后采用。&#x27;);}
+      else{state.fields=fields;state.aiVersion=version;state.generatedAt=generatedAt;state.aiStatus=&#x27;draft&#x27;;tell(&#x27;四部分解读已生成（模拟）。请回查引用与条件，复核后再附带导出。&#x27;);}
+      q(&#x27;#cp-review-check&#x27;).checked=false;render();
+    });
+  });
+  q(&#x27;#cp-adopt&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{if(!state.candidate||state.candidate.version!==state.version)return;state.history.push({fields:state.fields.slice(),version:state.aiVersion});state.fields=state.candidate.fields;state.aiVersion=state.candidate.version;state.generatedAt=state.candidate.generatedAt;state.candidate=null;state.aiStatus=&#x27;draft&#x27;;q(&#x27;#cp-review-check&#x27;).checked=false;tell(&#x27;已采用新草稿。旧解读与人工修改可回看；请复核新结果。&#x27;);render();});
+  q(&#x27;#cp-edit-ai&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.fields.forEach((t,i)=&gt;q(&#x27;#cp-ai-edit-&#x27;+i).value=t);q(&#x27;#cp-ai-editor&#x27;).hidden=false;});
+  q(&#x27;#cp-cancel-ai&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{q(&#x27;#cp-ai-editor&#x27;).hidden=true;});
+  q(&#x27;#cp-save-ai&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{const values=labels.map((_,i)=&gt;q(&#x27;#cp-ai-edit-&#x27;+i).value.trim());if(values.some(t=&gt;!t)){tell(&#x27;四部分需填写；无足够证据时请写明缺口。&#x27;);return;}state.fields=values;state.aiStatus=&#x27;draft&#x27;;q(&#x27;#cp-review-check&#x27;).checked=false;q(&#x27;#cp-ai-editor&#x27;).hidden=true;tell(&#x27;人工修改已保留，请重新核对引用、条件与措辞后确认。&#x27;);render();});
+  q(&#x27;#cp-review-check&#x27;).addEventListener(&#x27;change&#x27;,render);
+  q(&#x27;#cp-confirm-ai&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{if(!state.verified||!q(&#x27;#cp-review-check&#x27;).checked||state.aiVersion!==state.version)return;state.aiStatus=&#x27;reviewed&#x27;;tell(&#x27;当前解读已复核；条件和未知项保留，后续经营动作仍由运营决定。&#x27;);render();});
+  q(&#x27;#cp-export&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.exportOpen=true;q(&#x27;#cp-export-ai&#x27;).checked=eligible();render();tell(&#x27;已打开导出预览。此原型不生成真实 Excel 文件。&#x27;);});
+  q(&#x27;#cp-close-export&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.exportOpen=false;render();});q(&#x27;#cp-export-ai&#x27;).addEventListener(&#x27;change&#x27;,renderExport);
+  reset(&#x27;normal&#x27;);
+  if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:render});tweak.addSelect(design,&#x27;sourcePlacement&#x27;,{label:&#x27;来源详情位置&#x27;,options:[{label:&#x27;侧边&#x27;,value:&#x27;side&#x27;},{label:&#x27;表格下方&#x27;,value:&#x27;inline&#x27;}]});}
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

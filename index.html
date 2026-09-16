@@ -149,8 +149,8 @@
     <p class="appendix-intro">从学员的真实运营经历中选一个主案例，贯穿用户研究、业务分析、流程与产品设计、评测、发布验证和迭代，再用于求职表达。</p>
     <div class="study-time"><span><strong>30 天</strong> · 约 60 小时</span><span><strong>20 次交流</strong> · 每次约 60 分钟</span><span><strong>10 天</strong> · 独立练习</span></div>
     <p class="course-setup"><strong>日期：</strong>按 Day 01–Day 30 标注，具体日期按实际约定。每 7 天为一个教学周，前三周各 5 次交流，第四周 4 次，Day 30 结课交流 1 次。</p>
-    <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。每天只要求一项主要产出，课后继续完成同一项；基础、交互和架构分别用两次课讲练。</p>
-    <p class="course-setup"><strong>项目与准备：</strong>主案例贯穿同一份 PRD、原型与 Demo；学员另行亲手制作学习 PWA，在手机上刷 AI 术语、定义、案例与练习题。老师提前准备 Day 05 的样例与代码骨架、示范 PWA、经核对的学习资料、评测样例和实验教学数据。PWA 先用 3–5 个概念跑通；后续按需要复用已核对的课堂内容，不要求每天另写卡片。</p>
+    <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。每天只要求一项主要产出，课后继续完成同一项；基础、交互和核心架构分别用两次课讲练；动态执行与运行机制在评审、复盘中继续学。</p>
+    <p class="course-setup"><strong>项目与准备：</strong>主案例贯穿同一份 PRD、原型与 Demo；学员另行亲手制作学习 PWA，在手机上刷 AI 术语、定义、案例与练习题。老师提前准备 Day 05 的样例与代码骨架、示范 PWA、经核对的学习资料、评测样例和实验教学数据；课前配好 Day 26 的 OpenClaw、示范 Skill 与工具，使用脱敏样例资料。PWA 先用 3–5 个概念跑通；后续按需要复用已核对的课堂内容，不要求每天另写卡片。</p>
     <nav class="course-jumps" aria-label="30天教学安排导航"><a href="#week-1">第一周</a><a href="#week-2">第二周</a><a href="#week-3">第三周</a><a href="#week-4">第四周</a><a href="#closing">结课</a><a href="#ai-learning-map">Day 09 知识地图</a></nav>
     <div class="resource-panel" id="github-basics">
       <h3>GitHub 小白使用手册</h3>
@@ -236,23 +236,25 @@
             </tr>
             <tr id="day-04" data-study-day="30-4" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 04</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">业务版 PRD · 竞品追踪工作台</strong>承接 Day 03 的功能推导，确定首版：把截图、Excel、Word 提取成可核对、可持续补入的跟踪表，支持前后变化与横向看数。写清字段、来源、核对和比较规则；不做爬虫。
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">业务 PRD 与原型 · 竞品追踪工作台</strong>承接 Day 03，设计“资料提取 → 核对成表 → 对比变化 → 辅助解读”。程序计算，大模型给关注理由与核查建议，运营决定行动。用原型走通正常完成、部分失败和修改后三条路径；不做爬虫。
                 <details class="lesson-detail">
-                  <summary>课堂怎么用这份 PRD</summary>
+                  <summary>课堂怎么用 PRD 与原型</summary>
                   <ol>
-                    <li><strong>定范围：</strong>先做好数据整理与对照，经营判断与动作记录后置。</li>
-                    <li><strong>走一遍：</strong>沿用 Day 03 价格／优惠券案例，看三类资料怎样提取、核对并汇入同一张表。</li>
-                    <li><strong>补规则：</strong>例如移除观察时间或旧截图，检查哪些字段仍能比较、哪些必须待核对。</li>
+                    <li><strong>正常完成：</strong>从资料准备到核对、分析、复核与导出预览，区分程序计算和模型解释。</li>
+                    <li><strong>部分失败：</strong>旧截图识读失败或模型超时，观察如何保留可用数据并单独重试。</li>
+                    <li><strong>修改之后：</strong>改券金额或撤去旧证据，检查旧解读失效、人工修改保留及新候选复核。</li>
                   </ol>
-                  <p><strong>课后产出：</strong>修订同一份业务版 PRD，留下待补样本与待确认问题，再用于后续原型设计。</p>
+                  <p><strong>课后产出：</strong>将原型走查发现回写同一份业务版 PRD。原型使用模拟数据与预设解读，不代表 OCR 或模型质量已验证。</p>
                 </details>
               </td>
-              <td><span class="day-label">目标</span>把“整理资料、便于看数”写成可走查的功能与规则，区分信息提取、人工确认和业务判断。</td>
-              <td><span class="day-label">产出</span>竞品追踪工作台业务版 PRD：首版范围、导入到导出的流程、字段与比较规则、验收。
+              <td><span class="day-label">目标</span>把数据整理与辅助判断写成可走查的规则，让正常、失败和修改后的操作都有明确去向。</td>
+              <td><span class="day-label">产出</span>业务版 PRD 与三条原型路径；说明证据、人工复核和失效处理规则。
                 <div class="day-attachments" id="prototype-materials">
-                  <strong>Day 04 主材料</strong>
+                  <strong>Day 04 教学材料</strong>
                   <ul>
                     <li><a href="attachments/4.%20prototype/业务版PRD-竞品追踪工作台.md">竞品追踪工作台 · 业务版 PRD</a></li>
+                    <li><a href="attachments/4.%20prototype/竞品追踪工作台-交互原型.html">可点击原型 · 三条路径</a></li>
+                    <li><a href="attachments/4.%20prototype/Day04原型走查指南.md">课堂走查指南</a></li>
                   </ul>
                 </div>
               </td>
@@ -331,9 +333,9 @@
             </tr>
             <tr id="day-09" data-study-day="30-9" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 09</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础①：看懂模型在做什么</strong>先用 5 分钟回看试用发现。老师用同一份竞品资料演示正确、缺资料和出错的输出，讲模型、训练与推理的区别；学员用自己的话解释结果能否采用。最后展示学习 PWA 和知识地图。课后只整理 3–5 张经核对的概念卡，供次日制作。 <a href="#ai-learning-map">查看知识地图</a></td>
-              <td><span class="day-label">目标</span>能解释模型的基本作用与局限，知道怎样查证一个 AI 概念。</td>
-              <td><span class="day-label">产出</span>3–5 张概念卡：定义、业务例子、来源与一道自测题。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础①：看懂模型在做什么</strong>先用 5 分钟回看试用发现。老师用同一份竞品资料演示正确、缺资料和出错的输出，讲模型、训练与推理的区别；学员解释结果能否采用。展示学习 PWA 时，用 5 分钟概览执行方式、运行支撑与具体产品，标出后续学习日期。课后仍只整理 3–5 张经核对的基础概念卡。 <a href="#ai-learning-map">查看知识地图</a></td>
+              <td><span class="day-label">目标</span>能解释模型的基本作用与局限，知道新概念属于哪一层、怎样查证。</td>
+              <td><span class="day-label">产出</span>3–5 张基础概念卡：定义、业务例子、来源与一道自测题。</td>
             </tr>
             <tr id="day-10" data-study-day="30-10" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 10</span></th>
@@ -378,7 +380,7 @@
     <details class="study-plan" id="week-3">
       <summary>第三周 · 架构讲练、PRD 评审与评测入门<span class="plan-hours">Day 15–21 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
-        <p class="learning-map-intro"><strong>本周节奏：</strong>Day 15 看请求与数据，Day 16 看执行与工具；Day 17 汇总评审。Day 18 老师示范评测，Day 19 学员试评，周末只跑一轮小评测和一次修改。</p>
+        <p class="learning-map-intro"><strong>本周节奏：</strong>Day 15 看请求与数据，Day 16 用 Graph 画清 Workflow 与 Agent；Day 17 先看动态执行，再评审 PRD。Day 18–19 分两天讲练评测，周末只跑一轮小评测和一次修改。</p>
         <table class="day-table" aria-label="第15至21天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
           <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
@@ -391,15 +393,15 @@
             </tr>
             <tr id="day-16" data-study-day="30-16" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 16</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构②：工作流与 Agent 怎样执行</strong>老师用同一个小任务对照固定工作流与模型选择工具的过程，示范一次工具调用、失败和停止。学员据此给主项目选择执行方式，标出人工确认与失败后的去向；课后补写选择理由，不要求新增 Agent 功能。</td>
-              <td><span class="day-label">目标</span>能解释谁决定下一步、调用什么工具、何时停止或交给人。</td>
-              <td><span class="day-label">产出</span>主项目执行流程图，含工具、停止条件、人工处理与取舍依据。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构②：Workflow、Agent 与 Graph</strong>老师用同一个资料整理任务，对照程序规定步骤与模型选择下一步；在 Graph（流程／状态图）上讲节点、连线、分支、循环与状态，示范一次工具调用和停止。学员画主项目执行图，标出人工确认与失败去向，课后补写选择理由。本日只读图、画图，不学框架代码。</td>
+              <td><span class="day-label">目标</span>能画出执行过程，说明谁决定下一步、何时停止，以及为什么采用这种方式。</td>
+              <td><span class="day-label">产出</span>主项目执行图：步骤、状态、工具、人工确认、停止条件与方案取舍。</td>
             </tr>
             <tr id="day-17" data-study-day="30-17" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 17</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">把交互与架构补入 PRD，再做评审</strong>汇总已完成的交互与架构说明，老师带着对照 Demo 检查输入输出、数据依赖和人工边界。学员解释一项设计，接受追问后修订；课后只关闭一个最影响使用的问题，准备可评测的版本。</td>
-              <td><span class="day-label">目标</span>把已学机制写成前后一致、能与研发讨论的产品方案。</td>
-              <td><span class="day-label">产出</span>第二版 PRD，附方案选择、实现状态与待解决问题。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">动态执行示范与 PRD 评审</strong>前 15 分钟演示 Dynamic workflow：资料缺项后，模型根据结果选择重读已有材料、询问用户或停止，区分预设分支与执行中调整路径。后 45 分钟评审已有交互与架构，对照 Demo 追问输入输出、数据依赖和人工边界。课后修订同一份 PRD，关闭一个最影响评测的问题。</td>
+              <td><span class="day-label">目标</span>能解释动态路径的决定依据与停止条件，把方案写成可与研发讨论的需求。</td>
+              <td><span class="day-label">产出</span>第二版 PRD：交互与执行规则、方案选择、实现状态和待解决问题。</td>
             </tr>
             <tr id="day-18" data-study-day="30-18" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 18</span></th>
@@ -427,22 +429,22 @@
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>能解释一次请求与执行流程，完成第二版 PRD；经过两次评测讲练，在独立日跑一轮小评测并尝试修复一个问题，带着结果进入第四周。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>能画清请求与执行流程，读懂分支、循环和状态，说明谁决定下一步，完成第二版 PRD；经过两次评测讲练，独立跑一轮小评测并尝试修复一个问题。</p>
       </div>
     </details>
     <details class="study-plan" id="week-4">
       <summary>第四周 · 评测复盘、用户验证与交付<span class="plan-hours">Day 22–28 · 4 次交流 · 3 天独立练习</span></summary>
       <div class="study-body">
-        <p class="learning-map-intro"><strong>本周减量：</strong>保留评测复盘、用户试用和一次交付评审；独立技术答辩与陌生场景练习并入 Day 26 评审和 Day 30 模拟。Day 23 的 A/B 只学基本判断，腾出的课时用于前面拆开的讲练。</p>
+        <p class="learning-map-intro"><strong>本周节奏：</strong>Day 22 借失败案例认识 Harness，Day 26 用 Skills／OpenClaw 示范替换部分老师讲解与 PWA 抽查。保留评测复盘、试用准备、真实用户反馈和交付评审；A/B 只学基本判断，技术答辩与场景变化在评审和结课模拟中练习。</p>
         <table class="day-table" aria-label="第22至28天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
           <thead><tr><th scope="col">日期</th><th scope="col">教学安排</th><th scope="col">目标</th><th scope="col">产出</th></tr></thead>
           <tbody>
             <tr id="day-22" data-study-day="30-22" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 22</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测复盘与下一轮试用准备</strong>老师带着复盘 Day 20–21，核对错误归因和版本比较；选定可试用版本，再沿用 Day 08 模板准备一个任务，明确记录项、已知限制和出错后的处理方式。课后预约 Day 24 的目标运营。</td>
-              <td><span class="day-label">目标</span>讲清一次迭代的依据，准备范围明确、可观察的真实试用。</td>
-              <td><span class="day-label">产出</span>迭代结论与试用任务单，注明版本、记录方式和已知限制。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">评测复盘：Harness 与试用准备</strong>用 20 分钟复盘 Day 20–21 的错误和版本比较；再用 20 分钟沿一条失败过程认识 Harness（Agent 的运行支撑）：检查工具与上下文、记录状态，在权限内重试或交给人。最后 20 分钟选定可试用版本，沿用 Day 08 模板准备任务，补上出错处理。课后预约 Day 24 的目标运营。</td>
+              <td><span class="day-label">目标</span>能说明运行失败怎样处理，将迭代结论与必要运行规则用于下一轮试用。</td>
+              <td><span class="day-label">产出</span>试用任务单：版本选择依据、记录项、已知限制与出错处理规则。</td>
             </tr>
             <tr id="day-23" data-study-day="30-23" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 23</span></th>
@@ -464,9 +466,9 @@
             </tr>
             <tr id="day-26" data-study-day="30-26" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 26</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">项目交付评审与表达练习</strong>老师先示范如何用证据讲清一项决策与个人贡献，学员再演示主项目，说明需求、技术选择和验证结果；老师检查材料一致性并抽查 PWA 的一张卡，选出最多两项补改。课后只整理补改清单。</td>
-              <td><span class="day-label">目标</span>能用项目材料支撑自己的回答，明确结课前最需要补的地方。</td>
-              <td><span class="day-label">产出</span>项目讲解提纲、评审反馈与最多两项补改。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">Skills／OpenClaw 示范与交付评审</strong>前 20 分钟，老师在已配置的 OpenClaw 中展示 Agent 如何加载 Skill、按其指引调用工具并完成资料整理，示范用执行记录解释能力与限制。后 40 分钟，学员演示主项目，对照说明可复用步骤、工具和运行环境，讲清需求、技术选择、验证与个人贡献；老师核对材料，选出最多两项补改。课后只整理补改清单。</td>
+              <td><span class="day-label">目标</span>看懂 Skills、工具与运行环境的关系，能用项目证据支撑自己的解释。</td>
+              <td><span class="day-label">产出</span>项目讲解提纲与评审反馈，附能力对照和最多两项补改。</td>
             </tr>
             <tr id="day-27" data-study-day="30-27" data-mode="independent">
               <th scope="row"><span class="day-number">Day 27</span><span class="session-kind">独立练习</span></th>
@@ -482,7 +484,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="study-gate"><strong>阶段目标：</strong>完成一次评测复盘、真实试用或注明的角色演练，并据反馈作出迭代决定；掌握 A/B 的基本判断，完成合并评审、补改与终验。</p>
+        <p class="study-gate"><strong>阶段目标：</strong>能说明必要的运行规则，看懂 Skills／OpenClaw 的执行示范；完成试用与反馈迭代，掌握 A/B 基本判断，完成交付评审、补改与终验。</p>
       </div>
     </details>
     <details class="study-plan" id="closing">
@@ -512,26 +514,29 @@
     </div>
     <details class="ai-learning-map" id="ai-learning-map">
       <summary>Day 09 · AI PM 的学习地图</summary>
-      <p class="learning-map-intro">Day 05 先学 PE 入门；Day 09 学基础并看老师示范，Day 10 制作 PWA，Day 11–12 学交互原则与设计；Day 15–16 学架构，Day 18–19 学评测。下列是持续学习范围，30 天内围绕主项目学习必需概念；算法推导、训练实操和复杂 Agent 留到后续。学习卡包含定义、业务例子、来源与自测解析。</p>
+      <p class="learning-map-intro">Day 09 用 5 分钟看全貌，不逐项学完。Day 05 学 PE，Day 09–10 学基础并做 PWA，Day 11–12 学交互，Day 15–17 学请求、执行与方案取舍，Day 18–19 学评测；Day 22 认识 Harness，Day 26 看 Skills／OpenClaw 示范。学习卡仍从 3–5 个基础概念开始。</p>
       <div class="learning-map-grid">
         <article class="learning-map-item"><h4>模型与算法基础</h4><p>分类、预测、排序与生成分别解决什么；大模型的上下文、能力与局限。</p></article>
         <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>Day 05 先写任务、资料、规则与验收；Day 15 看运行时 Prompt、上下文和模型调用；Day 18–19 用评测检查效果。</p></article>
         <article class="learning-map-item"><h4>AI 交互原则与方式</h4><p>任务范围、必要确认、过程与来源可见；打断恢复、异常降级和修改影响。结合用户任务选择表格辅助、对话等交互方式。</p></article>
-        <article class="learning-map-item"><h4>AI 应用技术架构</h4><p>沿实际请求解释界面、服务、模型、数据与工具如何配合，画清结果校验、人工确认和异常处理的路径。</p></article>
-        <article class="learning-map-item"><h4>RAG、工作流与 Agent</h4><p>知识从哪里来、工具如何调用、何时停止；哪些步骤需要人工接管。</p></article>
+        <article class="learning-map-item"><h4>请求、数据与 RAG</h4><p>Day 15 沿一次请求看界面、服务、模型与校验；区分直接提供资料和先检索再回答，画清数据来源与去向。</p></article>
+        <article class="learning-map-item"><h4>Workflow 与 Agent</h4><p>Day 16 对比事先规定路径与模型决定下一步：能调用什么工具、何时停、谁确认。要能说明项目选择，不要求新增 Agent 功能。</p></article>
+        <article class="learning-map-item"><h4>Graph 与动态工作流</h4><p>Day 16 用节点、连线和状态画执行过程；Graph 可以承载 Workflow 或 Agent。Day 17 看执行中调整路径，区分预设分支与模型临时决策。</p></article>
         <article class="learning-map-item"><h4>数据与模型训练</h4><p>训练与推理、预训练与微调的区别；特征、标签、数据划分及验证方法。</p></article>
         <article class="learning-map-item"><h4>评测与模型选择</h4><p>如何比较质量、稳定性、速度和成本，分析失败并判断方案是否合适。</p></article>
-        <article class="learning-map-item"><h4>产品运行</h4><p>失败、权限与人工接管怎样处理；如何记录实际使用并持续监控。</p></article>
+        <article class="learning-map-item"><h4>Harness：运行支撑</h4><p>Day 22 借失败案例认识模型之外的配套：工具、上下文、权限、执行记录与状态恢复。能给项目提出运行要求，暂不搭建完整环境。</p></article>
+        <article class="learning-map-item"><h4>Skills 与 OpenClaw</h4><p>Day 26 看一次实际执行：Skill 用指令、资料或脚本沉淀业务方法；工具提供操作能力；OpenClaw 是承载这些能力的具体系统。先看懂各自职责。</p></article>
       </div>
     </details>
     <div class="appendix-notes">
       <p><strong>学习 PWA：</strong>学员亲手制作，先用 3–5 个已核对概念完成手机刷学。后续只复用课堂已有资料，每周按需补少量内容；终验样例及答案不放入题库。学习自测与主项目质量评测分别记录。</p>
       <p><strong>三种验证：</strong>用户测试看人能否完成任务；离线评测看 AI 输出是否合格；线上 A/B 用随机分组检验改动对业务指标的影响。样本、周期或数据不足时，结论保留为待验证。</p>
-      <p><strong>实验实操：</strong>Day 20–21 做离线评测与一次修改，Day 22 准备试用，Day 23 学业务指标与 A/B 基本判断，Day 24 试用、Day 25 复盘。A/B 保留一个教学案例；完整统计分析与正式线上实验留作后续，真实试用不等同于随机对照实验。</p>
+      <p><strong>实验实操：</strong>Day 20–21 做离线评测与一次修改，Day 22 复盘运行问题并准备试用，Day 23 学业务指标与 A/B 基本判断，Day 24 试用、Day 25 复盘。A/B 保留一个教学案例；完整统计分析与正式线上实验留作后续，真实试用不等同于随机对照实验。</p>
+      <p><strong>学习深度：</strong>Workflow／Agent 会作方案取舍，Graph 会读会画；动态工作流与 Harness 能解释案例并提出要求；Skills／OpenClaw 先看懂实际执行。独立搭建复杂编排、配置新系统和训练模型留作后续，不额外增加本期作业。</p>
       <p><strong>课程目标：</strong>用一个主案例讲清研究、设计、技术、验证和迭代，同时亲手制作可在手机刷学 AI 知识的 PWA。算法与训练以概念、数据条件和方案判断为本期目标；Agent 深度使用和正式产品交付经验按结课证据继续补。</p>
       <p><strong>材料口径：</strong>使用获授权的脱敏资料，简历标明课堂项目和个人贡献。缺少真实用户时明确记录角色模拟；课程天数不能替代岗位要求的产品年限。</p>
     </div>
-    <p class="study-sources">方法参考：<a href="https://www.microsoft.com/en-us/research/articles/a-b-testing-across-products/" target="_blank" rel="noopener noreferrer">线上 A/B 实验</a> · <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">AI 评测</a> · <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">工作流与 Agent</a> · <a href="https://docs.openclaw.ai/tools" target="_blank" rel="noopener noreferrer">工具调用机制</a> · <a href="https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/" target="_blank" rel="noopener noreferrer">AI 交互设计</a> · <a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">用户反馈与控制</a>。逐日安排依据课程讨论与教学记录制定。</p>
+    <p class="study-sources">方法参考：<a href="https://www.microsoft.com/en-us/research/articles/a-b-testing-across-products/" target="_blank" rel="noopener noreferrer">线上 A/B 实验</a> · <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">AI 评测</a> · <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">工作流与 Agent</a> · <a href="https://docs.langchain.com/oss/python/langgraph/graph-api" target="_blank" rel="noopener noreferrer">Graph</a> · <a href="https://docs.langchain.com/oss/python/deepagents/overview" target="_blank" rel="noopener noreferrer">Harness</a> · <a href="https://agentskills.io/what-are-skills" target="_blank" rel="noopener noreferrer">Skills</a> · <a href="https://docs.openclaw.ai/" target="_blank" rel="noopener noreferrer">OpenClaw</a> · <a href="https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/" target="_blank" rel="noopener noreferrer">AI 交互设计</a> · <a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">用户反馈与控制</a>。逐日安排依据课程讨论与教学记录制定。</p>
   </section>
 
   <footer>依据：你提供的简历、跨境电商 AI 产品岗位 JD 截图与首次教学录屏。三级能力框架为教学对照，不是企业统一职级标准；技术概念附官方资料，Day 01 按课堂记录修订，后续学习安排为教学计划。</footer>
