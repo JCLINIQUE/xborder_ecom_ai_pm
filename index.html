@@ -150,7 +150,7 @@
     <div class="study-time"><span><strong>30 天</strong> · 约 60 小时</span><span><strong>20 次交流</strong> · 每次约 60 分钟</span><span><strong>10 天</strong> · 独立练习</span></div>
     <p class="course-setup"><strong>日期：</strong>按 Day 01–Day 30 标注，具体日期按实际约定。每 7 天为一个教学周，前三周各 5 次交流，第四周 4 次，Day 30 结课交流 1 次。</p>
     <p class="course-setup"><strong>节奏：</strong>默认每天总投入 2 小时。交流日为 60 分钟讲练＋60 分钟独立作业；独立日练习 120 分钟。普通交流按讲解 15 分钟、现场练习 30 分钟、反馈重练 15 分钟安排。每天只要求一项主要产出，课后继续完成同一项；基础、交互和架构分别用两次课讲练。</p>
-    <p class="course-setup"><strong>项目与准备：</strong>主案例贯穿同一份 PRD、原型与 Demo；学员另行亲手制作学习 PWA，在手机上刷 AI 术语、定义、案例与练习题。老师提前准备示范 PWA、经核对的学习资料、评测样例和实验教学数据。PWA 先用 3–5 个概念跑通；后续按需要复用已核对的课堂内容，不要求每天另写卡片。</p>
+    <p class="course-setup"><strong>项目与准备：</strong>主案例贯穿同一份 PRD、原型与 Demo；学员另行亲手制作学习 PWA，在手机上刷 AI 术语、定义、案例与练习题。老师提前准备 Day 05 的样例与代码骨架、示范 PWA、经核对的学习资料、评测样例和实验教学数据。PWA 先用 3–5 个概念跑通；后续按需要复用已核对的课堂内容，不要求每天另写卡片。</p>
     <nav class="course-jumps" aria-label="30天教学安排导航"><a href="#week-1">第一周</a><a href="#week-2">第二周</a><a href="#week-3">第三周</a><a href="#week-4">第四周</a><a href="#closing">结课</a><a href="#ai-learning-map">Day 09 知识地图</a></nav>
     <div class="resource-panel" id="github-basics">
       <h3>GitHub 小白使用手册</h3>
@@ -259,13 +259,29 @@
             </tr>
             <tr id="day-05" data-study-day="30-5" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 05</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">产品 Demo</strong>先根据 Day 04 工作台 PRD 画清资料核对与表格对照的原型，再由老师指导学员通过 vibe coding 搭建最小 Demo，走通“导入资料 → 提取核对 → 入表比较 → 导出”。按同一份 PRD 的验收样例检查功能，标明尚未实现或使用模拟数据的部分。</td>
-              <td><span class="day-label">目标</span>把原型变成可以实际操作、检查输入输出的产品 Demo。</td>
-              <td><span class="day-label">产出</span>可运行的最小 Demo、功能检查记录与待完善项。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">PE 入门与产品 Demo</strong>先用 15 分钟讲 Prompt Engineering：把 Day 04 的任务、背景、资料、规则、输出与验收写成指令。再确认流程简图，老师带着用 vibe coding 跑通“样例资料 → 候选表 → 核对入表”，遇到一个错误就修改并复查。
+                <details class="lesson-detail">
+                  <summary>60 分钟讲练与当天范围</summary>
+                  <ol>
+                    <li><strong>15 分钟：</strong>对照模糊与具体的 Prompt，学员补写一条可检查的业务要求。</li>
+                    <li><strong>5 分钟：</strong>按 PRD 确认本次主流程简图。</li>
+                    <li><strong>30 分钟：</strong>用老师准备的样例与代码骨架搭建，学员亲手修改一条规则。</li>
+                    <li><strong>10 分钟：</strong>用正常与缺日期资料检查，改一处问题并复查。</li>
+                  </ol>
+                  <p><strong>课后 60 分钟：</strong>只继续这一个 Demo。课堂先跑通一种输入，完整文件解析、关联更新和导出逐项补齐；未接通真实提取须标明模拟。课件中的完整 PE 方法用于复习，不要求当天学完。</p>
+                </details>
+              </td>
+              <td><span class="day-label">目标</span>把业务要求写成可执行、可检查的指令，并据此搭出最小流程。</td>
+              <td><span class="day-label">产出</span>可运行的最小 Demo，附使用的 Prompt、检查记录与待完善项。
+                <div class="day-attachments" id="pe-demo-materials">
+                  <strong>PE 与 Demo 课件</strong>
+                  <ul><li><a href="attachments/5.%20demo/Day05-PE与Demo入门.md">Day 05：讲练安排、Prompt 示例与方法速查</a></li></ul>
+                </div>
+              </td>
             </tr>
             <tr id="day-06" data-study-day="30-6" data-mode="independent">
               <th scope="row"><span class="day-number">Day 06</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完善 Demo 并按 PRD 自查</strong>补齐 Day 05 的待完善项，沿用课堂示范的验收样例检查正常与异常输入；记录实际结果、与 PRD 或原型的差异及待修复问题。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">完善 Demo 并按 PRD 自查</strong>补齐 Day 05 的待完善项，沿用课堂示范的验收样例检查正常与异常输入；记录实际结果、与 PRD 或原型的差异及待修复问题；保留 Prompt 修改前后的对应结果。</td>
               <td><span class="day-label">目标</span>独立检查 Demo 是否符合已经写清的需求与交互规则。</td>
               <td><span class="day-label">产出</span>完善后的 Demo、逐项自查记录与问题清单。</td>
             </tr>
@@ -283,7 +299,7 @@
     <details class="study-plan" id="week-2">
       <summary>第二周 · AI 基础与交互，分两天讲练<span class="plan-hours">Day 08–14 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
-        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 08 用户试用；Day 09–10 学 AI 基础、制作学习 PWA；Day 11–12 先选交互方式，再补异常处理。架构与方案评审顺延到第三周。</p>
+        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 08 用户试用；Day 09–10 学 AI 基础、制作学习 PWA；Day 11–12 先讲交互原则与主流程，再练打断、异常和局部修改。架构与方案评审顺延到第三周。</p>
         <p class="learning-map-intro"><strong>学习 PWA：</strong>Day 09 老师展示，Day 10 学员亲手制作并讲解，Day 13 完善手机体验。Day 14 只整理主项目交互，不再同时扩充 PWA。</p>
         <table class="day-table" aria-label="第8至14天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
@@ -327,15 +343,20 @@
             </tr>
             <tr id="day-11" data-study-day="30-11" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 11</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 交互①：选择用户完成任务的方式</strong>老师从对话、嵌入式辅助、生成与编辑等方式中选两种适合主项目的例子作对照。学员围绕一个核心任务选交互方式，画出输入、查看结果、修改和确认的正常流程；课后补齐这一条流程。</td>
-              <td><span class="day-label">目标</span>能根据用户任务选择交互方式，讲清正常情况下怎样完成工作。</td>
-              <td><span class="day-label">产出</span>主任务的交互选择依据与正常流程原型。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 交互原则①：范围、确认与可见性</strong>老师概览六条交互原则，重点讲清任务范围、关键资料确认、过程状态与结果来源。结合工作台比较表格核对和对话入口，示范一条主流程；学员在已有原型上补齐输入、核对、入表与导出的去向。</td>
+              <td><span class="day-label">目标</span>知道每一步要让用户看什么、确认什么，能解释交互方式的选择。</td>
+              <td><span class="day-label">产出</span>一条正常主流程原型，标明状态、来源入口与确认后的去向。
+                <div class="day-attachments" id="ai-interaction-materials">
+                  <strong>Day 11–12 共用课件</strong>
+                  <ul><li><a href="attachments/6.%20ai-interaction/AI产品交互原则-课堂讲义.md">六条交互原则、工作台案例与两天练习</a></li></ul>
+                </div>
+              </td>
             </tr>
             <tr id="day-12" data-study-day="30-12" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 12</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 交互②：结果不对或任务失败怎么办</strong>沿用 Day 11 原型。老师示范一条资料不足的处理路径，学员再补生成等待、结果纠正和调用失败时的操作；现场按一条失败样例走查，课后完善同一份交互说明。</td>
-              <td><span class="day-label">目标</span>让用户知道当前状态，能检查、纠正结果，并在失败后继续。</td>
-              <td><span class="day-label">产出</span>异常状态、恢复路径与走查记录，写入同一份原型说明。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 交互原则②：打断、恢复与局部修改</strong>沿用昨天的原型，老师示范识别失败与取消文件后的处理，学员再设计“修改一个已入表数值”。说明哪些成果保留、怎样继续、哪些结果要重算或重新核对；课后补完同一份原型。<a href="attachments/6.%20ai-interaction/AI产品交互原则-课堂讲义.md">查看共用练习</a></td>
+              <td><span class="day-label">目标</span>让用户遇到问题知道怎样继续，修改后知道影响了什么。</td>
+              <td><span class="day-label">产出</span>补齐失败、取消和数值修改三处路径的主流程原型。</td>
             </tr>
             <tr id="day-13" data-study-day="30-13" data-mode="independent">
               <th scope="row"><span class="day-number">Day 13</span><span class="session-kind">独立练习</span></th>
@@ -364,7 +385,7 @@
           <tbody>
             <tr id="day-15" data-study-day="30-15" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 15</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构①：一次请求经过哪里</strong>老师沿 Demo 的一次实际请求，解释界面、应用服务、模型与结果校验怎样衔接，现场查看 Prompt 和上下文。只围绕“模型如何拿到资料”对照直接提供资料与检索／RAG；学员画出当前项目的请求和数据流。课后补齐这张图。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构①：一次请求经过哪里</strong>承接 Day 05 的 PE 入门，老师沿 Demo 的一次实际请求解释界面、应用服务、模型与校验怎样衔接，区分搭建产品的指令与运行时 Prompt、上下文。只围绕“模型如何拿到资料”对照直接提供资料与检索／RAG；学员画出当前项目的请求和数据流。课后补齐这张图。</td>
               <td><span class="day-label">目标</span>能沿一次请求说清资料从哪来、交给模型什么、结果如何返回。</td>
               <td><span class="day-label">产出</span>当前请求与数据流图，注明实际实现、资料来源和待确认项。</td>
             </tr>
@@ -491,11 +512,11 @@
     </div>
     <details class="ai-learning-map" id="ai-learning-map">
       <summary>Day 09 · AI PM 的学习地图</summary>
-      <p class="learning-map-intro">Day 09 学基础并看老师示范，Day 10 制作 PWA，Day 11–12 学交互；Day 15–16 学架构，Day 18–19 学评测。下列是持续学习范围，30 天内围绕主项目学习必需概念；算法推导、训练实操和复杂 Agent 留到后续。学习卡包含定义、业务例子、来源与自测解析。</p>
+      <p class="learning-map-intro">Day 05 先学 PE 入门；Day 09 学基础并看老师示范，Day 10 制作 PWA，Day 11–12 学交互原则与设计；Day 15–16 学架构，Day 18–19 学评测。下列是持续学习范围，30 天内围绕主项目学习必需概念；算法推导、训练实操和复杂 Agent 留到后续。学习卡包含定义、业务例子、来源与自测解析。</p>
       <div class="learning-map-grid">
         <article class="learning-map-item"><h4>模型与算法基础</h4><p>分类、预测、排序与生成分别解决什么；大模型的上下文、能力与局限。</p></article>
-        <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>如何描述任务、提供上下文、约束输出，并通过 API 使用模型。</p></article>
-        <article class="learning-map-item"><h4>AI 交互范式</h4><p>对话式、嵌入式辅助、生成与编辑式、任务委托式怎样选择；如何设计确认、修改、证据查看和失败恢复。</p></article>
+        <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>Day 05 先写任务、资料、规则与验收；Day 15 看运行时 Prompt、上下文和模型调用；Day 18–19 用评测检查效果。</p></article>
+        <article class="learning-map-item"><h4>AI 交互原则与方式</h4><p>任务范围、必要确认、过程与来源可见；打断恢复、异常降级和修改影响。结合用户任务选择表格辅助、对话等交互方式。</p></article>
         <article class="learning-map-item"><h4>AI 应用技术架构</h4><p>沿实际请求解释界面、服务、模型、数据与工具如何配合，画清结果校验、人工确认和异常处理的路径。</p></article>
         <article class="learning-map-item"><h4>RAG、工作流与 Agent</h4><p>知识从哪里来、工具如何调用、何时停止；哪些步骤需要人工接管。</p></article>
         <article class="learning-map-item"><h4>数据与模型训练</h4><p>训练与推理、预训练与微调的区别；特征、标签、数据划分及验证方法。</p></article>
