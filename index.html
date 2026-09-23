@@ -236,48 +236,49 @@
             </tr>
             <tr id="day-04" data-study-day="30-4" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 04</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">业务 PRD 与原型 · 竞品追踪工作台</strong>承接 Day 03，设计“资料提取 → 核对成表 → 对比变化 → 辅助解读”。程序计算，大模型给关注理由与核查建议，运营决定行动。用原型走通正常完成、部分失败和修改后三条路径；不做爬虫。
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">业务 PRD 与原型 · 竞品追踪工作台</strong>承接 Day 03，设计“资料提取 → 核对成表 → 对比变化 → 辅助解读”。程序计算，大模型给关注理由与核查建议，运营决定行动。设计正常完成、部分失败和修改后的页面与状态；正式走查放在 Day 08，不做爬虫。
                 <details class="lesson-detail">
-                  <summary>课堂怎么用 PRD 与原型</summary>
+                  <summary>课堂设计什么</summary>
                   <ol>
-                    <li><strong>正常完成：</strong>从资料准备到核对、分析、复核与导出预览，区分程序计算和模型解释。</li>
-                    <li><strong>部分失败：</strong>旧截图识读失败或模型超时，观察如何保留可用数据并单独重试。</li>
-                    <li><strong>修改之后：</strong>改券金额或撤去旧证据，检查旧解读失效、人工修改保留及新候选复核。</li>
+                    <li><strong>拆页面：</strong>明确资料准备、候选核对、分析与导出页面的输入、操作和输出。</li>
+                    <li><strong>写规则：</strong>标出资料来源、比较条件，以及程序计算、模型解释与人工决定的分工。</li>
+                    <li><strong>补状态：</strong>设计正常、局部失败和修改后的处理，注明哪些内容保留、重算或待核对。</li>
                   </ol>
-                  <p><strong>课后产出：</strong>将原型走查发现回写同一份业务版 PRD。原型使用模拟数据与预设解读，不代表 OCR 或模型质量已验证。</p>
+                  <p><strong>课后产出：</strong>补齐同一份业务版 PRD 与原型，列出待验证问题，供 Day 05 制作 Demo、Day 08 正式走查。原型使用模拟数据与预设解读，不代表 OCR 或模型质量已验证。</p>
                 </details>
               </td>
-              <td><span class="day-label">目标</span>把数据整理与辅助判断写成可走查的规则，让正常、失败和修改后的操作都有明确去向。</td>
-              <td><span class="day-label">产出</span>业务版 PRD 与三条原型路径；说明证据、人工复核和失效处理规则。
+              <td><span class="day-label">目标</span>把业务规则落实到页面与状态，说明正常、失败和修改后的处理方式。</td>
+              <td><span class="day-label">产出</span>业务版 PRD、原型页面与状态说明，附待验证问题。
                 <div class="day-attachments" id="prototype-materials">
                   <strong>Day 04 教学材料</strong>
                   <ul>
                     <li><a href="attachments/4.%20prototype/业务版PRD-竞品追踪工作台.md">竞品追踪工作台 · 业务版 PRD</a></li>
                     <li><a href="attachments/4.%20prototype/竞品追踪工作台-交互原型.html">可点击原型 · 三条路径</a></li>
-                    <li><a href="attachments/4.%20prototype/Day04原型走查指南.md">课堂走查指南</a></li>
                   </ul>
                 </div>
               </td>
             </tr>
             <tr id="day-05" data-study-day="30-5" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 05</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">PE 入门与产品 Demo</strong>先用 15 分钟讲 Prompt Engineering：把 Day 04 的任务、背景、资料、规则、输出与验收写成指令。再确认流程简图，老师带着用 vibe coding 跑通“样例资料 → 候选表 → 核对入表”，遇到一个错误就修改并复查。
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">应用形态、PE 与 Demo 入门</strong>先用“导入资料、分析、保存日报”认识前端、后端、数据库、API，以及浏览器与服务器的分工；再区分 Application、Web 应用、本地运行、PWA 与 HTML，认清 localhost 和 npm。随后把 Day 04 的业务规则写成 Prompt，老师带着用 vibe coding 跑通“样例资料 → 候选表 → 核对入表”。
                 <details class="lesson-detail">
                   <summary>60 分钟讲练与当天范围</summary>
                   <ol>
-                    <li><strong>15 分钟：</strong>对照模糊与具体的 Prompt，学员补写一条可检查的业务要求。</li>
+                    <li><strong>10 分钟：</strong>用运营例子说明前端负责操作、后端处理请求、数据库保存记录、API 调用能力；区分临时显示与真正保存。其他基础词汇随课查阅，不要求背诵。</li>
+                    <li><strong>5 分钟：</strong>对照 HTML 文件与本地 Web 应用，解释 App 是总称、HTML 是页面技术、本地是运行位置、PWA 是 Web 应用增强形态；辨认打开、安装与联网依赖。</li>
+                    <li><strong>10 分钟：</strong>对照模糊与具体的 Prompt，学员补写一条可检查的业务要求。</li>
                     <li><strong>5 分钟：</strong>按 PRD 确认本次主流程简图。</li>
-                    <li><strong>30 分钟：</strong>用老师准备的样例与代码骨架搭建，学员亲手修改一条规则。</li>
+                    <li><strong>20 分钟：</strong>用老师准备的样例与代码骨架搭建，学员亲手修改一条规则。</li>
                     <li><strong>10 分钟：</strong>用正常与缺日期资料检查，改一处问题并复查。</li>
                   </ol>
-                  <p><strong>课后 60 分钟：</strong>只继续这一个 Demo。课堂先跑通一种输入，完整文件解析、关联更新和导出逐项补齐；未接通真实提取须标明模拟。课件中的完整 PE 方法用于复习，不要求当天学完。</p>
+                  <p><strong>课后 60 分钟：</strong>只继续这一个 Demo，在同一份使用说明中写清产物形态、启动方法、数据保存位置、联网依赖和限制。课堂先跑通一种输入，未接通真实提取须标明模拟；不额外要求写接口、建数据库或搭服务器，Day 15 再详细讲请求链路。PWA 今天只认概念，Day 10 再制作；PE 方法速查用于复习。</p>
                 </details>
               </td>
-              <td><span class="day-label">目标</span>把业务要求写成可执行、可检查的指令，并据此搭出最小流程。</td>
-              <td><span class="day-label">产出</span>可运行的最小 Demo，附使用的 Prompt、检查记录与待完善项。
+              <td><span class="day-label">目标</span>能指出哪里操作、谁处理请求、数据存在哪里、哪里调用 AI；说清产物形态和运行方式，用可检查的指令搭出最小流程。</td>
+              <td><span class="day-label">产出</span>可运行的最小 Demo，附 Prompt、检查记录及使用说明（形态、启动方法、保存位置、联网依赖、待完善项）。
                 <div class="day-attachments" id="pe-demo-materials">
-                  <strong>PE 与 Demo 课件</strong>
-                  <ul><li><a href="attachments/5.%20demo/Day05-PE与Demo入门.md">Day 05：讲练安排、Prompt 示例与方法速查</a></li></ul>
+                  <strong>应用形态、PE 与 Demo 课件</strong>
+                  <ul><li><a href="attachments/5.%20demo/Day05-PE与Demo入门.md">Day 05：前后端与数据基础、应用形态对照表、Prompt 与 Demo 练习</a></li></ul>
                 </div>
               </td>
             </tr>
@@ -301,7 +302,7 @@
     <details class="study-plan" id="week-2">
       <summary>第二周 · AI 基础、产品形态与交互<span class="plan-hours">Day 08–14 · 5 次交流 · 2 天独立练习</span></summary>
       <div class="study-body">
-        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 08 用户试用；Day 09 从模型能力认识产品形态与人机协作，Day 10 将概念与产品对比卡做成学习 PWA；Day 11–12 再设计主流程、确认与可见性，并练习打断、恢复和局部修改。执行架构与方案评审在第三周展开。</p>
+        <p class="learning-map-intro"><strong>本周项目线：</strong>Day 08 原型走查与用户试用；Day 09 认识模型能力、上下文获取、产品形态与人机协作，Day 10 将同一组学习卡做成 PWA；Day 11–12 再设计主流程、确认与可见性，并练习打断、恢复和局部修改。执行架构与方案评审在第三周展开。</p>
         <p class="learning-map-intro"><strong>学习 PWA：</strong>Day 09 老师展示，Day 10 学员亲手制作并讲解，Day 13 完善手机体验。Day 14 只整理主项目交互，不再同时扩充 PWA。</p>
         <table class="day-table" aria-label="第8至14天的教学安排、目标与产出">
           <colgroup><col><col><col><col></colgroup>
@@ -309,15 +310,17 @@
           <tbody>
             <tr id="day-08" data-study-day="30-8" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 08</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">用户试用设计与试跑</strong>快速检查 Demo 是否适合试用，选定一个核心业务任务；老师示范任务设计与观察记录，学员主持课堂试跑，练习让用户独立操作并追问原因。课后请预约的目标运营试用，区分课堂演练与真实反馈。
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">原型走查与用户试用</strong>承接 Day 04 的设计，师生正式走查正常完成、部分失败和修改后三条路径，对照 PRD 记录规则缺口。再从 Demo 已实现的范围中选一个任务，老师示范观察方法，学员主持试跑；课后请预约的目标运营试用，分别记录走查、课堂演练与真实反馈。
                 <details class="lesson-detail">
-                  <summary>课堂安排与试用示例</summary>
+                  <summary>60 分钟：先走查，再准备试用</summary>
                   <ol>
-                    <li><strong>10 分钟：</strong>快速检查 Demo，确认样例资料与已知限制，选定一个核心业务任务。</li>
-                    <li><strong>15 分钟：</strong>老师示范怎样写试用任务、观察和记录，避免逐步教用户点击。</li>
-                    <li><strong>25 分钟：</strong>学员主持一次试跑，老师检查是否过度引导、记录是否具体；课堂可由老师扮演用户。</li>
-                    <li><strong>10 分钟：</strong>修改任务与记录表，确认课后目标用户试用安排。</li>
+                    <li><strong>5 分钟：</strong>说明原型的模拟范围，检查 Demo 的可用功能与已知限制。</li>
+                    <li><strong>25 分钟：</strong>走查三条路径：正常完成 10 分钟、部分失败 7 分钟、修改后复核 8 分钟；对照 PRD 记录规则缺口。</li>
+                    <li><strong>10 分钟：</strong>老师示范一个试用任务及观察记录，区分检查产品规则与观察用户行为。</li>
+                    <li><strong>15 分钟：</strong>学员主持单任务试跑，练习不提示点击、记录卡点并追问原因；课堂可由老师扮演用户。</li>
+                    <li><strong>5 分钟：</strong>确认优先修正的问题、任务单与课后真实用户试用安排。</li>
                   </ol>
+                  <p><strong>三条走查路径：</strong>正常完成检查来源、程序计算、模型解读与导出；部分失败检查可用数据保留与单独重试；修改之后检查旧解读失效、人工修改保留和新候选复核。走查发现回写同一份 PRD，不能作为真实用户反馈。</p>
                   <p><strong>任务示例：</strong>用这份竞品资料，找出你今天需要优先核验的变化，并说明依据。</p>
                   <ul>
                     <li>用户能否自己找到入口、理解页面并完成任务？</li>
@@ -328,23 +331,41 @@
                   <p><strong>追问示例：</strong>刚才为什么没有采纳这条建议？记录具体原因，再判断需要调整需求、交互还是结果表达。</p>
                   <p><strong>课后实践：</strong>请真实目标运营使用 Demo，课堂演练和真实试用分别记录；Day 09 开头回看发现。</p>
                 </details></td>
-              <td><span class="day-label">目标</span>学会验证别人能否用产品完成工作，依据操作卡点、结果使用和复核耗时发现改进机会。</td>
-              <td><span class="day-label">产出</span>用户试用任务、观察记录表、课堂试跑记录与课后真实试用反馈。</td>
+              <td><span class="day-label">目标</span>先检查规则与页面是否一致，再观察用户能否独立完成任务，区分走查发现与用户反馈。</td>
+              <td><span class="day-label">产出</span>走查与试用记录：规则缺口及 PRD 修订、试用任务、观察记录与课后真实反馈。
+                <div class="day-attachments" id="walkthrough-materials">
+                  <strong>Day 08 走查材料</strong>
+                  <ul>
+                    <li><a href="attachments/8.%20walkthrough/Day08原型走查指南.md">三条路径走查指南</a></li>
+                    <li><a href="attachments/4.%20prototype/竞品追踪工作台-交互原型.html">配套可点击原型</a></li>
+                    <li><a href="attachments/4.%20prototype/业务版PRD-竞品追踪工作台.md">对照业务版 PRD</a></li>
+                  </ul>
+                </div>
+              </td>
             </tr>
             <tr id="day-09" data-study-day="30-9" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 09</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础①：从模型能力到产品形态</strong>围绕“为什么同样是 AI，用起来却不一样”，从学员用过的产品进入。用同一份亚马逊竞品资料及其日报任务，比较资料研究、成果共创、任务委派与流程编排；建立模型能力、产品形态、人机协作三个层次的认识，区分交互方式、执行机制与 AI-native。 <a href="#ai-learning-map">查看知识地图</a>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础①：从模型能力到产品形态</strong>围绕“为什么同样是 AI，用起来却不一样”，从学员用过的产品进入，以亚马逊竞品资料与日报任务为主线，比较 NotebookLM 的资料研究、Lovart 的成果共创、Claude Cowork 的任务委派，以及 Coze／n8n 工作流的步骤编排。先看实际用法，再迁移到日报工作台；分清模型能力、产品形态、人机协作，并分别讨论交互方式、执行机制与 AI-native。 <a href="#ai-learning-map">查看知识地图</a>
                 <details class="lesson-detail">
                   <summary>课堂安排、对比框架与验收</summary>
-                  <p><strong>课堂主问题：</strong>为什么同样是 AI，用起来却不一样？沿用主项目的竞品跟踪资料，以“找出重点变化、核对依据并形成运营日报”为同一任务线索。</p>
+                  <p><strong>课堂主问题：</strong>为什么同样是 AI，用起来却不一样？沿用亚马逊竞品资料，以“找出重点变化、核对依据并形成运营日报”为任务线索。先看各产品适合的真实任务，再把协作方式迁移到日报工作台设计。</p>
                   <ol>
                     <li><strong>5 分钟 · 回看试用：</strong>从 Day 08 的卡点出发，讨论问题可能来自模型能力、资料不足还是产品设计，保留待验证判断。</li>
-                    <li><strong>10 分钟 · 看懂模型在做什么：</strong>用正确、缺资料和出错的输出解释理解、生成与推理的能力及局限；区分模型训练与使用时推理，说明提供上下文不等于训练模型。</li>
-                    <li><strong>20 分钟 · 对比产品形态：</strong>老师结合真实界面与准备好的案例，重点比较 NotebookLM 的资料研究、Lovart 的成果共创、Claude Cowork 的任务委派、n8n 的流程编排；学员指出各自围绕什么工作、用户能控制什么。运营场景类比与产品现成功能分开标注。</li>
-                    <li><strong>10 分钟 · 建立判断框架：</strong>用下方四个问题拆解体验，区分模型能力、产品形态和人机协作；讨论 AI-native 是围绕 AI 核心能力组织产品的设计取向，与聊天、画布或自主程度分别判断。</li>
-                    <li><strong>10 分钟 · 业务迁移与讲解：</strong>学员选择两种形态对照同一个日报任务，说明运营更需要直接编辑、研究资料还是委派任务，并提出当前工作台的一项形态选择及理由；老师根据讲解纠正概念混淆。</li>
+                    <li><strong>8 分钟 · 看懂模型在做什么：</strong>用正确、缺资料和出错的输出解释理解、生成与推理的能力及局限；区分模型训练与使用时推理，说明提供上下文不等于训练模型。</li>
+                    <li><strong>15 分钟 · 资料从哪里来：</strong>用“同事没资料就无法分析”的例子解释上下文，认识手动导入、Workflow、爬虫、API、MCP 与 Plugin。其中 5 分钟用“问工具清单 → 填店铺与日期调用 → 收到结果”的白话消息讲 MCP，再与实际查询的 API、安装／启用的插件功能包对照。说明资料仍要核对，安装不等于连接或授权。</li>
+                    <li><strong>15 分钟 · 对比产品形态：</strong>老师结合真实界面与准备好的案例，对照下方四种用法；学员指出工作对象和用户控制权。Lovart 用商品图修改展示共创，再类比日报中的局部修改；Coze 与 n8n 选一个展示工作流，另一个作同类参照，不逐个实操。</li>
+                    <li><strong>7 分钟 · 建立判断框架：</strong>用下方四个问题拆解体验，区分模型能力、产品形态和人机协作；讨论 AI-native 是围绕 AI 核心能力组织产品的设计取向，与聊天、画布或自主程度分别判断。</li>
+                    <li><strong>5 分钟 · 业务迁移与讲解：</strong>学员将两种协作方式迁移到日报工作台，说明哪些环节适合查证资料、直接改成果、委派任务或按流程运行，提出一项设计选择及理由；明确这是产品设计设想，不等于示例产品已有该功能。</li>
                     <li><strong>5 分钟 · 学习卡与后续路线：</strong>展示学习 PWA，将一条课堂判断示范为概念／对比卡；标明 Day 11–12 练交互设计、Day 15–17 解释执行架构，课后完善同一组 3–5 张卡。</li>
                   </ol>
+                  <p><strong>四种用法与产品例子：</strong>这是教学选取的使用方式，同一产品可以同时支持多种。</p>
+                  <ul>
+                    <li><strong>资料研究 · NotebookLM：</strong>带着资料问问题、核对依据。用竞品材料追问某条变化来自哪里。</li>
+                    <li><strong>成果共创 · Lovart：</strong>和 AI 一起做、一起改作品。用商品图的局部修改观察如何指定对象、调整并确认结果。</li>
+                    <li><strong>任务委派 · Claude Cowork：</strong>交代目标和资料，让 AI 分步骤完成。观察整理日报时如何查看进度、纠偏与验收。</li>
+                    <li><strong>流程编排 · Coze／n8n 的工作流功能：</strong>把取数、整理、模型处理和输出连成步骤，配置触发、分支与出错处理，按设定运行。取数仍需接好数据来源。</li>
+                  </ul>
+                  <p><strong>编排与委派的区别：</strong>编排重点看人怎样规定步骤与条件；委派重点看 AI 怎样围绕目标安排执行。工作流内部也可以包含 Agent，两种方式可以组合。</p>
                   <p><strong>比较任何 AI 产品的四个问题：</strong></p>
                   <ul>
                     <li><strong>如何表达意图：</strong>打字、@、语音、选中对象还是拖动节点？这是交互方式。</li>
@@ -352,17 +373,23 @@
                     <li><strong>谁决定下一步：</strong>用户、预设程序还是模型？AI 能回答、编辑或调用哪些工具，用户如何接手？</li>
                     <li><strong>何时开始、持续多久：</strong>一次问答、整项任务，还是定时／事件触发的持续工作？</li>
                   </ul>
-                  <p><strong>课堂验收：</strong>“为什么 Lovart 和 n8n 都有画布，但用户控制的东西不同？如果做运营日报工作台，我希望用户控制什么？”学员需结合案例解释成果对象与执行步骤的区别，并说明自己的选择。</p>
-                  <p><strong>补充案例：</strong>X 中的 @Grok、Gemini web／mobile、LibTV、Cursor、Claude Code、Codex、Coze 与 OpenClaw 用于归类和追问。产品可能组合多种协作方式；不按品牌或界面排成能力等级，不要求当天逐个实操。</p>
-                  <p><strong>课后产出：</strong>只完善同一组 3–5 张学习卡，覆盖模型基础、产品形态与人机协作；至少一张对比卡写明两种形态、运营例子和工作台选择理由。每张卡包含解释、来源及核对日期、一道自测题与解析，供 Day 10 直接使用。</p>
-                  <p><strong>示例资料：</strong><a href="https://blog.google/innovation-and-ai/products/notebooklm-beginner-tips/" target="_blank" rel="noopener noreferrer">NotebookLM：资料与引用</a> · <a href="https://www.lovart.ai/docs/getting-started/how-lovart-works" target="_blank" rel="noopener noreferrer">Lovart：成果与画布</a> · <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" target="_blank" rel="noopener noreferrer">Claude Cowork：任务与交付</a> · <a href="https://docs.n8n.io/" target="_blank" rel="noopener noreferrer">n8n：流程与工具</a>。课前核对所用版本与演示材料。</p>
+                  <p><strong>先看各自做什么：</strong>API 提供程序调用功能的入口；MCP 规定应用怎样询问工具清单、取得输入要求、发出调用并接收结果；Plugin 是加进某个应用的附加功能包，可能包含 MCP 配置，也可能直接用 API 或只提供本地功能。手动导入、爬虫负责不同的资料获取方式，Workflow 安排执行步骤。它们不是互斥选择，也不能把安装、连接、授权混为一谈。</p>
+                  <p><strong>课堂验收：</strong>“为什么 Lovart 和 n8n 都有画布，但用户控制的东西不同？如果做运营日报工作台，我希望用户控制什么？”再用三步消息解释 MCP，并说明“经营数据插件里的 Plugin、MCP、API 各做什么？安装后为何还可能读不到店铺数据？”当天不安装插件或搭新接入系统。</p>
+                  <p><strong>补充案例：</strong>X 中的 @Grok、Gemini web／mobile、LibTV、Cursor、Claude Code、Codex 与 OpenClaw 用于归类和追问。产品可能组合多种协作方式；不按品牌或界面排成能力等级，不要求当天逐个实操。</p>
+                  <p><strong>课后产出：</strong>只完善同一组 3–5 张学习卡，覆盖模型基础、上下文获取、产品形态与人机协作；至少一张比较产品形态并说明工作台选择理由，一张比较取数方式并说明怎样组合。每张卡包含运营例子、来源及核对日期、一道自测题与解析，供 Day 10 直接使用，不另交接入项目。</p>
+                  <p><strong>示例资料：</strong><a href="https://blog.google/innovation-and-ai/products/notebooklm-beginner-tips/" target="_blank" rel="noopener noreferrer">NotebookLM：资料与引用</a> · <a href="https://www.lovart.ai/docs/getting-started/how-lovart-works" target="_blank" rel="noopener noreferrer">Lovart：成果与画布</a> · <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" target="_blank" rel="noopener noreferrer">Claude Cowork：任务与交付</a> · <a href="https://docs.coze.cn/guides_workflow" target="_blank" rel="noopener noreferrer">Coze：低代码工作流</a> · <a href="https://docs.n8n.io/build-your-first-workflow" target="_blank" rel="noopener noreferrer">n8n：连接节点与执行</a>。课前核对所用版本与演示材料。</p>
                 </details></td>
-              <td><span class="day-label">目标</span>能解释模型的基本作用与局限，用四个问题比较 AI 产品；区分 AI-native、交互方式与自主程度，为运营工作台提出有理由的形态选择。</td>
-              <td><span class="day-label">产出</span>3–5 张基础与产品对比卡：解释、运营例子、来源及核对日期、自测题与解析；至少一张包含两种形态的比较和工作台选择理由。</td>
+              <td><span class="day-label">目标</span>能解释模型与上下文的作用，分清取数、连接与流程安排；用四个问题比较 AI 产品，区分 AI-native、交互方式与自主程度，为工作台选择资料路径和产品形态。</td>
+              <td><span class="day-label">产出</span>3–5 张学习卡：模型基础、取数方式对比、产品形态对比；含运营例子、选择理由、来源及核对日期、自测题与解析。
+                <div class="day-attachments" id="context-materials">
+                  <strong>Day 09 上下文获取课件</strong>
+                  <ul><li><a href="attachments/9.%20llm%20%26%20ai_product/Day09-AI如何获取运营上下文.md">AI 分析前，资料从哪里来？MCP 三步问答、API 与 Plugin 对照</a></li></ul>
+                </div>
+              </td>
             </tr>
             <tr id="day-10" data-study-day="30-10" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 10</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础②：亲手制作学习 PWA</strong>沿用 Day 09 的 3–5 张基础与产品对比卡，学员用 vibe coding 制作“看卡片 → 作答 → 看解析”；老师示范手机访问与进度保存，带着排除阻断问题。最后学员展示一张卡，用运营例子讲清模型、产品形态或人机协作的区别；课后继续同一版本，手机自查留到 Day 13。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">AI 基础②：亲手制作学习 PWA</strong>承接 Day 05 对 PWA 与 Web 应用的认识，沿用 Day 09 的同一组 3–5 张学习卡（模型基础、取数方式与产品形态），学员用 vibe coding 制作“看卡片 → 作答 → 看解析”；老师示范手机访问、安装与进度保存，说明离线可用范围并带着排除阻断问题。最后学员展示一张卡，用运营例子讲清其中的区别；课后继续同一版本，手机自查留到 Day 13。</td>
               <td><span class="day-label">目标</span>把已学内容做成能操作的学习工具，并用自己的话讲清概念。</td>
               <td><span class="day-label">产出</span>学员自建 PWA 初版，跑通刷卡、答题与解析。</td>
             </tr>
@@ -385,7 +412,7 @@
             </tr>
             <tr id="day-13" data-study-day="30-13" data-mode="independent">
               <th scope="row"><span class="day-number">Day 13</span><span class="session-kind">独立练习</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">在手机上完善学习 PWA</strong>只完善 Day 10 已示范的功能：在手机上打开并添加主屏幕，检查刷卡、答题、解析及进度保存。修正已有卡片，不扩充题库；录一段手机操作演示。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">在手机上完善学习 PWA</strong>只完善 Day 10 已示范的功能：在手机上打开并添加主屏幕，检查刷卡、答题、解析及进度保存；断网核对已声明的离线范围，不把安装成功等同于全部功能可离线。修正已有卡片，不扩充题库；录一段手机操作演示。</td>
               <td><span class="day-label">目标</span>让首版 PWA 能在手机上持续使用，关闭后可继续学习。</td>
               <td><span class="day-label">产出</span>手机可用的 PWA、操作演示与验收记录。</td>
             </tr>
@@ -410,7 +437,7 @@
           <tbody>
             <tr id="day-15" data-study-day="30-15" data-mode="meeting">
               <th scope="row"><span class="day-number">Day 15</span></th>
-              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构①：一次请求经过哪里</strong>承接 Day 05 的 PE 入门，老师沿 Demo 的一次实际请求解释界面、应用服务、模型与校验怎样衔接，区分搭建产品的指令与运行时 Prompt、上下文。只围绕“模型如何拿到资料”对照直接提供资料与检索／RAG；学员画出当前项目的请求和数据流。课后补齐这张图。</td>
+              <td><span class="day-label">教学安排</span><strong class="lesson-topic">技术架构①：一次请求经过哪里</strong>承接 Day 05 的前后端与 PE 基础、Day 09 的上下文获取，老师沿 Demo 的一次实际请求解释界面、应用服务、模型与校验怎样衔接，区分搭建产品的指令与运行时 Prompt、上下文。只围绕“模型如何拿到资料”对照直接提供资料与检索／RAG；学员画出当前项目的请求和数据流。课后补齐这张图。</td>
               <td><span class="day-label">目标</span>能沿一次请求说清资料从哪来、交给模型什么、结果如何返回。</td>
               <td><span class="day-label">产出</span>当前请求与数据流图，注明实际实现、资料来源和待确认项。</td>
             </tr>
@@ -537,10 +564,11 @@
     </div>
     <details class="ai-learning-map" id="ai-learning-map">
       <summary>Day 09 · 从模型能力到产品形态的学习地图</summary>
-      <p class="learning-map-intro">Day 09 围绕“为什么同样是 AI，用起来却不一样”，重点认识模型能力、产品形态与人机协作；通过表达意图、工作对象、下一步由谁决定、触发与持续方式四个问题比较产品。Day 10 将 3–5 张基础与产品对比卡做成 PWA；Day 11–12 设计具体交互，Day 15–17 解释请求、数据、工具与执行机制，Day 18–19 学评测；Day 22 认识 Harness，Day 26 看 Skills／OpenClaw 实际执行。</p>
+      <p class="learning-map-intro">Day 09 围绕“为什么同样是 AI，用起来却不一样”，先认识模型能力与上下文获取，再看产品形态与人机协作；分清资料怎么来、谁安排执行，并通过表达意图、工作对象、下一步由谁决定、触发与持续方式四个问题比较产品。Day 10 将同一组 3–5 张学习卡做成 PWA；Day 11–12 设计具体交互，Day 15–17 解释请求、数据、工具与执行机制，Day 18–19 学评测；Day 22 认识 Harness，Day 26 看 Skills／OpenClaw 实际执行。</p>
       <div class="learning-map-grid">
         <article class="learning-map-item"><h4>模型与算法基础</h4><p>Day 09 用正确、缺资料和出错的输出认识模型的理解、生成与推理能力，区分训练与使用时推理、上下文与模型参数；分类、预测、排序等作为后续概念参照。</p></article>
-        <article class="learning-map-item"><h4>产品形态与人机协作</h4><p>Day 09 用同一个运营日报任务比较资料研究、成果共创、任务委派与流程编排。重点判断工作对象和用户控制权，理解相似界面可以承载不同执行方式，同一产品也可组合多种形态。</p></article>
+        <article class="learning-map-item"><h4>资料来源与上下文获取</h4><p>Day 09 用日报例子认识手动导入、Workflow、爬虫、API、MCP 与 Plugin；用问工具清单、填条件调用、接收结果讲清 MCP，区分业务 API 与插件功能包。取到资料后还要解析、核对和筛选；安装、连接、授权以及模型实际读到什么分别确认。</p></article>
+        <article class="learning-map-item"><h4>产品形态与人机协作</h4><p>Day 09 看 NotebookLM 查证资料、Lovart 共改作品、Claude Cowork 接手任务，以及 Coze／n8n 编排工作流。先看真实用法，再迁移到日报工作台；比较工作对象与用户控制权，同一产品可支持多种方式。</p></article>
         <article class="learning-map-item"><h4>AI-native 与自主程度</h4><p>Day 09 认识 AI-native 是围绕 AI 核心能力组织产品的设计取向；交互方式、执行机制与自主程度分别判断。聊天框、画布、MCP 或 Agent 标签本身不能代表产品是否原生或更高级。</p></article>
         <article class="learning-map-item"><h4>Prompt 与模型调用</h4><p>Day 05 先写任务、资料、规则与验收；Day 15 看运行时 Prompt、上下文和模型调用；Day 18–19 用评测检查效果。</p></article>
         <article class="learning-map-item"><h4>AI 交互原则与方式</h4><p>Day 09 先看懂体验差异；Day 11–12 再把形态选择落实为任务范围、必要确认、过程与来源可见、打断恢复和局部修改，画出用户能完成工作的具体路径。</p></article>
@@ -554,10 +582,10 @@
       </div>
     </details>
     <div class="appendix-notes">
-      <p><strong>学习 PWA：</strong>学员亲手制作，先用 Day 09 的 3–5 张基础与产品对比卡完成手机刷学，保留来源、核对日期与自测解析。后续只复用课堂已有资料，每周按需补少量内容；终验样例及答案不放入题库。学习自测与主项目质量评测分别记录。</p>
+      <p><strong>学习 PWA：</strong>学员亲手制作，先用 Day 09 的同一组 3–5 张学习卡完成手机刷学，覆盖模型基础、取数方式和产品形态，保留来源、核对日期与自测解析。后续只复用课堂已有资料，每周按需补少量内容；终验样例及答案不放入题库。学习自测与主项目质量评测分别记录。</p>
       <p><strong>三种验证：</strong>用户测试看人能否完成任务；离线评测看 AI 输出是否合格；线上 A/B 用随机分组检验改动对业务指标的影响。样本、周期或数据不足时，结论保留为待验证。</p>
       <p><strong>实验实操：</strong>Day 20–21 做离线评测与一次修改，Day 22 复盘运行问题并准备试用，Day 23 学业务指标与 A/B 基本判断，Day 24 试用、Day 25 复盘。A/B 保留一个教学案例；完整统计分析与正式线上实验留作后续，真实试用不等同于随机对照实验。</p>
-      <p><strong>学习深度：</strong>Day 09 建立模型、产品形态与人机协作的认知框架，能比较并解释选择；Day 11–12 练具体交互，Day 15–17 再解释实现并作方案取舍。Workflow／Agent 会作方案取舍，Graph 会读会画；动态工作流与 Harness 能解释案例并提出要求；Skills／OpenClaw 先看懂实际执行。独立搭建复杂编排、配置新系统和训练模型留作后续，不额外增加本期作业。</p>
+      <p><strong>学习深度：</strong>Day 09 建立模型、上下文获取、产品形态与人机协作的认知框架，能比较并解释选择，不要求实现爬虫、MCP 或自动取数；Day 11–12 练具体交互，Day 15–17 再解释实现并作方案取舍。Workflow／Agent 会作方案取舍，Graph 会读会画；动态工作流与 Harness 能解释案例并提出要求；Skills／OpenClaw 先看懂实际执行。独立搭建复杂编排、配置新系统和训练模型留作后续，不额外增加本期作业。</p>
       <p><strong>课程目标：</strong>用一个主案例讲清研究、设计、技术、验证和迭代，同时亲手制作可在手机刷学 AI 知识的 PWA。算法与训练以概念、数据条件和方案判断为本期目标；Agent 深度使用和正式产品交付经验按结课证据继续补。</p>
       <p><strong>材料口径：</strong>使用获授权的脱敏资料，简历标明课堂项目和个人贡献。缺少真实用户时明确记录角色模拟；课程天数不能替代岗位要求的产品年限。</p>
     </div>
