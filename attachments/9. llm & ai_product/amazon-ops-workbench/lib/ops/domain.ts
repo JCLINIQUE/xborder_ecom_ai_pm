@@ -59,6 +59,14 @@ export const sourceSchema = z.object({
   warnings: z.array(z.string()),
   market: z.string().max(30),
   currency: z.string().max(10),
+  mcp: z
+    .object({
+      provider: z.string().max(100),
+      tool: z.string().max(150),
+      fetchedAt: z.string(),
+      query: z.string().max(48000),
+    })
+    .optional(),
 });
 export const chartSchema = z.object({
   id: z.string(),
@@ -339,6 +347,14 @@ export function evidence(w: Workspace) {
         id: s.id,
         name: s.name,
         reference: `[来源:${s.id.slice(0, 8)}]`,
+        ...(s.mcp
+          ? {
+              provenance: s.mcp,
+              dataBoundary:
+                "第三方外部数据，不是店铺实际经营报表；流量得分不等于访客数。",
+              warnings: s.warnings,
+            }
+          : {}),
         text: s.text.slice(0, 12000),
         textTruncated: s.text.length > 12000,
         tables: s.tables
@@ -364,6 +380,9 @@ export function makeReport(w: Workspace) {
       .join("\n\n") || "尚未运行 AI 分析。以下为待填写内容，不代表 AI 结论。"
   }\n\n## 今日行动\n- 待运营确认与补充\n\n## 数据缺口与备注\n- 未导入的指标不按零处理；当前未自动关联不同报表。\n- 同一数据集应使用相同站点、币种和统计口径；有重叠的报表不可直接相加。\n\n## 数据来源\n${w.sources
     .filter((s) => s.confirmed)
-    .map((s) => `- [来源:${s.id.slice(0, 8)}] ${s.name}`)
+    .map(
+      (s) =>
+        `- [来源:${s.id.slice(0, 8)}] ${s.name}${s.mcp ? `（第三方 MCP 数据，读取于 ${s.mcp.fetchedAt}，非店铺实际经营报表）` : ""}`,
+    )
     .join("\n")}`;
 }

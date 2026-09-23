@@ -35,6 +35,7 @@ import { parseFile, parseTabularText, sha256 } from "@/lib/ops/importers";
 import { fields, dateKey, type Field, type Source } from "@/lib/ops/domain";
 import { Choice, PanelHeading } from "./primitives";
 import { toast } from "sonner";
+import { McpImport } from "./mcp-import";
 
 export function ImportPanel({ onReport }: { onReport: () => void }) {
   const ops = useWorkspace(),
@@ -167,6 +168,20 @@ export function ImportPanel({ onReport }: { onReport: () => void }) {
         title="导入与校验数据"
         description="原始资料保留；字段、口径和识别结果由你确认后，再参与报告。"
       >
+        <McpImport
+          disabled={working}
+          onImport={async (source, file) => {
+            setWorking(true);
+            try {
+              const target = await ops.ensure();
+              await ops.addSource(source, file, target.id);
+              edit(source);
+              toast.success("MCP 结果已保存，请核对字段后确认。");
+            } finally {
+              setWorking(false);
+            }
+          }}
+        />
         <Button
           variant="outline"
           onClick={() => setPaste(true)}
@@ -253,6 +268,7 @@ export function ImportPanel({ onReport }: { onReport: () => void }) {
               <div>
                 <strong>{s.name}</strong>
                 <small>
+                  {s.mcp ? "MCP · " : ""}
                   {s.confirmed ? "已确认" : "待校验"} ·{" "}
                   {s.tables.reduce((n, t) => n + t.rows.length, 0)} 行结构化数据
                 </small>
