@@ -14,15 +14,18 @@ export function Choice({
   options,
   label,
   className = "",
+  disabled = false,
 }: {
   value: string;
   onChange: (v: string) => void;
   options: { value: string; label: string }[];
   label: string;
   className?: string;
+  disabled?: boolean;
 }) {
   return (
     <Select
+      disabled={disabled}
       value={value || "__none"}
       onValueChange={(v) => onChange(v === "__none" ? "" : v)}
     >

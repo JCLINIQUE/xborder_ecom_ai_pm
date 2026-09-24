@@ -5,15 +5,18 @@ import type { Tool } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
 import { api, checkOrigin, HttpError, userId } from "@/lib/server/storage";
 import { MCP_ENDPOINT, MCP_PROVIDER, MCP_READ_TOOLS } from "@/lib/ops/mcp";
+import { bearerTokenSchema, redactMcpCredentials } from "@/lib/server/mcp-auth";
 
 const requestSchema = z.discriminatedUnion("action", [
   z.object({
     action: z.literal("list"),
     connectionUrl: z.string().url().max(8192),
+    bearerToken: bearerTokenSchema,
   }),
   z.object({
     action: z.literal("read"),
     connectionUrl: z.string().url().max(8192),
+    bearerToken: bearerTokenSchema,
     tool: z.string().max(150),
     arguments: z.record(z.unknown()),
     consent: z.literal(true),
@@ -64,8 +67,7 @@ export async function POST(req: Request) {
     await userId();
     const body = await requestBody(req);
     const endpoint = new URL(body.connectionUrl);
-    // Exact provider/route boundary, not an arbitrary URL proxy. The provider's
-    // credential-management page supplies a complete, token-bearing MCP link.
+    // Keep credentials restricted to the exact reviewed provider endpoint.
     if (
       `${endpoint.origin}${endpoint.pathname}` !== MCP_ENDPOINT ||
       endpoint.username ||
@@ -85,6 +87,9 @@ export async function POST(req: Request) {
     let tooLarge = false;
     let cleanup = false;
     const transport = new StreamableHTTPClientTransport(endpoint, {
+      requestInit: body.bearerToken
+        ? { headers: { Authorization: `Bearer ${body.bearerToken}` } }
+        : undefined,
       reconnectionOptions: {
         maxRetries: 0,
         initialReconnectionDelay: 1000,
@@ -149,6 +154,8 @@ export async function POST(req: Request) {
       signal: AbortSignal.any([req.signal, deadline]),
     };
     try {
+      const redact = (value: unknown) =>
+        redactMcpCredentials(value, endpoint, body.bearerToken);
       await client.connect(transport, options);
       const all: Tool[] = [];
       let cursor: string | undefined;
@@ -165,7 +172,7 @@ export async function POST(req: Request) {
         throw new HttpError(502, "数据源工具清单过大，暂时无法完整读取。");
       const allowed = all.filter(reviewed);
       if (body.action === "list") {
-        return {
+        return redact({
           tools: allowed.map((tool) => ({
             name: tool.name,
             title: MCP_READ_TOOLS[tool.name],
@@ -173,7 +180,7 @@ export async function POST(req: Request) {
             inputSchema: tool.inputSchema,
           })),
           excludedCount: all.length - allowed.length,
-        };
+        });
       }
       const tool = allowed.find((t) => t.name === body.tool);
       if (!tool)
@@ -187,7 +194,7 @@ export async function POST(req: Request) {
       if (!validation.valid)
         throw new HttpError(
           400,
-          `查询条件不符合数据源要求：${validation.errorMessage?.slice(0, 700) || "请核对必填项与格式"}`,
+          `查询条件不符合数据源要求：${redact(validation.errorMessage?.slice(0, 700) || "请核对必填项与格式")}`,
         );
       const result = await client.callTool(
         { name: tool.name, arguments: body.arguments },
@@ -199,26 +206,21 @@ export async function POST(req: Request) {
           502,
           "数据源未完成查询。请检查站点、ASIN、日期范围及账户额度；没有导入任何数据。平台可能已消耗查询额度，请先核对再重试。",
         );
-      let serialized = JSON.stringify(result);
+      const serialized = JSON.stringify(result);
       if (new TextEncoder().encode(serialized).byteLength > 1024 * 1024)
         throw new HttpError(
           413,
           "查询结果超过 1 MB，请缩小范围。不会截断导入，也不会自动继续翻页。",
         );
       // Do not allow an echoed credential link/token to enter saved evidence.
-      serialized = serialized.split(endpoint.href).join("[授权链接已隐藏]");
-      for (const secret of endpoint.searchParams.values()) {
-        if (secret.length >= 8)
-          serialized = serialized.split(secret).join("[授权信息已隐藏]");
-      }
-      return {
+      return redact({
         provider: MCP_PROVIDER,
         tool: tool.name,
         title: MCP_READ_TOOLS[tool.name],
         fetchedAt: new Date().toISOString(),
         arguments: body.arguments,
-        result: JSON.parse(serialized),
-      };
+        result,
+      });
     } catch (error) {
       if (error instanceof HttpError) throw error;
       // Only a local diagnostic category; never log error.message/stack because
@@ -234,7 +236,7 @@ export async function POST(req: Request) {
       if (upstreamStatus === 401 || upstreamStatus === 403)
         throw new HttpError(
           401,
-          "尚未获得数据权限。请到西柚洞察「控制台 → 凭证管理」复制完整 MCP 链接（含授权信息）；只有 /mcp 地址无法读取。授权过期时请重新复制。",
+          "尚未获得数据权限。请核对西柚洞察的完整 MCP 授权链接或 Bearer Token；只有 /mcp 地址无法读取。授权过期时请重新复制。",
         );
       if (upstreamStatus === 429)
         throw new HttpError(

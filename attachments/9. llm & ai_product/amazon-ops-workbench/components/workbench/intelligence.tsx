@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Download,
@@ -21,7 +21,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { useWorkspace } from "@/lib/ops/workspace-context";
+import { apiRequest, useWorkspace } from "@/lib/ops/workspace-context";
 import { scopeLabel, makeReport } from "@/lib/ops/domain";
 import { download, exportReport } from "@/lib/ops/export";
 import { Choice, Empty, PanelHeading } from "./primitives";
@@ -35,26 +35,72 @@ export function ConnectionDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const ops = useWorkspace();
+  const [attempted, setAttempted] = useState(false);
+  const [action, setAction] = useState<"save" | "test" | null>(null);
+  const [notice, setNotice] = useState("");
+  const [failure, setFailure] = useState("");
+  const [localSave, setLocalSave] = useState(false);
+  const connectionIssue = ops.connectionIssue;
+  useEffect(() => {
+    if (open) void apiRequest<{ available: boolean }>("/__local/model-config")
+      .then(result => setLocalSave(result.available)).catch(() => setLocalSave(false));
+  }, [open]);
+  function clearFeedback() { setNotice(""); setFailure(""); }
+  async function testConnection() {
+    setAttempted(true);
+    if (connectionIssue) return;
+    setAction("test"); setNotice(""); setFailure("");
+    try {
+      await apiRequest("/api/model-config/test", {
+        method: "POST", body: JSON.stringify({ ...ops.connection, key: ops.key.trim() || undefined }),
+      });
+      setNotice("连接测试成功，模型已实际返回回复。可以生成分析。 " );
+    } catch (error) { setFailure((error as Error).message); }
+    finally { setAction(null); }
+  }
+  async function saveLocally() {
+    setAttempted(true);
+    if (connectionIssue || !ops.key.trim()) return;
+    setAction("save"); setNotice(""); setFailure("");
+    try {
+      const saved = await apiRequest<{ revision: string; fileName: string }>("/__local/model-config", {
+        method: "POST", body: JSON.stringify({ ...ops.connection, key: ops.key.trim() }),
+      });
+      setNotice(`已保存到本机 ${saved.fileName}，正在加载本地配置…`);
+      let loaded = false;
+      for (let attempt = 0; attempt < 15; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        try {
+          const config = await ops.refreshModelConfig();
+          if (config.revision === saved.revision && config.providers[ops.connection.provider].configured) { loaded = true; break; }
+        } catch { /* Development server is restarting to load the private file. */ }
+      }
+      if (loaded) ops.setKey("");
+      setNotice(loaded ? "已保存到本机并加载成功，刷新后也可使用。" : "文件已保存；服务重新启动后生效。");
+    } catch (error) { setFailure((error as Error).message); }
+    finally { setAction(null); }
+  }
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={value => { if (!action) onOpenChange(value); }}>
       <DialogContent className="sm:max-w-xl">
         <DialogHeader>
           <DialogTitle>模型连接</DialogTitle>
           <DialogDescription>
-            这只是本工具的 AI
-            连接，不属于某一份资料。分析要求在分析页编辑，日报要求在日报页编辑。
+            可使用本机保存的密钥，也可临时填写。接口地址已自动配置。
           </DialogDescription>
         </DialogHeader>
         <label className="field-label">
           模型服务
           <Choice
             label="模型服务"
+            disabled={!!action}
             value={ops.connection.provider}
             onChange={(v) => {
+              clearFeedback();
               ops.setKey("");
               ops.setConnection({
                 provider: v as "deepseek" | "qwen",
-                model: "",
+                model: ops.modelConfig?.providers[v as "deepseek" | "qwen"].model || "",
               });
             }}
             options={[
@@ -67,11 +113,10 @@ export function ConnectionDialog({
           模型名称
           <Input
             value={ops.connection.model}
+            disabled={!!action}
             maxLength={100}
-            onChange={(e) =>
-              ops.setConnection({ ...ops.connection, model: e.target.value })
-            }
-            placeholder="填写服务商提供的模型 ID"
+            onChange={(e) => { clearFeedback(); ops.setConnection({ ...ops.connection, model: e.target.value }); }}
+            placeholder="填写服务商提供的模型 ID，不是 API 网址"
           />
         </label>
         <label className="field-label">
@@ -79,15 +124,17 @@ export function ConnectionDialog({
           <Input
             type="password"
             autoComplete="off"
+            maxLength={500}
             value={ops.key}
-            onChange={(e) => ops.setKey(e.target.value)}
-            placeholder="在此输入，仅本次页面会话使用"
+            disabled={!!action}
+            onChange={(e) => { clearFeedback(); ops.setKey(e.target.value); }}
+            placeholder={ops.hasServerKey ? "本机密钥已配置；留空使用本机密钥" : "填写服务商密钥，不是 API 网址"}
           />
         </label>
-        <p className="text-xs muted leading-6">
-          模型配置和 Key
-          在本次页面会话中共用，不跟随资料切换，也不写入报告或下载文件。刷新页面需重新填写。请求经本工具服务端转发到所选服务商，Key
-          不持久化。
+        <p className="text-sm muted leading-6">
+          {ops.hasServerKey ? "已检测到服务端密钥，浏览器不会读取密钥内容。" : "尚未配置本机密钥。"}
+          {localSave && " 点击「保存到本机」将写入 Git 忽略的 .dev.vars；已有 .env 配置时沿用 .env.local。也可直接编辑文件。"}
+          {" "}临时填写的密钥刷新后清空；密钥不写入报告或下载文件。
         </p>
         <a
           className="text-xs text-primary underline"
@@ -101,7 +148,25 @@ export function ConnectionDialog({
         >
           查看服务商模型说明 ↗
         </a>
-        <Button onClick={() => onOpenChange(false)}>完成</Button>
+        {attempted && connectionIssue && (
+          <p role="alert" className="text-sm text-destructive">{connectionIssue}</p>
+        )}
+        {failure && <p role="alert" className="text-sm text-destructive">{failure}</p>}
+        {notice && <p role="status" className="text-sm">{notice}</p>}
+        <p className="text-sm text-muted-foreground">测试连接只发送一句“回复 OK”，不发送导入资料，可能产生少量 API 费用。</p>
+        <div className="flex flex-wrap gap-2">
+          {localSave && <Button variant="outline" disabled={!!action || !ops.key.trim()} onClick={() => void saveLocally()}>{action === "save" ? "正在保存…" : "保存到本机"}</Button>}
+          <Button variant="outline" disabled={!!action} onClick={() => void testConnection()}>{action === "test" ? "正在测试…" : "测试连接"}</Button>
+        <Button disabled={!!action} onClick={() => {
+          setAttempted(true);
+          if (connectionIssue) return;
+          ops.setKey(ops.key.trim());
+          ops.setConnection({ ...ops.connection, model: ops.connection.model.trim() });
+          setAttempted(false);
+          onOpenChange(false);
+          toast.success("模型配置已应用。可通过「测试连接」验证，或生成分析。");
+        }}>使用此配置</Button>
+        </div>
       </DialogContent>
     </Dialog>
   );
@@ -122,6 +187,7 @@ export function AnalysisPanel({
     w = ops.workspace,
     [question, setQuestion] = useState(""),
     [consent, setConsent] = useState(false);
+  const connectionIssue = ops.connectionIssue;
   if (!w?.sources.some((s) => s.confirmed))
     return (
       <Empty
@@ -149,7 +215,7 @@ export function AnalysisPanel({
       >
         <Button size="sm" variant="outline" onClick={onSettings}>
           <KeyRound size={14} />
-          {ops.key ? "模型连接" : "连接 AI"}
+          {ops.key || ops.hasServerKey ? "模型连接" : "连接 AI"}
         </Button>
       </PanelHeading>
       <section className="panel">
@@ -190,13 +256,16 @@ export function AnalysisPanel({
           </span>
         </label>
         <Button
-          disabled={ops.busy || !consent || !ops.key || !ops.connection.model}
+          disabled={ops.busy || !consent || !!connectionIssue}
           onClick={() => void run()}
         >
           <Sparkles size={15} />
           {ops.busy ? "正在分析…" : "生成分析"}
         </Button>
-        {(!ops.key || !ops.connection.model) && (
+        {connectionIssue && <p className="text-sm text-muted-foreground mt-3">{connectionIssue}</p>}
+        {ops.analysisError && <p role="alert" className="text-sm text-destructive mt-3">{ops.analysisError}</p>}
+        {!connectionIssue && !consent && <p className="text-sm text-muted-foreground mt-3">勾选上方发送许可后，即可生成分析。</p>}
+        {connectionIssue && (
           <Button variant="link" onClick={onSettings}>
             先填写模型连接
           </Button>
@@ -301,6 +370,7 @@ export function DailyReport({
     w = ops.workspace,
     [confirm, setConfirm] = useState<"local" | "ai" | null>(null),
     [consent, setConsent] = useState(false);
+  const connectionIssue = ops.connectionIssue;
   if (!w)
     return (
       <Empty
@@ -496,7 +566,10 @@ export function DailyReport({
                   允许将上述内容发送给所选模型服务，可能产生 API 费用。
                 </span>
               </label>
-              {(!ops.key || !ops.connection.model) && (
+              {connectionIssue && <p className="text-sm text-muted-foreground">{connectionIssue}</p>}
+              {ops.analysisError && <p role="alert" className="text-sm text-destructive">{ops.analysisError}</p>}
+              {!connectionIssue && !consent && <p className="text-sm text-muted-foreground">勾选上方发送许可后，即可生成日报。</p>}
+              {connectionIssue && (
                 <Button
                   variant="outline"
                   onClick={() => {
@@ -518,7 +591,7 @@ export function DailyReport({
             disabled={
               ops.busy ||
               (confirm === "ai" &&
-                (!consent || !ops.key || !ops.connection.model))
+                (!consent || !!connectionIssue))
             }
             onClick={() => void generate()}
           >

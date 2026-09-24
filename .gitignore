@@ -38,3 +38,6 @@
 Thumbs.db
 *.swp
 *.swo
+
+# Preserved history of the imported Sites project (not course source)
+.site-history/

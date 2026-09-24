@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { toast } from "sonner";
+import { modelConnectionIssue, type ModelConfigStatus } from "./model-connection";
 import {
   newWorkspace,
   type Workspace,
@@ -52,10 +53,30 @@ function useWorkspaceEngine() {
     [saveError, setSaveError] = useState(""),
     [busy, setBusy] = useState(false),
     [key, setKey] = useState(""),
-    [connection, setConnection] = useState<{
+    [modelConfig, setModelConfig] = useState<ModelConfigStatus | null>(null),
+    [analysisError, setAnalysisError] = useState(""),
+    [connection, setConnectionState] = useState<{
       provider: "deepseek" | "qwen";
       model: string;
+      userSelected?: boolean;
     }>({ provider: "deepseek", model: "" });
+  function setConnection(next: { provider: "deepseek" | "qwen"; model: string }) {
+    setConnectionState({ ...next, userSelected: true });
+  }
+  const refreshModelConfig = useCallback(async () => {
+    const config = await apiRequest<ModelConfigStatus>("/api/model-config");
+    setModelConfig(config);
+    setConnectionState(current => current.userSelected ? {
+      ...current, model: current.model || config.providers[current.provider].model,
+    } : {
+      provider: config.defaultProvider,
+      model: config.providers[config.defaultProvider].model,
+    });
+    return config;
+  }, []);
+  const hasServerKey = !!modelConfig?.providers[connection.provider].configured;
+  const connectionIssue = modelConnectionIssue(connection.model, key, hasServerKey);
+  useEffect(() => { void refreshModelConfig().catch(() => {}); }, [refreshModelConfig]);
   const current = useRef<Workspace | null>(null),
     revision = useRef(0),
     generation = useRef(0),
@@ -227,10 +248,8 @@ function useWorkspaceEngine() {
     return source.id;
   }
   async function analyze(kind: "analysis" | "report", focus = "") {
-    if (!key.trim())
-      throw new Error(
-        "请先在「模型连接」中填入 API Key。Key 仅在本次页面会话中使用。",
-      );
+    setAnalysisError("");
+    if (connectionIssue) { setAnalysisError(connectionIssue); throw new Error(connectionIssue); }
     await flush();
     const w = current.current;
     if (!w) throw new Error("请先导入并确认数据。");
@@ -240,11 +259,11 @@ function useWorkspaceEngine() {
         method: "POST",
         body: JSON.stringify({
           workspaceId: w.id,
-          key,
+          key: key.trim() || undefined,
           kind,
           focus,
           provider: connection.provider,
-          model: connection.model,
+          model: connection.model.trim(),
           expectedRevision: revision.current,
         }),
       });
@@ -276,6 +295,9 @@ function useWorkspaceEngine() {
         }));
       await flush();
       return result;
+    } catch (error) {
+      setAnalysisError(error instanceof Error ? error.message : "生成失败，请重试。");
+      throw error;
     } finally {
       setBusy(false);
     }
@@ -293,6 +315,11 @@ function useWorkspaceEngine() {
     setKey,
     connection,
     setConnection,
+    hasServerKey,
+    modelConfig,
+    refreshModelConfig,
+    connectionIssue,
+    analysisError,
     refresh,
     create,
     open,

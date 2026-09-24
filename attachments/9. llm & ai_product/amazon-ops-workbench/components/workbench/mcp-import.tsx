@@ -151,6 +151,7 @@ export function McpImport({
 }) {
   const [open, setOpen] = useState(false);
   const [connectionUrl, setConnectionUrl] = useState("");
+  const [bearerToken, setBearerToken] = useState("");
   const [discovery, setDiscovery] = useState<McpDiscovery | null>(null);
   const [selected, setSelected] = useState("");
   const [fields, setFields] = useState<Record<string, string>>({});
@@ -169,6 +170,7 @@ export function McpImport({
     if (!value) {
       abort.current?.abort();
       setConnectionUrl("");
+      setBearerToken("");
       setDiscovery(null);
       setPreview(null);
       setConsent(false);
@@ -198,6 +200,7 @@ export function McpImport({
         body: JSON.stringify({
           action: "list",
           connectionUrl: connectionUrl.trim(),
+          bearerToken: bearerToken.trim(),
         }),
         signal: controller.signal,
       });
@@ -224,6 +227,7 @@ export function McpImport({
         body: JSON.stringify({
           action: "read",
           connectionUrl: connectionUrl.trim(),
+          bearerToken: bearerToken.trim(),
           tool: selected,
           arguments: args,
           consent: true,
@@ -248,6 +252,7 @@ export function McpImport({
       setPreview(null);
       setDiscovery(null);
       setConnectionUrl("");
+      setBearerToken("");
       setConsent(false);
     } catch (e) {
       setError((e as Error).message);
@@ -309,7 +314,7 @@ export function McpImport({
               {MCP_ENDPOINT} · Codex 与此工作台需要分别连接。
             </p>
             <label className="field-label">
-              完整 MCP 授权链接
+              MCP 地址或完整授权链接
               <Input
                 type="password"
                 autoComplete="off"
@@ -317,7 +322,7 @@ export function McpImport({
                 maxLength={8192}
                 disabled={!!busy}
                 value={connectionUrl}
-                placeholder="粘贴西柚洞察凭证管理页的完整 MCP 链接"
+                placeholder={MCP_ENDPOINT}
                 onChange={(e) => {
                   setConnectionUrl(e.target.value);
                   setDiscovery(null);
@@ -327,9 +332,28 @@ export function McpImport({
                 }}
               />
             </label>
+            <label className="field-label">
+              Bearer Token（可选）
+              <Input
+                type="password"
+                autoComplete="off"
+                spellCheck={false}
+                maxLength={4096}
+                disabled={!!busy}
+                value={bearerToken}
+                placeholder="使用 Authorization 授权时填写 Token，不含 Bearer 前缀"
+                onChange={(e) => {
+                  setBearerToken(e.target.value);
+                  setDiscovery(null);
+                  setPreview(null);
+                  setError("");
+                  setConsent(false);
+                }}
+              />
+            </label>
             <p className="text-sm text-muted-foreground leading-6">
-              链接含授权码，只在此窗口使用，关闭后清空；不写入资料、Prompt
-              或日报。请勿把链接粘贴进查询条件。
+              授权链接和 Token 只在此窗口使用，关闭后清空；不写入资料、Prompt
+              或日报。请勿把授权信息粘贴进查询条件。
             </p>
             <div className="flex gap-3 flex-wrap items-center">
               <Button

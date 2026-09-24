@@ -1,0 +1,7 @@
+# Copy to .dev.vars and put the actual key there. Never commit .dev.vars.
+AI_PROVIDER=deepseek
+DEEPSEEK_MODEL=deepseek-flash
+DEEPSEEK_API_KEY=
+# Optional alternative (Beijing region):
+# QWEN_MODEL=qwen-plus
+# QWEN_API_KEY=

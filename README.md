@@ -15,7 +15,7 @@
 | 阶段 | 主要内容 |
 | --- | --- |
 | 第一周 · Day 01–07 | Day 01–03：调研 → 候选需求 → 功能推导与业务初稿；Day 04：竞品追踪工作台 PRD、页面与状态设计；随后制作 Demo |
-| 第二周 · Day 08–14 | Day 08 原型走查与用户试用；从模型能力认识产品形态与人机协作；制作学习 PWA，练习正常与异常交互并补充同一份 PRD |
+| 第二周 · Day 08–14 | Day 08 原型走查与用户试用；从模型能力认识产品形态与人机协作；Day 10 以「知 AI」示范制作概念学习 PWA，练习正常与异常交互并补充同一份 PRD |
 | 第三周 · Day 15–21 | 请求与数据流、Workflow／Agent 与执行图、PRD 评审；离线评测、评分校准与一轮对照迭代 |
 | 第四周 · Day 22–28 | 业务价值与实验分析、技术答辩、项目交付与终验 |
 | 结课 · Day 29–30 | 材料定稿、独立讲解与完整模拟 |
@@ -30,7 +30,11 @@ Day 01–04 聚焦**日常竞品跟踪如何辅助运营决策**。Day 01 先区
 
 [Day 09 · AI 基础①：从模型能力到产品形态](index.html#day-09) 以“为什么同样是 AI，用起来却不一样”为主问题。先讲模型能力、训练与推理、上下文和输出局限，再用运营日报例子认识**手动导入、Workflow、爬虫、API、MCP 与 Plugin**。用“问工具清单、填条件调用、接收结果”讲清 MCP，再区分业务 API 与安装／启用的插件功能包；资料仍要解析、核对和筛选，安装、连接与授权分别确认。随后比较 NotebookLM 的资料研究、Lovart 的成果共创、Claude Cowork 的任务委派与 n8n 的流程编排。学员用“如何表达意图、围绕什么工作、谁决定下一步、何时触发与持续多久”四个问题比较产品，区分 AI-native、交互方式与自主程度。当天只解释资料路径与形态选择，不安装插件或新增采集、接入实现；Day 11–12 练交互，Day 15–17 再解释执行架构。
 
-学员将 Day 09 的判断整理为同一组 **3–5 张学习卡**，覆盖模型基础、上下文获取、产品形态与人机协作；每张包含解释、运营例子、来源及核对日期、自测题与解析。至少一张比较产品形态并说明工作台选择理由，一张比较取数方式及其组合关系，不另外增加交付物。Day 10 沿用这些卡片亲手制作学习 PWA，在手机上复习并自测。主项目 Demo、学习 PWA 和最终项目材料会在课程中逐步完成；当前仓库提供教学安排及下列配套教材。
+学员将 Day 09 的判断整理为同一组 **3–5 张学习卡**，覆盖模型基础、上下文获取、产品形态与人机协作；每张包含解释、运营例子、来源及核对日期、自测题与解析。至少一张比较产品形态并说明工作台选择理由，一张比较取数方式及其组合关系，不另外增加交付物。Day 10 只将其中符合 OpenAI／Anthropic 官方来源要求的 AI 概念卡编入学习 PWA；产品比较与工作台选择理由保留在课堂笔记。不足 3–5 张时复用示范版已核验的概念内容，不增加额外写卡任务。
+
+[Day 10 · 概念先行的学习 PWA](index.html#day-10) 使用 **[「知 AI · 概念学习手册」](https://ai-concept-notebook.jennifer-kuang12.chatgpt.site)** 作为示范（私有入口，需登录并具备访问权限）。按“概念 → 易混点 → 小测 → 可选亚马逊店铺例子 → 复习”学习；每课标注官方文档章节、原文链接、核验日期与适用范围。示范版已有 6 个单元、23 个概念，Day 10 先选 3–5 个；阅读、概念小测、例子练习和复习分别记录。Day 13 检查手机、进度恢复与离线范围。
+
+[Day 10 课堂说明](<attachments/10. ai-learning/Day10-AI知识学习PWA.md>)与教学安排同日归档；**PWA 源码按要求放在 [Day 11 目录](<attachments/11. ai-interaction/ai-knowledge-pwa/README.md>)**。源码归档位置不改变 Day 10 的教学安排。主项目 Demo、学员自建 PWA 和最终项目材料分别记录贡献；示范站不直接计作学员独立成果。
 
 ## 材料目录
 
@@ -44,6 +48,8 @@ Day 01–04 聚焦**日常竞品跟踪如何辅助运营决策**。Day 01 先区
 | `attachments/5. demo/` | [Day 05 主课件：前后端与数据基础、应用对照表、PE 与 Demo](<attachments/5. demo/Day05-PE与Demo入门.md>)；[原始 HTML Demo](<attachments/5. demo/index.html>)（保留不改）；[桌麦市场调研.xlsx](<attachments/5. demo/桌麦市场调研.xlsx>) 为市场调研参考，不作为 Day 01–03 日常竞品跟踪的证据或练习输入 |
 | `attachments/8. walkthrough/` | [Day 08 原型走查指南](<attachments/8. walkthrough/Day08原型走查指南.md>)：对照 Day 04 的 PRD 与原型检查三条路径，再准备用户试用。 |
 | `attachments/9. llm & ai_product/` | [AI 如何获取运营上下文：MCP 三步问答、API 与 Plugin 对照](<attachments/9. llm & ai_product/Day09-AI如何获取运营上下文.md>)；[Day 09 材料与工作台代码入口](<attachments/9. llm & ai_product/README.md>) |
+| `attachments/10. ai-learning/` | [Day 10 · AI 知识学习 PWA](<attachments/10. ai-learning/Day10-AI知识学习PWA.md>)：示范入口、课堂安排、概念来源要求与 Day 13 手机验收 |
+| `attachments/11. ai-interaction/` | [Day 11 材料目录](<attachments/11. ai-interaction/README.md>)；[知 AI PWA 源码与运行说明](<attachments/11. ai-interaction/ai-knowledge-pwa/README.md>)；原有交互讲义保留 |
 
 ## 首次下载到电脑
 
