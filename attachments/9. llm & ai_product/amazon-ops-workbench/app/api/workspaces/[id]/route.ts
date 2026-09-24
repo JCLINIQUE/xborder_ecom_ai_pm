@@ -44,7 +44,7 @@ export async function PUT(req: Request, ctx: Context) {
       .bind(id, uid)
       .all<{ id: string }>();
     const allowed = new Set(fileRows.results.map((f) => f.id));
-    if (w.sources.some((s) => s.fileId && !allowed.has(s.fileId)))
+    if (w.sources.some((s) => s.fileId && !allowed.has(s.fileId)) || w.interaction.canvas.assets.some(a => !allowed.has(a.fileId)) || w.interaction.canvas.requests.some(r => !allowed.has(r.fileId)))
       throw new HttpError(400, "引用的原始文件不属于本次资料。");
     const update = await db()
       .prepare(

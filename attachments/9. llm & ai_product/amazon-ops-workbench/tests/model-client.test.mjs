@@ -12,6 +12,15 @@ const config = { provider: "deepseek", model: "deepseek-flash", key: "test-only-
 const messages = [{ role: "user", content: "synthetic test" }];
 const response = (content = "OK", finish_reason = "stop") => Response.json({ choices: [{ message: { content }, finish_reason }] });
 
+test("external cancellation prevents a request or rejects late output", async () => {
+  const before = new AbortController(); before.abort();
+  let called = false;
+  await assert.rejects(() => completeModel(config, messages, { signal: before.signal, fetcher: async () => { called = true; return response(); } }), e => e.status === 499);
+  assert.equal(called, false);
+  const late = new AbortController();
+  await assert.rejects(() => completeModel(config, messages, { signal: late.signal, fetcher: async () => { late.abort(); return response("late result"); } }), e => e.status === 499);
+});
+
 test("local keys stay server-side; temporary keys override only their selected provider", () => {
   const env = { DEEPSEEK_API_KEY: "local-deepseek-key", DEEPSEEK_MODEL: "deepseek-flash", QWEN_API_KEY: "local-qwen-key" };
   const status = modelConfigStatus(env);

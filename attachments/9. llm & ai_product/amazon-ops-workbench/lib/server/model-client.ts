@@ -30,10 +30,12 @@ const endpoints = {
 export async function completeModel(
   config: ReturnType<typeof resolveModelConfig>,
   messages: { role: "system" | "user"; content: string }[],
-  options: { fetcher?: typeof fetch; timeoutMs?: number; maxTokens?: number } = {},
+  options: { fetcher?: typeof fetch; timeoutMs?: number; maxTokens?: number; signal?: AbortSignal } = {},
 ) {
-  const signal = AbortSignal.timeout(options.timeoutMs ?? 120000);
+  const deadline = AbortSignal.timeout(options.timeoutMs ?? 120000);
+  const signal = options.signal ? AbortSignal.any([deadline, options.signal]) : deadline;
   try {
+    signal.throwIfAborted();
     const response = await (options.fetcher ?? fetch)(endpoints[config.provider], {
       method: "POST",
       // Workers supports manual/follow only. Never forward credentials on a redirect.
@@ -70,6 +72,7 @@ export async function completeModel(
       throw new ModelError(502, "模型服务返回了无法读取的内容，请稍后重试。");
     }
     const choice = body?.choices?.[0];
+    signal.throwIfAborted();
     const content = choice?.message?.content;
     if (typeof content !== "string" || !content.trim())
       throw new ModelError(502, choice?.finish_reason === "length"
@@ -78,6 +81,7 @@ export async function completeModel(
     if (content.length > 50000) throw new ModelError(502, "模型回复过长，请缩小分析范围。");
     return { content, truncated: choice?.finish_reason === "length" };
   } catch (error) {
+    if (options.signal?.aborted) throw new ModelError(499, "请求已取消；服务商可能已经消耗本次额度。");
     if (error instanceof ModelError) throw error;
     if (signal.aborted || (error instanceof Error && ["TimeoutError", "AbortError"].includes(error.name)))
       throw new ModelError(504, "等待模型回复超时，请稍后重试或缩小分析范围。本次不会自动重试。");

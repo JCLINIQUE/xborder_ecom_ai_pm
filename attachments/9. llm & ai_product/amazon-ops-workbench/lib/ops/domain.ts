@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { interactionSchema } from "./interactions";
 
 export const fields = {
   date: "日期",
@@ -92,6 +93,7 @@ export const analysisSchema = z.object({
   edited: z.boolean().default(false),
 });
 export const workspaceSchema = z.object({
+  interaction: interactionSchema,
   id: z.string(),
   name: z.string().min(1).max(100),
   sources: z.array(sourceSchema).max(20),
@@ -135,6 +137,7 @@ export const REPORT_PROMPT =
   "生成一份简洁的中文运营日报，包括经营概览、重点问题、分析依据、今日行动和待补充数据。保留来源编号；没有依据的内容写待确认。不要捏造负责人、完成时间或行动结果。";
 export function newWorkspace(): Workspace {
   return {
+    interaction: interactionSchema.parse({}),
     id: crypto.randomUUID(),
     name: "运营日报",
     sources: [],

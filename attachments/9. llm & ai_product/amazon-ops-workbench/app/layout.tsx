@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./workbench.css";
+import "./interactions.css";
+import "./ai-studios.css";
 
 export const metadata: Metadata = {
   title: "亚马逊精品运营工作台",

@@ -33,7 +33,9 @@ import { backup } from "@/lib/ops/export";
 import { ImportPanel } from "./import-panel";
 import { ReportView } from "./report-view";
 import { AnalysisPanel, ConnectionDialog, DailyReport } from "./intelligence";
-import { Empty, PanelHeading } from "./primitives";
+import { Choice, Empty, PanelHeading } from "./primitives";
+import { interactionModes, type InteractionMode } from "@/lib/ops/interactions";
+import { InteractionLab } from "./interactions/lab";
 type Step = "import" | "data" | "analysis" | "report";
 const steps = [
   {
@@ -73,6 +75,7 @@ function MvpWorkbench() {
   const ops = useWorkspace(),
     w = ops.workspace,
     [step, setStep] = useState<Step>("import"),
+    [mode, setMode] = useState<InteractionMode>("form"),
     [settings, setSettings] = useState(false),
     [importSession, setImportSession] = useState(0),
     [focus, setFocus] = useState("");
@@ -84,6 +87,22 @@ function MvpWorkbench() {
     setFocus(focus);
     setStep("analysis");
   }
+  if (step === "analysis" && mode !== "form") return (
+    <div className={`immersive-workbench immersive-${mode}`}>
+      <header className="immersive-toolbar"><strong>{mode === "terminal" ? ">_ AI 分析 / Terminal" : `AI 分析 / ${ { editor: "Editor", workflow: "Workflow", delegate: "Tasks", canvas: "Canvas" }[mode]}`}</strong><div>
+        <Choice label="AI 交互方式" value={mode} options={interactionModes.map(m => ({ value: m.id, label: m.title }))} onChange={value => setMode(value as InteractionMode)} />
+        <Button variant="ghost" size="sm" onClick={() => setStep("import")}>资料</Button>
+        <Button variant="ghost" size="sm" onClick={() => setSettings(true)}>模型连接</Button>
+        <Button variant="ghost" size="sm" onClick={() => { setMode("form"); setStep("analysis"); }}>返回步骤式工作台</Button>
+      </div></header>
+      <main className="immersive-main">
+        {ops.saveError && <div role="alert" className="interaction-error">{ops.saveError}<Button variant="ghost" onClick={() => void ops.flush().catch(ops.notifyError)}>重试保存</Button>{w && <Button variant="ghost" onClick={() => backup(w)}>下载备份</Button>}</div>}
+        <InteractionLab mode={mode} onSettings={() => setSettings(true)} onImport={() => setStep("import")} />
+      </main>
+      <footer className="immersive-status"><span>{ops.saveStatus}</span><span>{mode === "terminal" ? "Enter 执行 · ↑ ↓ 历史 · Ctrl+C 停止" : mode === "editor" ? "⌘/Ctrl+K 编辑 · ⌘/Ctrl+S 保存" : "AI 分析 · 共用资料与成果"}</span></footer>
+      <ConnectionDialog open={settings} onOpenChange={setSettings} />
+    </div>
+  );
   return (
     <SidebarProvider
       style={{ "--sidebar-width": "238px" } as React.CSSProperties}
@@ -96,7 +115,7 @@ function MvpWorkbench() {
             </span>
             <div>
               <strong>亚马逊精品运营工作台</strong>
-              <small>从导入数据，到一份日报</small>
+              <small>同一份资料，多种 AI 协作方式</small>
             </div>
           </div>
         </SidebarHeader>
@@ -135,7 +154,8 @@ function MvpWorkbench() {
             <SidebarTrigger className="md:hidden" />
             <strong>{steps[index].name}</strong>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
+            {step === "analysis" && <Choice label="AI 交互方式" value={mode} options={interactionModes.map(m => ({ value: m.id, label: m.title }))} onChange={value => { setMode(value as InteractionMode); setStep("analysis"); }} />}
             {w && (
               <Button
                 variant="ghost"
@@ -280,7 +300,7 @@ function MvpWorkbench() {
                 onImport={() => setStep("import")}
               />
             ))}
-          {step === "analysis" && (
+          {step === "analysis" && mode === "form" && (
             <AnalysisPanel
               focus={focus}
               onSettings={() => setSettings(true)}
@@ -288,6 +308,7 @@ function MvpWorkbench() {
               onImport={() => setStep("import")}
             />
           )}
+          {step === "analysis" && mode !== "form" && <InteractionLab mode={mode} onSettings={() => setSettings(true)} onImport={() => setStep("import")} />}
           {step === "report" && (
             <DailyReport
               onImport={() => setStep("import")}

@@ -10,6 +10,8 @@ import {
 } from "react";
 import { toast } from "sonner";
 import { modelConnectionIssue, type ModelConfigStatus } from "./model-connection";
+import { type InteractionAction, type InteractionResult, type Proposal } from "./interactions";
+import { applyDocumentProposal } from "./workspace-documents";
 import {
   newWorkspace,
   type Workspace,
@@ -304,6 +306,34 @@ function useWorkspaceEngine() {
   }
   const notifyError = (e: unknown) =>
     toast.error(e instanceof Error ? e.message : "操作失败，请重试。");
+  async function interact(input: {
+    action: InteractionAction; instruction: string; draft?: string;
+    selection?: { start: number; end: number }; source?: "confirmed" | "mcp";
+  }, signal?: AbortSignal, expected?: { id: string; dataVersion: number }): Promise<InteractionResult> {
+    if (connectionIssue) throw new Error(connectionIssue);
+    await flush();
+    const w = current.current;
+    if (!w) throw new Error("请先导入并确认资料。");
+    if (expected && (w.id !== expected.id || w.dataVersion !== expected.dataVersion))
+      throw new Error("资料已切换或变更，请基于当前资料重新开始。");
+    signal?.throwIfAborted();
+    setBusy(true);
+    try {
+      const result = await apiRequest<InteractionResult>("/api/interactions", {
+        method: "POST", signal,
+        body: JSON.stringify({ ...input, workspaceId: w.id, expectedRevision: revision.current,
+          key: key.trim() || undefined, provider: connection.provider, model: connection.model }),
+      });
+      signal?.throwIfAborted();
+      if (current.current?.id !== w.id || current.current.dataVersion !== w.dataVersion)
+        throw new Error("资料已切换或变更，本次结果未应用。请基于当前资料重新生成。");
+      return result;
+    } finally { setBusy(false); }
+  }
+  async function applyInteractionProposal(proposal: Proposal) {
+    update(w => applyDocumentProposal(w, proposal));
+    await flush();
+  }
   return {
     workspace,
     recent,
@@ -328,6 +358,8 @@ function useWorkspaceEngine() {
     flush,
     addSource,
     analyze,
+    interact,
+    applyInteractionProposal,
     notifyError,
   };
 }

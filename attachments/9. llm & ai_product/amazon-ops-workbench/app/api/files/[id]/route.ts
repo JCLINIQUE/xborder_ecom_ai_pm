@@ -8,17 +8,19 @@ export async function GET(
       { id } = await ctx.params;
     const f = await db()
       .prepare(
-        "SELECT object_key AS objectKey,name FROM files WHERE id=? AND user_id=?",
+        "SELECT object_key AS objectKey,name,mime FROM files WHERE id=? AND user_id=?",
       )
       .bind(id, uid)
-      .first<{ objectKey: string; name: string }>();
+      .first<{ objectKey: string; name: string; mime: string }>();
     if (!f) throw new HttpError(404, "文件不存在。");
     const obj = await bucket().get(f.objectKey);
     if (!obj) throw new HttpError(404, "原始文件不可用。");
+    const inline = new URL(req.url).searchParams.get("preview") === "1";
+    if (inline && !["image/png", "image/jpeg", "image/webp"].includes(f.mime)) throw new HttpError(415, "画布只预览 PNG、JPG 和 WebP 图片。");
     return new Response(obj.body, {
       headers: {
-        "Content-Type": "application/octet-stream",
-        "Content-Disposition": `attachment; filename*=UTF-8''${encodeURIComponent(f.name)}`,
+        "Content-Type": inline ? f.mime : "application/octet-stream",
+        "Content-Disposition": `${inline ? "inline" : "attachment"}; filename*=UTF-8''${encodeURIComponent(f.name)}`,
         "X-Content-Type-Options": "nosniff",
         "Cache-Control": "private,no-store",
       },
